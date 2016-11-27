@@ -30,69 +30,96 @@ namespace Mutuples {
 		var suffixes = Enumerable.Range(0, i).Select(x => (x + 1).ToString()).ToArray();
 		var types = suffixes.Select(x => "T" + x);
 		var typeArgs = String.Join(", ", types);
-		var baseTypeArgs = String.Join(", ", types.Take(i - 1));
 		var invokeParams = String.Join(", ", suffixes.Select(x => "T" + x + " item" + x));
 		var initializers = String.Join("; ", suffixes.Select(x => $"Item{x} = item{x}"));
 		var toString = "(" + String.Join(", ", suffixes.Select(x => $"{{Item{x}}}")) + ")";
 #>
-	public class Mutuple<<#= typeArgs #>>
-<# if (baseTypeArgs.Any()) { #>
-	: Mutuple<<#= baseTypeArgs #>>, IStructuralComparable, IStructuralEquatable, IComparable
-<#	} else { #>
-	: IStructuralComparable, IStructuralEquatable, IComparable
-<#	} #>
+	public class Mutuple<<#= typeArgs #>> : IEquatable<Mutuple<<#= typeArgs #>>>, IComparable<Mutuple<<#= typeArgs #>>>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
-		public T<#=i#> Item<#=i#> { get; set; }
-		protected Mutuple() {}
+<#	foreach (var suffix in suffixes) { #>
+		public T<#=suffix#> Item<#=suffix#> { get; set; }
+<# } #>
+
+		public Mutuple() {}
 		public Mutuple(<#= invokeParams #>) { <#= initializers #>; }
 		public override String ToString() => $"<#= toString #>";
 
-		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
-		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
-		
-		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		#region GetHashCode
+		public override Int32 GetHashCode() => GetHashCode(null);
+
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			return GetHashCode(comparer);
+		}
+
+		private Int32 GetHashCode(IEqualityComparer comparer) {
+			var hash = 0x51ed270b;
+			unchecked {
+<#	foreach (var suffix in suffixes) { #>
+				if (TypeCache<T<#= suffix #>>.IsValueType || !ReferenceEquals(Item<#= suffix #>, null))
+					hash = (hash * -1521134295) + (comparer?.GetHashCode(Item<#= suffix #>) ?? EqualityComparer<T<#= suffix #>>.Default.GetHashCode(Item<#= suffix #>));
+<# } #>
+			}
+			return hash;
+		}
+		#endregion
+
+		#region Equals
+		public override Boolean Equals(Object obj) => Equals(obj as Mutuple<<#= typeArgs #>>);
+
+		public Boolean Equals(Mutuple<<#= typeArgs #>> other) => Equals(other, null);
+
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			return Equals(other as Mutuple<<#= typeArgs #>>, comparer);
+		}
+
+		private Boolean Equals(Mutuple<<#= typeArgs #>> other, IEqualityComparer comparer) {
+			if (other == null)
+				return false;
+<#	foreach (var suffix in suffixes) { #>
+			if (!(comparer?.Equals(Item<#= suffix #>, other.Item<#= suffix #>) ?? EqualityComparer<T<#= suffix #>>.Default.Equals(Item<#= suffix #>, other.Item<#= suffix #>)))
+				return false;
+<# } #>
+			return true;
+		}
+		#endregion
+
+		#region CompareTo
+		Int32 IComparable.CompareTo(Object obj) {
+			if (obj == null)
+				return 1;
+			return CompareTo(obj as Mutuple<<#= typeArgs #>>, null);
+		}
+
+		Int32 IComparable<Mutuple<<#= typeArgs #>>>.CompareTo(Mutuple<<#= typeArgs #>> other)  {
+			if (other == null)
+				return 1;
+			return CompareTo(other, null);
+		}
+
 		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
 			if (comparer == null)
 				throw new ArgumentNullException(nameof(comparer));
 			if (other == null)
 				return 1;
-			var mutuple = other as Mutuple<<#= typeArgs #>>;
-			if (mutuple == null)
+			return CompareTo(other as Mutuple<<#= typeArgs #>>, comparer);
+		}
+
+		private Int32 CompareTo(Mutuple<<#= typeArgs #>> other, IComparer comparer) {
+			if (other == null)
 				throw new ArgumentException("Incorrect type, must be `Mutuple<<#= typeArgs #>>`", nameof(other));
 			Int32 num;
 <#	foreach (var suffix in suffixes) { #>
-			num = comparer.Compare(Item<#= suffix #>, mutuple.Item<#= suffix #>);
+			num = comparer?.Compare(Item<#= suffix #>, other.Item<#= suffix #>) ?? Comparer<T<#= suffix #>>.Default.Compare(Item<#= suffix #>, other.Item<#= suffix #>);
 			if (num != 0)
 				return num;
 <# } #>
 			return num;
 		}
-		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
-			if (comparer == null)
-				throw new ArgumentNullException(nameof(comparer));
-			if (other == null)
-				return false;
-			var mutuple = other as Mutuple<<#= typeArgs #>>;
-			if (mutuple == null)
-				return false;
-<#	foreach (var suffix in suffixes) { #>
-			if (!comparer.Equals(Item<#= suffix #>, mutuple.Item<#= suffix #>))
-				return false;
-<# } #>
-			return true;
-		}
-		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
-			if (comparer == null)
-				throw new ArgumentNullException(nameof(comparer));
-			var hash = 0x51ed270b;
-			unchecked {
-<#	foreach (var suffix in suffixes) { #>
-				if (TypeCache<T<#= suffix #>>.IsValueType || !Item<#= suffix #>.Equals(null))
-					hash = (hash * -1521134295) + Item<#= suffix #>.GetHashCode();
-<# } #>
-			}
-			return hash;
-		}
+		#endregion
 	}
 
 <#	} #>
