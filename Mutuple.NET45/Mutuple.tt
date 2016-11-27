@@ -12,35 +12,6 @@ using System.Collections.Generic;
 using System.Collections.Generic;
 */#>
 namespace Mutuples {
-<#/*	public class Mutuple<T> {
-		public T1 Item1 { get; set; }
-	}
-
-	public class Mutuple<T1, T2> : IComparable<Mutuple<T1, T2>>, IEquatable<Mutuple<T1, T2>>, IStructuralEquatable, IStructuralComparable, IComparable {
-		public T1 Item1 { get; set; }
-		public T2 Item2 { get; set; }
-		public override Boolean Equals(Object obj) => Equals(obj as Mutuple<T1, T2>);
-		public Boolean Equals(Object other, IEqualityComparer comparer) => Equals(other as Mutuple<T1, T2>, comparer);
-		public Boolean Equals(Mutuple<T1, T2> other) => Equals(other, EqualityComparer<Mutuple<T1, T2>>.Default);
-		public Boolean Equals(Mutuple<T1, T2> other, IEqualityComparer comparer) => other != null && comparer.Equals(Item1, other.Item1) && comparer.Equals(Item2, other.Item2);
-
-		public override Int32 GetHashCode() => GetHashCode(EqualityComparer<Mutuple<T1, T2>>.Default);
-
-		public Int32 GetHashCode(IEqualityComparer comparer) {
-			throw new NotImplementedException();
-		}
-
-		public Int32 CompareTo(Object obj) => CompareTo(obj as Mutuple<T1, T2>);
-		public Int32 CompareTo(Object other, IComparer comparer) => CompareTo(other as Mutuple<T1, T2>, Comparer<Mutuple<T1, T2>>.Default);
-		public Int32 CompareTo(Mutuple<T1, T2> other) => CompareTo(other, Comparer<Mutuple<T1, T2>>.Default);
-		public Int32 CompareTo(Mutuple<T1, T2> other, IComparer comparer) {
-			if (other == null)
-				return 1;
-			var num1 = comparer.Compare
-			return comparer.Compare(Item1, other.Item1);
-		}
-	}
-*/#>
 	public static class Mutuple
 	{
 <#
@@ -48,7 +19,6 @@ namespace Mutuples {
 		var suffixes = Enumerable.Range(0, i).Select(x => (x + 1).ToString()).ToArray();
 		var types = suffixes.Select(x => "T" + x);
 		var typeArgs = String.Join(", ", types);
-		var baseTypeArgs = String.Join(", ", types.Take(i - 1));
 		var invokeParams = String.Join(", ", suffixes.Select(x => "T" + x + " item" + x));
 		var invokeArgs = String.Join(", ", suffixes.Select(x => "item" + x));
 #>
@@ -62,7 +32,6 @@ namespace Mutuples {
 		var typeArgs = String.Join(", ", types);
 		var baseTypeArgs = String.Join(", ", types.Take(i - 1));
 		var invokeParams = String.Join(", ", suffixes.Select(x => "T" + x + " item" + x));
-		var invokeArgs = String.Join(", ", suffixes.Select(x => "item" + x));
 		var initializers = String.Join("; ", suffixes.Select(x => $"Item{x} = item{x}"));
 		var toString = "(" + String.Join(", ", suffixes.Select(x => $"{{Item{x}}}")) + ")";
 #>
@@ -118,7 +87,7 @@ namespace Mutuples {
 			var hash = 0x51ed270b;
 			unchecked {
 <#	foreach (var suffix in suffixes) { #>
-				if (Item<#= suffix #>.Equals(default(T<#= suffix #>)))
+				if (TypeCache<T<#= suffix #>>.IsValueType || !Item<#= suffix #>.Equals(null))
 					hash = (hash * -1521134295) + Item<#= suffix #>.GetHashCode();
 <# } #>
 			}

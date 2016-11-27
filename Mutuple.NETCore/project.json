@@ -9,6 +9,20 @@
 		"licenseUrl": "https://raw.githubusercontent.com/NickStrupat/Mutuple/master/LICENSE"
 	},
 
+	"configurations": {
+		"Debug": {
+			"buildOptions": {
+				"define": [ "DEBUG", "TRACE", "NET_CORE" ]
+			}
+		},
+		"Release": {
+			"buildOptions": {
+				"define": [ "RELEASE", "TRACE", "NET_CORE" ],
+				"optimize": true
+			}
+		}
+	},
+
 	"dependencies": {
 		"NETStandard.Library": "1.6.1"
 	},

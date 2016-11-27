@@ -82,7 +82,7 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
 			}
 			return hash;
@@ -137,9 +137,9 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
 			}
 			return hash;
@@ -199,11 +199,11 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
 			}
 			return hash;
@@ -268,13 +268,13 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
 			}
 			return hash;
@@ -344,15 +344,15 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
 			}
 			return hash;
@@ -427,17 +427,17 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
-				if (Item6.Equals(default(T6)))
+				if (TypeCache<T6>.IsValueType || !Item6.Equals(null))
 					hash = (hash * -1521134295) + Item6.GetHashCode();
 			}
 			return hash;
@@ -517,19 +517,19 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
-				if (Item6.Equals(default(T6)))
+				if (TypeCache<T6>.IsValueType || !Item6.Equals(null))
 					hash = (hash * -1521134295) + Item6.GetHashCode();
-				if (Item7.Equals(default(T7)))
+				if (TypeCache<T7>.IsValueType || !Item7.Equals(null))
 					hash = (hash * -1521134295) + Item7.GetHashCode();
 			}
 			return hash;
@@ -614,21 +614,21 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
-				if (Item6.Equals(default(T6)))
+				if (TypeCache<T6>.IsValueType || !Item6.Equals(null))
 					hash = (hash * -1521134295) + Item6.GetHashCode();
-				if (Item7.Equals(default(T7)))
+				if (TypeCache<T7>.IsValueType || !Item7.Equals(null))
 					hash = (hash * -1521134295) + Item7.GetHashCode();
-				if (Item8.Equals(default(T8)))
+				if (TypeCache<T8>.IsValueType || !Item8.Equals(null))
 					hash = (hash * -1521134295) + Item8.GetHashCode();
 			}
 			return hash;
@@ -718,23 +718,23 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
-				if (Item6.Equals(default(T6)))
+				if (TypeCache<T6>.IsValueType || !Item6.Equals(null))
 					hash = (hash * -1521134295) + Item6.GetHashCode();
-				if (Item7.Equals(default(T7)))
+				if (TypeCache<T7>.IsValueType || !Item7.Equals(null))
 					hash = (hash * -1521134295) + Item7.GetHashCode();
-				if (Item8.Equals(default(T8)))
+				if (TypeCache<T8>.IsValueType || !Item8.Equals(null))
 					hash = (hash * -1521134295) + Item8.GetHashCode();
-				if (Item9.Equals(default(T9)))
+				if (TypeCache<T9>.IsValueType || !Item9.Equals(null))
 					hash = (hash * -1521134295) + Item9.GetHashCode();
 			}
 			return hash;
@@ -829,25 +829,25 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
-				if (Item6.Equals(default(T6)))
+				if (TypeCache<T6>.IsValueType || !Item6.Equals(null))
 					hash = (hash * -1521134295) + Item6.GetHashCode();
-				if (Item7.Equals(default(T7)))
+				if (TypeCache<T7>.IsValueType || !Item7.Equals(null))
 					hash = (hash * -1521134295) + Item7.GetHashCode();
-				if (Item8.Equals(default(T8)))
+				if (TypeCache<T8>.IsValueType || !Item8.Equals(null))
 					hash = (hash * -1521134295) + Item8.GetHashCode();
-				if (Item9.Equals(default(T9)))
+				if (TypeCache<T9>.IsValueType || !Item9.Equals(null))
 					hash = (hash * -1521134295) + Item9.GetHashCode();
-				if (Item10.Equals(default(T10)))
+				if (TypeCache<T10>.IsValueType || !Item10.Equals(null))
 					hash = (hash * -1521134295) + Item10.GetHashCode();
 			}
 			return hash;
@@ -947,27 +947,27 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
-				if (Item6.Equals(default(T6)))
+				if (TypeCache<T6>.IsValueType || !Item6.Equals(null))
 					hash = (hash * -1521134295) + Item6.GetHashCode();
-				if (Item7.Equals(default(T7)))
+				if (TypeCache<T7>.IsValueType || !Item7.Equals(null))
 					hash = (hash * -1521134295) + Item7.GetHashCode();
-				if (Item8.Equals(default(T8)))
+				if (TypeCache<T8>.IsValueType || !Item8.Equals(null))
 					hash = (hash * -1521134295) + Item8.GetHashCode();
-				if (Item9.Equals(default(T9)))
+				if (TypeCache<T9>.IsValueType || !Item9.Equals(null))
 					hash = (hash * -1521134295) + Item9.GetHashCode();
-				if (Item10.Equals(default(T10)))
+				if (TypeCache<T10>.IsValueType || !Item10.Equals(null))
 					hash = (hash * -1521134295) + Item10.GetHashCode();
-				if (Item11.Equals(default(T11)))
+				if (TypeCache<T11>.IsValueType || !Item11.Equals(null))
 					hash = (hash * -1521134295) + Item11.GetHashCode();
 			}
 			return hash;
@@ -1072,29 +1072,29 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
-				if (Item6.Equals(default(T6)))
+				if (TypeCache<T6>.IsValueType || !Item6.Equals(null))
 					hash = (hash * -1521134295) + Item6.GetHashCode();
-				if (Item7.Equals(default(T7)))
+				if (TypeCache<T7>.IsValueType || !Item7.Equals(null))
 					hash = (hash * -1521134295) + Item7.GetHashCode();
-				if (Item8.Equals(default(T8)))
+				if (TypeCache<T8>.IsValueType || !Item8.Equals(null))
 					hash = (hash * -1521134295) + Item8.GetHashCode();
-				if (Item9.Equals(default(T9)))
+				if (TypeCache<T9>.IsValueType || !Item9.Equals(null))
 					hash = (hash * -1521134295) + Item9.GetHashCode();
-				if (Item10.Equals(default(T10)))
+				if (TypeCache<T10>.IsValueType || !Item10.Equals(null))
 					hash = (hash * -1521134295) + Item10.GetHashCode();
-				if (Item11.Equals(default(T11)))
+				if (TypeCache<T11>.IsValueType || !Item11.Equals(null))
 					hash = (hash * -1521134295) + Item11.GetHashCode();
-				if (Item12.Equals(default(T12)))
+				if (TypeCache<T12>.IsValueType || !Item12.Equals(null))
 					hash = (hash * -1521134295) + Item12.GetHashCode();
 			}
 			return hash;
@@ -1204,31 +1204,31 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
-				if (Item6.Equals(default(T6)))
+				if (TypeCache<T6>.IsValueType || !Item6.Equals(null))
 					hash = (hash * -1521134295) + Item6.GetHashCode();
-				if (Item7.Equals(default(T7)))
+				if (TypeCache<T7>.IsValueType || !Item7.Equals(null))
 					hash = (hash * -1521134295) + Item7.GetHashCode();
-				if (Item8.Equals(default(T8)))
+				if (TypeCache<T8>.IsValueType || !Item8.Equals(null))
 					hash = (hash * -1521134295) + Item8.GetHashCode();
-				if (Item9.Equals(default(T9)))
+				if (TypeCache<T9>.IsValueType || !Item9.Equals(null))
 					hash = (hash * -1521134295) + Item9.GetHashCode();
-				if (Item10.Equals(default(T10)))
+				if (TypeCache<T10>.IsValueType || !Item10.Equals(null))
 					hash = (hash * -1521134295) + Item10.GetHashCode();
-				if (Item11.Equals(default(T11)))
+				if (TypeCache<T11>.IsValueType || !Item11.Equals(null))
 					hash = (hash * -1521134295) + Item11.GetHashCode();
-				if (Item12.Equals(default(T12)))
+				if (TypeCache<T12>.IsValueType || !Item12.Equals(null))
 					hash = (hash * -1521134295) + Item12.GetHashCode();
-				if (Item13.Equals(default(T13)))
+				if (TypeCache<T13>.IsValueType || !Item13.Equals(null))
 					hash = (hash * -1521134295) + Item13.GetHashCode();
 			}
 			return hash;
@@ -1343,33 +1343,33 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
-				if (Item6.Equals(default(T6)))
+				if (TypeCache<T6>.IsValueType || !Item6.Equals(null))
 					hash = (hash * -1521134295) + Item6.GetHashCode();
-				if (Item7.Equals(default(T7)))
+				if (TypeCache<T7>.IsValueType || !Item7.Equals(null))
 					hash = (hash * -1521134295) + Item7.GetHashCode();
-				if (Item8.Equals(default(T8)))
+				if (TypeCache<T8>.IsValueType || !Item8.Equals(null))
 					hash = (hash * -1521134295) + Item8.GetHashCode();
-				if (Item9.Equals(default(T9)))
+				if (TypeCache<T9>.IsValueType || !Item9.Equals(null))
 					hash = (hash * -1521134295) + Item9.GetHashCode();
-				if (Item10.Equals(default(T10)))
+				if (TypeCache<T10>.IsValueType || !Item10.Equals(null))
 					hash = (hash * -1521134295) + Item10.GetHashCode();
-				if (Item11.Equals(default(T11)))
+				if (TypeCache<T11>.IsValueType || !Item11.Equals(null))
 					hash = (hash * -1521134295) + Item11.GetHashCode();
-				if (Item12.Equals(default(T12)))
+				if (TypeCache<T12>.IsValueType || !Item12.Equals(null))
 					hash = (hash * -1521134295) + Item12.GetHashCode();
-				if (Item13.Equals(default(T13)))
+				if (TypeCache<T13>.IsValueType || !Item13.Equals(null))
 					hash = (hash * -1521134295) + Item13.GetHashCode();
-				if (Item14.Equals(default(T14)))
+				if (TypeCache<T14>.IsValueType || !Item14.Equals(null))
 					hash = (hash * -1521134295) + Item14.GetHashCode();
 			}
 			return hash;
@@ -1489,35 +1489,35 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
-				if (Item6.Equals(default(T6)))
+				if (TypeCache<T6>.IsValueType || !Item6.Equals(null))
 					hash = (hash * -1521134295) + Item6.GetHashCode();
-				if (Item7.Equals(default(T7)))
+				if (TypeCache<T7>.IsValueType || !Item7.Equals(null))
 					hash = (hash * -1521134295) + Item7.GetHashCode();
-				if (Item8.Equals(default(T8)))
+				if (TypeCache<T8>.IsValueType || !Item8.Equals(null))
 					hash = (hash * -1521134295) + Item8.GetHashCode();
-				if (Item9.Equals(default(T9)))
+				if (TypeCache<T9>.IsValueType || !Item9.Equals(null))
 					hash = (hash * -1521134295) + Item9.GetHashCode();
-				if (Item10.Equals(default(T10)))
+				if (TypeCache<T10>.IsValueType || !Item10.Equals(null))
 					hash = (hash * -1521134295) + Item10.GetHashCode();
-				if (Item11.Equals(default(T11)))
+				if (TypeCache<T11>.IsValueType || !Item11.Equals(null))
 					hash = (hash * -1521134295) + Item11.GetHashCode();
-				if (Item12.Equals(default(T12)))
+				if (TypeCache<T12>.IsValueType || !Item12.Equals(null))
 					hash = (hash * -1521134295) + Item12.GetHashCode();
-				if (Item13.Equals(default(T13)))
+				if (TypeCache<T13>.IsValueType || !Item13.Equals(null))
 					hash = (hash * -1521134295) + Item13.GetHashCode();
-				if (Item14.Equals(default(T14)))
+				if (TypeCache<T14>.IsValueType || !Item14.Equals(null))
 					hash = (hash * -1521134295) + Item14.GetHashCode();
-				if (Item15.Equals(default(T15)))
+				if (TypeCache<T15>.IsValueType || !Item15.Equals(null))
 					hash = (hash * -1521134295) + Item15.GetHashCode();
 			}
 			return hash;
@@ -1642,37 +1642,37 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
-				if (Item6.Equals(default(T6)))
+				if (TypeCache<T6>.IsValueType || !Item6.Equals(null))
 					hash = (hash * -1521134295) + Item6.GetHashCode();
-				if (Item7.Equals(default(T7)))
+				if (TypeCache<T7>.IsValueType || !Item7.Equals(null))
 					hash = (hash * -1521134295) + Item7.GetHashCode();
-				if (Item8.Equals(default(T8)))
+				if (TypeCache<T8>.IsValueType || !Item8.Equals(null))
 					hash = (hash * -1521134295) + Item8.GetHashCode();
-				if (Item9.Equals(default(T9)))
+				if (TypeCache<T9>.IsValueType || !Item9.Equals(null))
 					hash = (hash * -1521134295) + Item9.GetHashCode();
-				if (Item10.Equals(default(T10)))
+				if (TypeCache<T10>.IsValueType || !Item10.Equals(null))
 					hash = (hash * -1521134295) + Item10.GetHashCode();
-				if (Item11.Equals(default(T11)))
+				if (TypeCache<T11>.IsValueType || !Item11.Equals(null))
 					hash = (hash * -1521134295) + Item11.GetHashCode();
-				if (Item12.Equals(default(T12)))
+				if (TypeCache<T12>.IsValueType || !Item12.Equals(null))
 					hash = (hash * -1521134295) + Item12.GetHashCode();
-				if (Item13.Equals(default(T13)))
+				if (TypeCache<T13>.IsValueType || !Item13.Equals(null))
 					hash = (hash * -1521134295) + Item13.GetHashCode();
-				if (Item14.Equals(default(T14)))
+				if (TypeCache<T14>.IsValueType || !Item14.Equals(null))
 					hash = (hash * -1521134295) + Item14.GetHashCode();
-				if (Item15.Equals(default(T15)))
+				if (TypeCache<T15>.IsValueType || !Item15.Equals(null))
 					hash = (hash * -1521134295) + Item15.GetHashCode();
-				if (Item16.Equals(default(T16)))
+				if (TypeCache<T16>.IsValueType || !Item16.Equals(null))
 					hash = (hash * -1521134295) + Item16.GetHashCode();
 			}
 			return hash;
@@ -1802,39 +1802,39 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
-				if (Item6.Equals(default(T6)))
+				if (TypeCache<T6>.IsValueType || !Item6.Equals(null))
 					hash = (hash * -1521134295) + Item6.GetHashCode();
-				if (Item7.Equals(default(T7)))
+				if (TypeCache<T7>.IsValueType || !Item7.Equals(null))
 					hash = (hash * -1521134295) + Item7.GetHashCode();
-				if (Item8.Equals(default(T8)))
+				if (TypeCache<T8>.IsValueType || !Item8.Equals(null))
 					hash = (hash * -1521134295) + Item8.GetHashCode();
-				if (Item9.Equals(default(T9)))
+				if (TypeCache<T9>.IsValueType || !Item9.Equals(null))
 					hash = (hash * -1521134295) + Item9.GetHashCode();
-				if (Item10.Equals(default(T10)))
+				if (TypeCache<T10>.IsValueType || !Item10.Equals(null))
 					hash = (hash * -1521134295) + Item10.GetHashCode();
-				if (Item11.Equals(default(T11)))
+				if (TypeCache<T11>.IsValueType || !Item11.Equals(null))
 					hash = (hash * -1521134295) + Item11.GetHashCode();
-				if (Item12.Equals(default(T12)))
+				if (TypeCache<T12>.IsValueType || !Item12.Equals(null))
 					hash = (hash * -1521134295) + Item12.GetHashCode();
-				if (Item13.Equals(default(T13)))
+				if (TypeCache<T13>.IsValueType || !Item13.Equals(null))
 					hash = (hash * -1521134295) + Item13.GetHashCode();
-				if (Item14.Equals(default(T14)))
+				if (TypeCache<T14>.IsValueType || !Item14.Equals(null))
 					hash = (hash * -1521134295) + Item14.GetHashCode();
-				if (Item15.Equals(default(T15)))
+				if (TypeCache<T15>.IsValueType || !Item15.Equals(null))
 					hash = (hash * -1521134295) + Item15.GetHashCode();
-				if (Item16.Equals(default(T16)))
+				if (TypeCache<T16>.IsValueType || !Item16.Equals(null))
 					hash = (hash * -1521134295) + Item16.GetHashCode();
-				if (Item17.Equals(default(T17)))
+				if (TypeCache<T17>.IsValueType || !Item17.Equals(null))
 					hash = (hash * -1521134295) + Item17.GetHashCode();
 			}
 			return hash;
@@ -1969,41 +1969,41 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
-				if (Item6.Equals(default(T6)))
+				if (TypeCache<T6>.IsValueType || !Item6.Equals(null))
 					hash = (hash * -1521134295) + Item6.GetHashCode();
-				if (Item7.Equals(default(T7)))
+				if (TypeCache<T7>.IsValueType || !Item7.Equals(null))
 					hash = (hash * -1521134295) + Item7.GetHashCode();
-				if (Item8.Equals(default(T8)))
+				if (TypeCache<T8>.IsValueType || !Item8.Equals(null))
 					hash = (hash * -1521134295) + Item8.GetHashCode();
-				if (Item9.Equals(default(T9)))
+				if (TypeCache<T9>.IsValueType || !Item9.Equals(null))
 					hash = (hash * -1521134295) + Item9.GetHashCode();
-				if (Item10.Equals(default(T10)))
+				if (TypeCache<T10>.IsValueType || !Item10.Equals(null))
 					hash = (hash * -1521134295) + Item10.GetHashCode();
-				if (Item11.Equals(default(T11)))
+				if (TypeCache<T11>.IsValueType || !Item11.Equals(null))
 					hash = (hash * -1521134295) + Item11.GetHashCode();
-				if (Item12.Equals(default(T12)))
+				if (TypeCache<T12>.IsValueType || !Item12.Equals(null))
 					hash = (hash * -1521134295) + Item12.GetHashCode();
-				if (Item13.Equals(default(T13)))
+				if (TypeCache<T13>.IsValueType || !Item13.Equals(null))
 					hash = (hash * -1521134295) + Item13.GetHashCode();
-				if (Item14.Equals(default(T14)))
+				if (TypeCache<T14>.IsValueType || !Item14.Equals(null))
 					hash = (hash * -1521134295) + Item14.GetHashCode();
-				if (Item15.Equals(default(T15)))
+				if (TypeCache<T15>.IsValueType || !Item15.Equals(null))
 					hash = (hash * -1521134295) + Item15.GetHashCode();
-				if (Item16.Equals(default(T16)))
+				if (TypeCache<T16>.IsValueType || !Item16.Equals(null))
 					hash = (hash * -1521134295) + Item16.GetHashCode();
-				if (Item17.Equals(default(T17)))
+				if (TypeCache<T17>.IsValueType || !Item17.Equals(null))
 					hash = (hash * -1521134295) + Item17.GetHashCode();
-				if (Item18.Equals(default(T18)))
+				if (TypeCache<T18>.IsValueType || !Item18.Equals(null))
 					hash = (hash * -1521134295) + Item18.GetHashCode();
 			}
 			return hash;
@@ -2143,43 +2143,43 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
-				if (Item6.Equals(default(T6)))
+				if (TypeCache<T6>.IsValueType || !Item6.Equals(null))
 					hash = (hash * -1521134295) + Item6.GetHashCode();
-				if (Item7.Equals(default(T7)))
+				if (TypeCache<T7>.IsValueType || !Item7.Equals(null))
 					hash = (hash * -1521134295) + Item7.GetHashCode();
-				if (Item8.Equals(default(T8)))
+				if (TypeCache<T8>.IsValueType || !Item8.Equals(null))
 					hash = (hash * -1521134295) + Item8.GetHashCode();
-				if (Item9.Equals(default(T9)))
+				if (TypeCache<T9>.IsValueType || !Item9.Equals(null))
 					hash = (hash * -1521134295) + Item9.GetHashCode();
-				if (Item10.Equals(default(T10)))
+				if (TypeCache<T10>.IsValueType || !Item10.Equals(null))
 					hash = (hash * -1521134295) + Item10.GetHashCode();
-				if (Item11.Equals(default(T11)))
+				if (TypeCache<T11>.IsValueType || !Item11.Equals(null))
 					hash = (hash * -1521134295) + Item11.GetHashCode();
-				if (Item12.Equals(default(T12)))
+				if (TypeCache<T12>.IsValueType || !Item12.Equals(null))
 					hash = (hash * -1521134295) + Item12.GetHashCode();
-				if (Item13.Equals(default(T13)))
+				if (TypeCache<T13>.IsValueType || !Item13.Equals(null))
 					hash = (hash * -1521134295) + Item13.GetHashCode();
-				if (Item14.Equals(default(T14)))
+				if (TypeCache<T14>.IsValueType || !Item14.Equals(null))
 					hash = (hash * -1521134295) + Item14.GetHashCode();
-				if (Item15.Equals(default(T15)))
+				if (TypeCache<T15>.IsValueType || !Item15.Equals(null))
 					hash = (hash * -1521134295) + Item15.GetHashCode();
-				if (Item16.Equals(default(T16)))
+				if (TypeCache<T16>.IsValueType || !Item16.Equals(null))
 					hash = (hash * -1521134295) + Item16.GetHashCode();
-				if (Item17.Equals(default(T17)))
+				if (TypeCache<T17>.IsValueType || !Item17.Equals(null))
 					hash = (hash * -1521134295) + Item17.GetHashCode();
-				if (Item18.Equals(default(T18)))
+				if (TypeCache<T18>.IsValueType || !Item18.Equals(null))
 					hash = (hash * -1521134295) + Item18.GetHashCode();
-				if (Item19.Equals(default(T19)))
+				if (TypeCache<T19>.IsValueType || !Item19.Equals(null))
 					hash = (hash * -1521134295) + Item19.GetHashCode();
 			}
 			return hash;
@@ -2324,45 +2324,45 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
-				if (Item6.Equals(default(T6)))
+				if (TypeCache<T6>.IsValueType || !Item6.Equals(null))
 					hash = (hash * -1521134295) + Item6.GetHashCode();
-				if (Item7.Equals(default(T7)))
+				if (TypeCache<T7>.IsValueType || !Item7.Equals(null))
 					hash = (hash * -1521134295) + Item7.GetHashCode();
-				if (Item8.Equals(default(T8)))
+				if (TypeCache<T8>.IsValueType || !Item8.Equals(null))
 					hash = (hash * -1521134295) + Item8.GetHashCode();
-				if (Item9.Equals(default(T9)))
+				if (TypeCache<T9>.IsValueType || !Item9.Equals(null))
 					hash = (hash * -1521134295) + Item9.GetHashCode();
-				if (Item10.Equals(default(T10)))
+				if (TypeCache<T10>.IsValueType || !Item10.Equals(null))
 					hash = (hash * -1521134295) + Item10.GetHashCode();
-				if (Item11.Equals(default(T11)))
+				if (TypeCache<T11>.IsValueType || !Item11.Equals(null))
 					hash = (hash * -1521134295) + Item11.GetHashCode();
-				if (Item12.Equals(default(T12)))
+				if (TypeCache<T12>.IsValueType || !Item12.Equals(null))
 					hash = (hash * -1521134295) + Item12.GetHashCode();
-				if (Item13.Equals(default(T13)))
+				if (TypeCache<T13>.IsValueType || !Item13.Equals(null))
 					hash = (hash * -1521134295) + Item13.GetHashCode();
-				if (Item14.Equals(default(T14)))
+				if (TypeCache<T14>.IsValueType || !Item14.Equals(null))
 					hash = (hash * -1521134295) + Item14.GetHashCode();
-				if (Item15.Equals(default(T15)))
+				if (TypeCache<T15>.IsValueType || !Item15.Equals(null))
 					hash = (hash * -1521134295) + Item15.GetHashCode();
-				if (Item16.Equals(default(T16)))
+				if (TypeCache<T16>.IsValueType || !Item16.Equals(null))
 					hash = (hash * -1521134295) + Item16.GetHashCode();
-				if (Item17.Equals(default(T17)))
+				if (TypeCache<T17>.IsValueType || !Item17.Equals(null))
 					hash = (hash * -1521134295) + Item17.GetHashCode();
-				if (Item18.Equals(default(T18)))
+				if (TypeCache<T18>.IsValueType || !Item18.Equals(null))
 					hash = (hash * -1521134295) + Item18.GetHashCode();
-				if (Item19.Equals(default(T19)))
+				if (TypeCache<T19>.IsValueType || !Item19.Equals(null))
 					hash = (hash * -1521134295) + Item19.GetHashCode();
-				if (Item20.Equals(default(T20)))
+				if (TypeCache<T20>.IsValueType || !Item20.Equals(null))
 					hash = (hash * -1521134295) + Item20.GetHashCode();
 			}
 			return hash;
@@ -2512,47 +2512,47 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
-				if (Item6.Equals(default(T6)))
+				if (TypeCache<T6>.IsValueType || !Item6.Equals(null))
 					hash = (hash * -1521134295) + Item6.GetHashCode();
-				if (Item7.Equals(default(T7)))
+				if (TypeCache<T7>.IsValueType || !Item7.Equals(null))
 					hash = (hash * -1521134295) + Item7.GetHashCode();
-				if (Item8.Equals(default(T8)))
+				if (TypeCache<T8>.IsValueType || !Item8.Equals(null))
 					hash = (hash * -1521134295) + Item8.GetHashCode();
-				if (Item9.Equals(default(T9)))
+				if (TypeCache<T9>.IsValueType || !Item9.Equals(null))
 					hash = (hash * -1521134295) + Item9.GetHashCode();
-				if (Item10.Equals(default(T10)))
+				if (TypeCache<T10>.IsValueType || !Item10.Equals(null))
 					hash = (hash * -1521134295) + Item10.GetHashCode();
-				if (Item11.Equals(default(T11)))
+				if (TypeCache<T11>.IsValueType || !Item11.Equals(null))
 					hash = (hash * -1521134295) + Item11.GetHashCode();
-				if (Item12.Equals(default(T12)))
+				if (TypeCache<T12>.IsValueType || !Item12.Equals(null))
 					hash = (hash * -1521134295) + Item12.GetHashCode();
-				if (Item13.Equals(default(T13)))
+				if (TypeCache<T13>.IsValueType || !Item13.Equals(null))
 					hash = (hash * -1521134295) + Item13.GetHashCode();
-				if (Item14.Equals(default(T14)))
+				if (TypeCache<T14>.IsValueType || !Item14.Equals(null))
 					hash = (hash * -1521134295) + Item14.GetHashCode();
-				if (Item15.Equals(default(T15)))
+				if (TypeCache<T15>.IsValueType || !Item15.Equals(null))
 					hash = (hash * -1521134295) + Item15.GetHashCode();
-				if (Item16.Equals(default(T16)))
+				if (TypeCache<T16>.IsValueType || !Item16.Equals(null))
 					hash = (hash * -1521134295) + Item16.GetHashCode();
-				if (Item17.Equals(default(T17)))
+				if (TypeCache<T17>.IsValueType || !Item17.Equals(null))
 					hash = (hash * -1521134295) + Item17.GetHashCode();
-				if (Item18.Equals(default(T18)))
+				if (TypeCache<T18>.IsValueType || !Item18.Equals(null))
 					hash = (hash * -1521134295) + Item18.GetHashCode();
-				if (Item19.Equals(default(T19)))
+				if (TypeCache<T19>.IsValueType || !Item19.Equals(null))
 					hash = (hash * -1521134295) + Item19.GetHashCode();
-				if (Item20.Equals(default(T20)))
+				if (TypeCache<T20>.IsValueType || !Item20.Equals(null))
 					hash = (hash * -1521134295) + Item20.GetHashCode();
-				if (Item21.Equals(default(T21)))
+				if (TypeCache<T21>.IsValueType || !Item21.Equals(null))
 					hash = (hash * -1521134295) + Item21.GetHashCode();
 			}
 			return hash;
@@ -2707,49 +2707,49 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
-				if (Item6.Equals(default(T6)))
+				if (TypeCache<T6>.IsValueType || !Item6.Equals(null))
 					hash = (hash * -1521134295) + Item6.GetHashCode();
-				if (Item7.Equals(default(T7)))
+				if (TypeCache<T7>.IsValueType || !Item7.Equals(null))
 					hash = (hash * -1521134295) + Item7.GetHashCode();
-				if (Item8.Equals(default(T8)))
+				if (TypeCache<T8>.IsValueType || !Item8.Equals(null))
 					hash = (hash * -1521134295) + Item8.GetHashCode();
-				if (Item9.Equals(default(T9)))
+				if (TypeCache<T9>.IsValueType || !Item9.Equals(null))
 					hash = (hash * -1521134295) + Item9.GetHashCode();
-				if (Item10.Equals(default(T10)))
+				if (TypeCache<T10>.IsValueType || !Item10.Equals(null))
 					hash = (hash * -1521134295) + Item10.GetHashCode();
-				if (Item11.Equals(default(T11)))
+				if (TypeCache<T11>.IsValueType || !Item11.Equals(null))
 					hash = (hash * -1521134295) + Item11.GetHashCode();
-				if (Item12.Equals(default(T12)))
+				if (TypeCache<T12>.IsValueType || !Item12.Equals(null))
 					hash = (hash * -1521134295) + Item12.GetHashCode();
-				if (Item13.Equals(default(T13)))
+				if (TypeCache<T13>.IsValueType || !Item13.Equals(null))
 					hash = (hash * -1521134295) + Item13.GetHashCode();
-				if (Item14.Equals(default(T14)))
+				if (TypeCache<T14>.IsValueType || !Item14.Equals(null))
 					hash = (hash * -1521134295) + Item14.GetHashCode();
-				if (Item15.Equals(default(T15)))
+				if (TypeCache<T15>.IsValueType || !Item15.Equals(null))
 					hash = (hash * -1521134295) + Item15.GetHashCode();
-				if (Item16.Equals(default(T16)))
+				if (TypeCache<T16>.IsValueType || !Item16.Equals(null))
 					hash = (hash * -1521134295) + Item16.GetHashCode();
-				if (Item17.Equals(default(T17)))
+				if (TypeCache<T17>.IsValueType || !Item17.Equals(null))
 					hash = (hash * -1521134295) + Item17.GetHashCode();
-				if (Item18.Equals(default(T18)))
+				if (TypeCache<T18>.IsValueType || !Item18.Equals(null))
 					hash = (hash * -1521134295) + Item18.GetHashCode();
-				if (Item19.Equals(default(T19)))
+				if (TypeCache<T19>.IsValueType || !Item19.Equals(null))
 					hash = (hash * -1521134295) + Item19.GetHashCode();
-				if (Item20.Equals(default(T20)))
+				if (TypeCache<T20>.IsValueType || !Item20.Equals(null))
 					hash = (hash * -1521134295) + Item20.GetHashCode();
-				if (Item21.Equals(default(T21)))
+				if (TypeCache<T21>.IsValueType || !Item21.Equals(null))
 					hash = (hash * -1521134295) + Item21.GetHashCode();
-				if (Item22.Equals(default(T22)))
+				if (TypeCache<T22>.IsValueType || !Item22.Equals(null))
 					hash = (hash * -1521134295) + Item22.GetHashCode();
 			}
 			return hash;
@@ -2909,51 +2909,51 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
-				if (Item6.Equals(default(T6)))
+				if (TypeCache<T6>.IsValueType || !Item6.Equals(null))
 					hash = (hash * -1521134295) + Item6.GetHashCode();
-				if (Item7.Equals(default(T7)))
+				if (TypeCache<T7>.IsValueType || !Item7.Equals(null))
 					hash = (hash * -1521134295) + Item7.GetHashCode();
-				if (Item8.Equals(default(T8)))
+				if (TypeCache<T8>.IsValueType || !Item8.Equals(null))
 					hash = (hash * -1521134295) + Item8.GetHashCode();
-				if (Item9.Equals(default(T9)))
+				if (TypeCache<T9>.IsValueType || !Item9.Equals(null))
 					hash = (hash * -1521134295) + Item9.GetHashCode();
-				if (Item10.Equals(default(T10)))
+				if (TypeCache<T10>.IsValueType || !Item10.Equals(null))
 					hash = (hash * -1521134295) + Item10.GetHashCode();
-				if (Item11.Equals(default(T11)))
+				if (TypeCache<T11>.IsValueType || !Item11.Equals(null))
 					hash = (hash * -1521134295) + Item11.GetHashCode();
-				if (Item12.Equals(default(T12)))
+				if (TypeCache<T12>.IsValueType || !Item12.Equals(null))
 					hash = (hash * -1521134295) + Item12.GetHashCode();
-				if (Item13.Equals(default(T13)))
+				if (TypeCache<T13>.IsValueType || !Item13.Equals(null))
 					hash = (hash * -1521134295) + Item13.GetHashCode();
-				if (Item14.Equals(default(T14)))
+				if (TypeCache<T14>.IsValueType || !Item14.Equals(null))
 					hash = (hash * -1521134295) + Item14.GetHashCode();
-				if (Item15.Equals(default(T15)))
+				if (TypeCache<T15>.IsValueType || !Item15.Equals(null))
 					hash = (hash * -1521134295) + Item15.GetHashCode();
-				if (Item16.Equals(default(T16)))
+				if (TypeCache<T16>.IsValueType || !Item16.Equals(null))
 					hash = (hash * -1521134295) + Item16.GetHashCode();
-				if (Item17.Equals(default(T17)))
+				if (TypeCache<T17>.IsValueType || !Item17.Equals(null))
 					hash = (hash * -1521134295) + Item17.GetHashCode();
-				if (Item18.Equals(default(T18)))
+				if (TypeCache<T18>.IsValueType || !Item18.Equals(null))
 					hash = (hash * -1521134295) + Item18.GetHashCode();
-				if (Item19.Equals(default(T19)))
+				if (TypeCache<T19>.IsValueType || !Item19.Equals(null))
 					hash = (hash * -1521134295) + Item19.GetHashCode();
-				if (Item20.Equals(default(T20)))
+				if (TypeCache<T20>.IsValueType || !Item20.Equals(null))
 					hash = (hash * -1521134295) + Item20.GetHashCode();
-				if (Item21.Equals(default(T21)))
+				if (TypeCache<T21>.IsValueType || !Item21.Equals(null))
 					hash = (hash * -1521134295) + Item21.GetHashCode();
-				if (Item22.Equals(default(T22)))
+				if (TypeCache<T22>.IsValueType || !Item22.Equals(null))
 					hash = (hash * -1521134295) + Item22.GetHashCode();
-				if (Item23.Equals(default(T23)))
+				if (TypeCache<T23>.IsValueType || !Item23.Equals(null))
 					hash = (hash * -1521134295) + Item23.GetHashCode();
 			}
 			return hash;
@@ -3118,53 +3118,53 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
-				if (Item6.Equals(default(T6)))
+				if (TypeCache<T6>.IsValueType || !Item6.Equals(null))
 					hash = (hash * -1521134295) + Item6.GetHashCode();
-				if (Item7.Equals(default(T7)))
+				if (TypeCache<T7>.IsValueType || !Item7.Equals(null))
 					hash = (hash * -1521134295) + Item7.GetHashCode();
-				if (Item8.Equals(default(T8)))
+				if (TypeCache<T8>.IsValueType || !Item8.Equals(null))
 					hash = (hash * -1521134295) + Item8.GetHashCode();
-				if (Item9.Equals(default(T9)))
+				if (TypeCache<T9>.IsValueType || !Item9.Equals(null))
 					hash = (hash * -1521134295) + Item9.GetHashCode();
-				if (Item10.Equals(default(T10)))
+				if (TypeCache<T10>.IsValueType || !Item10.Equals(null))
 					hash = (hash * -1521134295) + Item10.GetHashCode();
-				if (Item11.Equals(default(T11)))
+				if (TypeCache<T11>.IsValueType || !Item11.Equals(null))
 					hash = (hash * -1521134295) + Item11.GetHashCode();
-				if (Item12.Equals(default(T12)))
+				if (TypeCache<T12>.IsValueType || !Item12.Equals(null))
 					hash = (hash * -1521134295) + Item12.GetHashCode();
-				if (Item13.Equals(default(T13)))
+				if (TypeCache<T13>.IsValueType || !Item13.Equals(null))
 					hash = (hash * -1521134295) + Item13.GetHashCode();
-				if (Item14.Equals(default(T14)))
+				if (TypeCache<T14>.IsValueType || !Item14.Equals(null))
 					hash = (hash * -1521134295) + Item14.GetHashCode();
-				if (Item15.Equals(default(T15)))
+				if (TypeCache<T15>.IsValueType || !Item15.Equals(null))
 					hash = (hash * -1521134295) + Item15.GetHashCode();
-				if (Item16.Equals(default(T16)))
+				if (TypeCache<T16>.IsValueType || !Item16.Equals(null))
 					hash = (hash * -1521134295) + Item16.GetHashCode();
-				if (Item17.Equals(default(T17)))
+				if (TypeCache<T17>.IsValueType || !Item17.Equals(null))
 					hash = (hash * -1521134295) + Item17.GetHashCode();
-				if (Item18.Equals(default(T18)))
+				if (TypeCache<T18>.IsValueType || !Item18.Equals(null))
 					hash = (hash * -1521134295) + Item18.GetHashCode();
-				if (Item19.Equals(default(T19)))
+				if (TypeCache<T19>.IsValueType || !Item19.Equals(null))
 					hash = (hash * -1521134295) + Item19.GetHashCode();
-				if (Item20.Equals(default(T20)))
+				if (TypeCache<T20>.IsValueType || !Item20.Equals(null))
 					hash = (hash * -1521134295) + Item20.GetHashCode();
-				if (Item21.Equals(default(T21)))
+				if (TypeCache<T21>.IsValueType || !Item21.Equals(null))
 					hash = (hash * -1521134295) + Item21.GetHashCode();
-				if (Item22.Equals(default(T22)))
+				if (TypeCache<T22>.IsValueType || !Item22.Equals(null))
 					hash = (hash * -1521134295) + Item22.GetHashCode();
-				if (Item23.Equals(default(T23)))
+				if (TypeCache<T23>.IsValueType || !Item23.Equals(null))
 					hash = (hash * -1521134295) + Item23.GetHashCode();
-				if (Item24.Equals(default(T24)))
+				if (TypeCache<T24>.IsValueType || !Item24.Equals(null))
 					hash = (hash * -1521134295) + Item24.GetHashCode();
 			}
 			return hash;
@@ -3334,55 +3334,55 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
-				if (Item6.Equals(default(T6)))
+				if (TypeCache<T6>.IsValueType || !Item6.Equals(null))
 					hash = (hash * -1521134295) + Item6.GetHashCode();
-				if (Item7.Equals(default(T7)))
+				if (TypeCache<T7>.IsValueType || !Item7.Equals(null))
 					hash = (hash * -1521134295) + Item7.GetHashCode();
-				if (Item8.Equals(default(T8)))
+				if (TypeCache<T8>.IsValueType || !Item8.Equals(null))
 					hash = (hash * -1521134295) + Item8.GetHashCode();
-				if (Item9.Equals(default(T9)))
+				if (TypeCache<T9>.IsValueType || !Item9.Equals(null))
 					hash = (hash * -1521134295) + Item9.GetHashCode();
-				if (Item10.Equals(default(T10)))
+				if (TypeCache<T10>.IsValueType || !Item10.Equals(null))
 					hash = (hash * -1521134295) + Item10.GetHashCode();
-				if (Item11.Equals(default(T11)))
+				if (TypeCache<T11>.IsValueType || !Item11.Equals(null))
 					hash = (hash * -1521134295) + Item11.GetHashCode();
-				if (Item12.Equals(default(T12)))
+				if (TypeCache<T12>.IsValueType || !Item12.Equals(null))
 					hash = (hash * -1521134295) + Item12.GetHashCode();
-				if (Item13.Equals(default(T13)))
+				if (TypeCache<T13>.IsValueType || !Item13.Equals(null))
 					hash = (hash * -1521134295) + Item13.GetHashCode();
-				if (Item14.Equals(default(T14)))
+				if (TypeCache<T14>.IsValueType || !Item14.Equals(null))
 					hash = (hash * -1521134295) + Item14.GetHashCode();
-				if (Item15.Equals(default(T15)))
+				if (TypeCache<T15>.IsValueType || !Item15.Equals(null))
 					hash = (hash * -1521134295) + Item15.GetHashCode();
-				if (Item16.Equals(default(T16)))
+				if (TypeCache<T16>.IsValueType || !Item16.Equals(null))
 					hash = (hash * -1521134295) + Item16.GetHashCode();
-				if (Item17.Equals(default(T17)))
+				if (TypeCache<T17>.IsValueType || !Item17.Equals(null))
 					hash = (hash * -1521134295) + Item17.GetHashCode();
-				if (Item18.Equals(default(T18)))
+				if (TypeCache<T18>.IsValueType || !Item18.Equals(null))
 					hash = (hash * -1521134295) + Item18.GetHashCode();
-				if (Item19.Equals(default(T19)))
+				if (TypeCache<T19>.IsValueType || !Item19.Equals(null))
 					hash = (hash * -1521134295) + Item19.GetHashCode();
-				if (Item20.Equals(default(T20)))
+				if (TypeCache<T20>.IsValueType || !Item20.Equals(null))
 					hash = (hash * -1521134295) + Item20.GetHashCode();
-				if (Item21.Equals(default(T21)))
+				if (TypeCache<T21>.IsValueType || !Item21.Equals(null))
 					hash = (hash * -1521134295) + Item21.GetHashCode();
-				if (Item22.Equals(default(T22)))
+				if (TypeCache<T22>.IsValueType || !Item22.Equals(null))
 					hash = (hash * -1521134295) + Item22.GetHashCode();
-				if (Item23.Equals(default(T23)))
+				if (TypeCache<T23>.IsValueType || !Item23.Equals(null))
 					hash = (hash * -1521134295) + Item23.GetHashCode();
-				if (Item24.Equals(default(T24)))
+				if (TypeCache<T24>.IsValueType || !Item24.Equals(null))
 					hash = (hash * -1521134295) + Item24.GetHashCode();
-				if (Item25.Equals(default(T25)))
+				if (TypeCache<T25>.IsValueType || !Item25.Equals(null))
 					hash = (hash * -1521134295) + Item25.GetHashCode();
 			}
 			return hash;
@@ -3557,57 +3557,57 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
-				if (Item6.Equals(default(T6)))
+				if (TypeCache<T6>.IsValueType || !Item6.Equals(null))
 					hash = (hash * -1521134295) + Item6.GetHashCode();
-				if (Item7.Equals(default(T7)))
+				if (TypeCache<T7>.IsValueType || !Item7.Equals(null))
 					hash = (hash * -1521134295) + Item7.GetHashCode();
-				if (Item8.Equals(default(T8)))
+				if (TypeCache<T8>.IsValueType || !Item8.Equals(null))
 					hash = (hash * -1521134295) + Item8.GetHashCode();
-				if (Item9.Equals(default(T9)))
+				if (TypeCache<T9>.IsValueType || !Item9.Equals(null))
 					hash = (hash * -1521134295) + Item9.GetHashCode();
-				if (Item10.Equals(default(T10)))
+				if (TypeCache<T10>.IsValueType || !Item10.Equals(null))
 					hash = (hash * -1521134295) + Item10.GetHashCode();
-				if (Item11.Equals(default(T11)))
+				if (TypeCache<T11>.IsValueType || !Item11.Equals(null))
 					hash = (hash * -1521134295) + Item11.GetHashCode();
-				if (Item12.Equals(default(T12)))
+				if (TypeCache<T12>.IsValueType || !Item12.Equals(null))
 					hash = (hash * -1521134295) + Item12.GetHashCode();
-				if (Item13.Equals(default(T13)))
+				if (TypeCache<T13>.IsValueType || !Item13.Equals(null))
 					hash = (hash * -1521134295) + Item13.GetHashCode();
-				if (Item14.Equals(default(T14)))
+				if (TypeCache<T14>.IsValueType || !Item14.Equals(null))
 					hash = (hash * -1521134295) + Item14.GetHashCode();
-				if (Item15.Equals(default(T15)))
+				if (TypeCache<T15>.IsValueType || !Item15.Equals(null))
 					hash = (hash * -1521134295) + Item15.GetHashCode();
-				if (Item16.Equals(default(T16)))
+				if (TypeCache<T16>.IsValueType || !Item16.Equals(null))
 					hash = (hash * -1521134295) + Item16.GetHashCode();
-				if (Item17.Equals(default(T17)))
+				if (TypeCache<T17>.IsValueType || !Item17.Equals(null))
 					hash = (hash * -1521134295) + Item17.GetHashCode();
-				if (Item18.Equals(default(T18)))
+				if (TypeCache<T18>.IsValueType || !Item18.Equals(null))
 					hash = (hash * -1521134295) + Item18.GetHashCode();
-				if (Item19.Equals(default(T19)))
+				if (TypeCache<T19>.IsValueType || !Item19.Equals(null))
 					hash = (hash * -1521134295) + Item19.GetHashCode();
-				if (Item20.Equals(default(T20)))
+				if (TypeCache<T20>.IsValueType || !Item20.Equals(null))
 					hash = (hash * -1521134295) + Item20.GetHashCode();
-				if (Item21.Equals(default(T21)))
+				if (TypeCache<T21>.IsValueType || !Item21.Equals(null))
 					hash = (hash * -1521134295) + Item21.GetHashCode();
-				if (Item22.Equals(default(T22)))
+				if (TypeCache<T22>.IsValueType || !Item22.Equals(null))
 					hash = (hash * -1521134295) + Item22.GetHashCode();
-				if (Item23.Equals(default(T23)))
+				if (TypeCache<T23>.IsValueType || !Item23.Equals(null))
 					hash = (hash * -1521134295) + Item23.GetHashCode();
-				if (Item24.Equals(default(T24)))
+				if (TypeCache<T24>.IsValueType || !Item24.Equals(null))
 					hash = (hash * -1521134295) + Item24.GetHashCode();
-				if (Item25.Equals(default(T25)))
+				if (TypeCache<T25>.IsValueType || !Item25.Equals(null))
 					hash = (hash * -1521134295) + Item25.GetHashCode();
-				if (Item26.Equals(default(T26)))
+				if (TypeCache<T26>.IsValueType || !Item26.Equals(null))
 					hash = (hash * -1521134295) + Item26.GetHashCode();
 			}
 			return hash;
@@ -3787,59 +3787,59 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
-				if (Item6.Equals(default(T6)))
+				if (TypeCache<T6>.IsValueType || !Item6.Equals(null))
 					hash = (hash * -1521134295) + Item6.GetHashCode();
-				if (Item7.Equals(default(T7)))
+				if (TypeCache<T7>.IsValueType || !Item7.Equals(null))
 					hash = (hash * -1521134295) + Item7.GetHashCode();
-				if (Item8.Equals(default(T8)))
+				if (TypeCache<T8>.IsValueType || !Item8.Equals(null))
 					hash = (hash * -1521134295) + Item8.GetHashCode();
-				if (Item9.Equals(default(T9)))
+				if (TypeCache<T9>.IsValueType || !Item9.Equals(null))
 					hash = (hash * -1521134295) + Item9.GetHashCode();
-				if (Item10.Equals(default(T10)))
+				if (TypeCache<T10>.IsValueType || !Item10.Equals(null))
 					hash = (hash * -1521134295) + Item10.GetHashCode();
-				if (Item11.Equals(default(T11)))
+				if (TypeCache<T11>.IsValueType || !Item11.Equals(null))
 					hash = (hash * -1521134295) + Item11.GetHashCode();
-				if (Item12.Equals(default(T12)))
+				if (TypeCache<T12>.IsValueType || !Item12.Equals(null))
 					hash = (hash * -1521134295) + Item12.GetHashCode();
-				if (Item13.Equals(default(T13)))
+				if (TypeCache<T13>.IsValueType || !Item13.Equals(null))
 					hash = (hash * -1521134295) + Item13.GetHashCode();
-				if (Item14.Equals(default(T14)))
+				if (TypeCache<T14>.IsValueType || !Item14.Equals(null))
 					hash = (hash * -1521134295) + Item14.GetHashCode();
-				if (Item15.Equals(default(T15)))
+				if (TypeCache<T15>.IsValueType || !Item15.Equals(null))
 					hash = (hash * -1521134295) + Item15.GetHashCode();
-				if (Item16.Equals(default(T16)))
+				if (TypeCache<T16>.IsValueType || !Item16.Equals(null))
 					hash = (hash * -1521134295) + Item16.GetHashCode();
-				if (Item17.Equals(default(T17)))
+				if (TypeCache<T17>.IsValueType || !Item17.Equals(null))
 					hash = (hash * -1521134295) + Item17.GetHashCode();
-				if (Item18.Equals(default(T18)))
+				if (TypeCache<T18>.IsValueType || !Item18.Equals(null))
 					hash = (hash * -1521134295) + Item18.GetHashCode();
-				if (Item19.Equals(default(T19)))
+				if (TypeCache<T19>.IsValueType || !Item19.Equals(null))
 					hash = (hash * -1521134295) + Item19.GetHashCode();
-				if (Item20.Equals(default(T20)))
+				if (TypeCache<T20>.IsValueType || !Item20.Equals(null))
 					hash = (hash * -1521134295) + Item20.GetHashCode();
-				if (Item21.Equals(default(T21)))
+				if (TypeCache<T21>.IsValueType || !Item21.Equals(null))
 					hash = (hash * -1521134295) + Item21.GetHashCode();
-				if (Item22.Equals(default(T22)))
+				if (TypeCache<T22>.IsValueType || !Item22.Equals(null))
 					hash = (hash * -1521134295) + Item22.GetHashCode();
-				if (Item23.Equals(default(T23)))
+				if (TypeCache<T23>.IsValueType || !Item23.Equals(null))
 					hash = (hash * -1521134295) + Item23.GetHashCode();
-				if (Item24.Equals(default(T24)))
+				if (TypeCache<T24>.IsValueType || !Item24.Equals(null))
 					hash = (hash * -1521134295) + Item24.GetHashCode();
-				if (Item25.Equals(default(T25)))
+				if (TypeCache<T25>.IsValueType || !Item25.Equals(null))
 					hash = (hash * -1521134295) + Item25.GetHashCode();
-				if (Item26.Equals(default(T26)))
+				if (TypeCache<T26>.IsValueType || !Item26.Equals(null))
 					hash = (hash * -1521134295) + Item26.GetHashCode();
-				if (Item27.Equals(default(T27)))
+				if (TypeCache<T27>.IsValueType || !Item27.Equals(null))
 					hash = (hash * -1521134295) + Item27.GetHashCode();
 			}
 			return hash;
@@ -4024,61 +4024,61 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
-				if (Item6.Equals(default(T6)))
+				if (TypeCache<T6>.IsValueType || !Item6.Equals(null))
 					hash = (hash * -1521134295) + Item6.GetHashCode();
-				if (Item7.Equals(default(T7)))
+				if (TypeCache<T7>.IsValueType || !Item7.Equals(null))
 					hash = (hash * -1521134295) + Item7.GetHashCode();
-				if (Item8.Equals(default(T8)))
+				if (TypeCache<T8>.IsValueType || !Item8.Equals(null))
 					hash = (hash * -1521134295) + Item8.GetHashCode();
-				if (Item9.Equals(default(T9)))
+				if (TypeCache<T9>.IsValueType || !Item9.Equals(null))
 					hash = (hash * -1521134295) + Item9.GetHashCode();
-				if (Item10.Equals(default(T10)))
+				if (TypeCache<T10>.IsValueType || !Item10.Equals(null))
 					hash = (hash * -1521134295) + Item10.GetHashCode();
-				if (Item11.Equals(default(T11)))
+				if (TypeCache<T11>.IsValueType || !Item11.Equals(null))
 					hash = (hash * -1521134295) + Item11.GetHashCode();
-				if (Item12.Equals(default(T12)))
+				if (TypeCache<T12>.IsValueType || !Item12.Equals(null))
 					hash = (hash * -1521134295) + Item12.GetHashCode();
-				if (Item13.Equals(default(T13)))
+				if (TypeCache<T13>.IsValueType || !Item13.Equals(null))
 					hash = (hash * -1521134295) + Item13.GetHashCode();
-				if (Item14.Equals(default(T14)))
+				if (TypeCache<T14>.IsValueType || !Item14.Equals(null))
 					hash = (hash * -1521134295) + Item14.GetHashCode();
-				if (Item15.Equals(default(T15)))
+				if (TypeCache<T15>.IsValueType || !Item15.Equals(null))
 					hash = (hash * -1521134295) + Item15.GetHashCode();
-				if (Item16.Equals(default(T16)))
+				if (TypeCache<T16>.IsValueType || !Item16.Equals(null))
 					hash = (hash * -1521134295) + Item16.GetHashCode();
-				if (Item17.Equals(default(T17)))
+				if (TypeCache<T17>.IsValueType || !Item17.Equals(null))
 					hash = (hash * -1521134295) + Item17.GetHashCode();
-				if (Item18.Equals(default(T18)))
+				if (TypeCache<T18>.IsValueType || !Item18.Equals(null))
 					hash = (hash * -1521134295) + Item18.GetHashCode();
-				if (Item19.Equals(default(T19)))
+				if (TypeCache<T19>.IsValueType || !Item19.Equals(null))
 					hash = (hash * -1521134295) + Item19.GetHashCode();
-				if (Item20.Equals(default(T20)))
+				if (TypeCache<T20>.IsValueType || !Item20.Equals(null))
 					hash = (hash * -1521134295) + Item20.GetHashCode();
-				if (Item21.Equals(default(T21)))
+				if (TypeCache<T21>.IsValueType || !Item21.Equals(null))
 					hash = (hash * -1521134295) + Item21.GetHashCode();
-				if (Item22.Equals(default(T22)))
+				if (TypeCache<T22>.IsValueType || !Item22.Equals(null))
 					hash = (hash * -1521134295) + Item22.GetHashCode();
-				if (Item23.Equals(default(T23)))
+				if (TypeCache<T23>.IsValueType || !Item23.Equals(null))
 					hash = (hash * -1521134295) + Item23.GetHashCode();
-				if (Item24.Equals(default(T24)))
+				if (TypeCache<T24>.IsValueType || !Item24.Equals(null))
 					hash = (hash * -1521134295) + Item24.GetHashCode();
-				if (Item25.Equals(default(T25)))
+				if (TypeCache<T25>.IsValueType || !Item25.Equals(null))
 					hash = (hash * -1521134295) + Item25.GetHashCode();
-				if (Item26.Equals(default(T26)))
+				if (TypeCache<T26>.IsValueType || !Item26.Equals(null))
 					hash = (hash * -1521134295) + Item26.GetHashCode();
-				if (Item27.Equals(default(T27)))
+				if (TypeCache<T27>.IsValueType || !Item27.Equals(null))
 					hash = (hash * -1521134295) + Item27.GetHashCode();
-				if (Item28.Equals(default(T28)))
+				if (TypeCache<T28>.IsValueType || !Item28.Equals(null))
 					hash = (hash * -1521134295) + Item28.GetHashCode();
 			}
 			return hash;
@@ -4268,63 +4268,63 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
-				if (Item6.Equals(default(T6)))
+				if (TypeCache<T6>.IsValueType || !Item6.Equals(null))
 					hash = (hash * -1521134295) + Item6.GetHashCode();
-				if (Item7.Equals(default(T7)))
+				if (TypeCache<T7>.IsValueType || !Item7.Equals(null))
 					hash = (hash * -1521134295) + Item7.GetHashCode();
-				if (Item8.Equals(default(T8)))
+				if (TypeCache<T8>.IsValueType || !Item8.Equals(null))
 					hash = (hash * -1521134295) + Item8.GetHashCode();
-				if (Item9.Equals(default(T9)))
+				if (TypeCache<T9>.IsValueType || !Item9.Equals(null))
 					hash = (hash * -1521134295) + Item9.GetHashCode();
-				if (Item10.Equals(default(T10)))
+				if (TypeCache<T10>.IsValueType || !Item10.Equals(null))
 					hash = (hash * -1521134295) + Item10.GetHashCode();
-				if (Item11.Equals(default(T11)))
+				if (TypeCache<T11>.IsValueType || !Item11.Equals(null))
 					hash = (hash * -1521134295) + Item11.GetHashCode();
-				if (Item12.Equals(default(T12)))
+				if (TypeCache<T12>.IsValueType || !Item12.Equals(null))
 					hash = (hash * -1521134295) + Item12.GetHashCode();
-				if (Item13.Equals(default(T13)))
+				if (TypeCache<T13>.IsValueType || !Item13.Equals(null))
 					hash = (hash * -1521134295) + Item13.GetHashCode();
-				if (Item14.Equals(default(T14)))
+				if (TypeCache<T14>.IsValueType || !Item14.Equals(null))
 					hash = (hash * -1521134295) + Item14.GetHashCode();
-				if (Item15.Equals(default(T15)))
+				if (TypeCache<T15>.IsValueType || !Item15.Equals(null))
 					hash = (hash * -1521134295) + Item15.GetHashCode();
-				if (Item16.Equals(default(T16)))
+				if (TypeCache<T16>.IsValueType || !Item16.Equals(null))
 					hash = (hash * -1521134295) + Item16.GetHashCode();
-				if (Item17.Equals(default(T17)))
+				if (TypeCache<T17>.IsValueType || !Item17.Equals(null))
 					hash = (hash * -1521134295) + Item17.GetHashCode();
-				if (Item18.Equals(default(T18)))
+				if (TypeCache<T18>.IsValueType || !Item18.Equals(null))
 					hash = (hash * -1521134295) + Item18.GetHashCode();
-				if (Item19.Equals(default(T19)))
+				if (TypeCache<T19>.IsValueType || !Item19.Equals(null))
 					hash = (hash * -1521134295) + Item19.GetHashCode();
-				if (Item20.Equals(default(T20)))
+				if (TypeCache<T20>.IsValueType || !Item20.Equals(null))
 					hash = (hash * -1521134295) + Item20.GetHashCode();
-				if (Item21.Equals(default(T21)))
+				if (TypeCache<T21>.IsValueType || !Item21.Equals(null))
 					hash = (hash * -1521134295) + Item21.GetHashCode();
-				if (Item22.Equals(default(T22)))
+				if (TypeCache<T22>.IsValueType || !Item22.Equals(null))
 					hash = (hash * -1521134295) + Item22.GetHashCode();
-				if (Item23.Equals(default(T23)))
+				if (TypeCache<T23>.IsValueType || !Item23.Equals(null))
 					hash = (hash * -1521134295) + Item23.GetHashCode();
-				if (Item24.Equals(default(T24)))
+				if (TypeCache<T24>.IsValueType || !Item24.Equals(null))
 					hash = (hash * -1521134295) + Item24.GetHashCode();
-				if (Item25.Equals(default(T25)))
+				if (TypeCache<T25>.IsValueType || !Item25.Equals(null))
 					hash = (hash * -1521134295) + Item25.GetHashCode();
-				if (Item26.Equals(default(T26)))
+				if (TypeCache<T26>.IsValueType || !Item26.Equals(null))
 					hash = (hash * -1521134295) + Item26.GetHashCode();
-				if (Item27.Equals(default(T27)))
+				if (TypeCache<T27>.IsValueType || !Item27.Equals(null))
 					hash = (hash * -1521134295) + Item27.GetHashCode();
-				if (Item28.Equals(default(T28)))
+				if (TypeCache<T28>.IsValueType || !Item28.Equals(null))
 					hash = (hash * -1521134295) + Item28.GetHashCode();
-				if (Item29.Equals(default(T29)))
+				if (TypeCache<T29>.IsValueType || !Item29.Equals(null))
 					hash = (hash * -1521134295) + Item29.GetHashCode();
 			}
 			return hash;
@@ -4519,65 +4519,65 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
-				if (Item6.Equals(default(T6)))
+				if (TypeCache<T6>.IsValueType || !Item6.Equals(null))
 					hash = (hash * -1521134295) + Item6.GetHashCode();
-				if (Item7.Equals(default(T7)))
+				if (TypeCache<T7>.IsValueType || !Item7.Equals(null))
 					hash = (hash * -1521134295) + Item7.GetHashCode();
-				if (Item8.Equals(default(T8)))
+				if (TypeCache<T8>.IsValueType || !Item8.Equals(null))
 					hash = (hash * -1521134295) + Item8.GetHashCode();
-				if (Item9.Equals(default(T9)))
+				if (TypeCache<T9>.IsValueType || !Item9.Equals(null))
 					hash = (hash * -1521134295) + Item9.GetHashCode();
-				if (Item10.Equals(default(T10)))
+				if (TypeCache<T10>.IsValueType || !Item10.Equals(null))
 					hash = (hash * -1521134295) + Item10.GetHashCode();
-				if (Item11.Equals(default(T11)))
+				if (TypeCache<T11>.IsValueType || !Item11.Equals(null))
 					hash = (hash * -1521134295) + Item11.GetHashCode();
-				if (Item12.Equals(default(T12)))
+				if (TypeCache<T12>.IsValueType || !Item12.Equals(null))
 					hash = (hash * -1521134295) + Item12.GetHashCode();
-				if (Item13.Equals(default(T13)))
+				if (TypeCache<T13>.IsValueType || !Item13.Equals(null))
 					hash = (hash * -1521134295) + Item13.GetHashCode();
-				if (Item14.Equals(default(T14)))
+				if (TypeCache<T14>.IsValueType || !Item14.Equals(null))
 					hash = (hash * -1521134295) + Item14.GetHashCode();
-				if (Item15.Equals(default(T15)))
+				if (TypeCache<T15>.IsValueType || !Item15.Equals(null))
 					hash = (hash * -1521134295) + Item15.GetHashCode();
-				if (Item16.Equals(default(T16)))
+				if (TypeCache<T16>.IsValueType || !Item16.Equals(null))
 					hash = (hash * -1521134295) + Item16.GetHashCode();
-				if (Item17.Equals(default(T17)))
+				if (TypeCache<T17>.IsValueType || !Item17.Equals(null))
 					hash = (hash * -1521134295) + Item17.GetHashCode();
-				if (Item18.Equals(default(T18)))
+				if (TypeCache<T18>.IsValueType || !Item18.Equals(null))
 					hash = (hash * -1521134295) + Item18.GetHashCode();
-				if (Item19.Equals(default(T19)))
+				if (TypeCache<T19>.IsValueType || !Item19.Equals(null))
 					hash = (hash * -1521134295) + Item19.GetHashCode();
-				if (Item20.Equals(default(T20)))
+				if (TypeCache<T20>.IsValueType || !Item20.Equals(null))
 					hash = (hash * -1521134295) + Item20.GetHashCode();
-				if (Item21.Equals(default(T21)))
+				if (TypeCache<T21>.IsValueType || !Item21.Equals(null))
 					hash = (hash * -1521134295) + Item21.GetHashCode();
-				if (Item22.Equals(default(T22)))
+				if (TypeCache<T22>.IsValueType || !Item22.Equals(null))
 					hash = (hash * -1521134295) + Item22.GetHashCode();
-				if (Item23.Equals(default(T23)))
+				if (TypeCache<T23>.IsValueType || !Item23.Equals(null))
 					hash = (hash * -1521134295) + Item23.GetHashCode();
-				if (Item24.Equals(default(T24)))
+				if (TypeCache<T24>.IsValueType || !Item24.Equals(null))
 					hash = (hash * -1521134295) + Item24.GetHashCode();
-				if (Item25.Equals(default(T25)))
+				if (TypeCache<T25>.IsValueType || !Item25.Equals(null))
 					hash = (hash * -1521134295) + Item25.GetHashCode();
-				if (Item26.Equals(default(T26)))
+				if (TypeCache<T26>.IsValueType || !Item26.Equals(null))
 					hash = (hash * -1521134295) + Item26.GetHashCode();
-				if (Item27.Equals(default(T27)))
+				if (TypeCache<T27>.IsValueType || !Item27.Equals(null))
 					hash = (hash * -1521134295) + Item27.GetHashCode();
-				if (Item28.Equals(default(T28)))
+				if (TypeCache<T28>.IsValueType || !Item28.Equals(null))
 					hash = (hash * -1521134295) + Item28.GetHashCode();
-				if (Item29.Equals(default(T29)))
+				if (TypeCache<T29>.IsValueType || !Item29.Equals(null))
 					hash = (hash * -1521134295) + Item29.GetHashCode();
-				if (Item30.Equals(default(T30)))
+				if (TypeCache<T30>.IsValueType || !Item30.Equals(null))
 					hash = (hash * -1521134295) + Item30.GetHashCode();
 			}
 			return hash;
@@ -4777,67 +4777,67 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
-				if (Item6.Equals(default(T6)))
+				if (TypeCache<T6>.IsValueType || !Item6.Equals(null))
 					hash = (hash * -1521134295) + Item6.GetHashCode();
-				if (Item7.Equals(default(T7)))
+				if (TypeCache<T7>.IsValueType || !Item7.Equals(null))
 					hash = (hash * -1521134295) + Item7.GetHashCode();
-				if (Item8.Equals(default(T8)))
+				if (TypeCache<T8>.IsValueType || !Item8.Equals(null))
 					hash = (hash * -1521134295) + Item8.GetHashCode();
-				if (Item9.Equals(default(T9)))
+				if (TypeCache<T9>.IsValueType || !Item9.Equals(null))
 					hash = (hash * -1521134295) + Item9.GetHashCode();
-				if (Item10.Equals(default(T10)))
+				if (TypeCache<T10>.IsValueType || !Item10.Equals(null))
 					hash = (hash * -1521134295) + Item10.GetHashCode();
-				if (Item11.Equals(default(T11)))
+				if (TypeCache<T11>.IsValueType || !Item11.Equals(null))
 					hash = (hash * -1521134295) + Item11.GetHashCode();
-				if (Item12.Equals(default(T12)))
+				if (TypeCache<T12>.IsValueType || !Item12.Equals(null))
 					hash = (hash * -1521134295) + Item12.GetHashCode();
-				if (Item13.Equals(default(T13)))
+				if (TypeCache<T13>.IsValueType || !Item13.Equals(null))
 					hash = (hash * -1521134295) + Item13.GetHashCode();
-				if (Item14.Equals(default(T14)))
+				if (TypeCache<T14>.IsValueType || !Item14.Equals(null))
 					hash = (hash * -1521134295) + Item14.GetHashCode();
-				if (Item15.Equals(default(T15)))
+				if (TypeCache<T15>.IsValueType || !Item15.Equals(null))
 					hash = (hash * -1521134295) + Item15.GetHashCode();
-				if (Item16.Equals(default(T16)))
+				if (TypeCache<T16>.IsValueType || !Item16.Equals(null))
 					hash = (hash * -1521134295) + Item16.GetHashCode();
-				if (Item17.Equals(default(T17)))
+				if (TypeCache<T17>.IsValueType || !Item17.Equals(null))
 					hash = (hash * -1521134295) + Item17.GetHashCode();
-				if (Item18.Equals(default(T18)))
+				if (TypeCache<T18>.IsValueType || !Item18.Equals(null))
 					hash = (hash * -1521134295) + Item18.GetHashCode();
-				if (Item19.Equals(default(T19)))
+				if (TypeCache<T19>.IsValueType || !Item19.Equals(null))
 					hash = (hash * -1521134295) + Item19.GetHashCode();
-				if (Item20.Equals(default(T20)))
+				if (TypeCache<T20>.IsValueType || !Item20.Equals(null))
 					hash = (hash * -1521134295) + Item20.GetHashCode();
-				if (Item21.Equals(default(T21)))
+				if (TypeCache<T21>.IsValueType || !Item21.Equals(null))
 					hash = (hash * -1521134295) + Item21.GetHashCode();
-				if (Item22.Equals(default(T22)))
+				if (TypeCache<T22>.IsValueType || !Item22.Equals(null))
 					hash = (hash * -1521134295) + Item22.GetHashCode();
-				if (Item23.Equals(default(T23)))
+				if (TypeCache<T23>.IsValueType || !Item23.Equals(null))
 					hash = (hash * -1521134295) + Item23.GetHashCode();
-				if (Item24.Equals(default(T24)))
+				if (TypeCache<T24>.IsValueType || !Item24.Equals(null))
 					hash = (hash * -1521134295) + Item24.GetHashCode();
-				if (Item25.Equals(default(T25)))
+				if (TypeCache<T25>.IsValueType || !Item25.Equals(null))
 					hash = (hash * -1521134295) + Item25.GetHashCode();
-				if (Item26.Equals(default(T26)))
+				if (TypeCache<T26>.IsValueType || !Item26.Equals(null))
 					hash = (hash * -1521134295) + Item26.GetHashCode();
-				if (Item27.Equals(default(T27)))
+				if (TypeCache<T27>.IsValueType || !Item27.Equals(null))
 					hash = (hash * -1521134295) + Item27.GetHashCode();
-				if (Item28.Equals(default(T28)))
+				if (TypeCache<T28>.IsValueType || !Item28.Equals(null))
 					hash = (hash * -1521134295) + Item28.GetHashCode();
-				if (Item29.Equals(default(T29)))
+				if (TypeCache<T29>.IsValueType || !Item29.Equals(null))
 					hash = (hash * -1521134295) + Item29.GetHashCode();
-				if (Item30.Equals(default(T30)))
+				if (TypeCache<T30>.IsValueType || !Item30.Equals(null))
 					hash = (hash * -1521134295) + Item30.GetHashCode();
-				if (Item31.Equals(default(T31)))
+				if (TypeCache<T31>.IsValueType || !Item31.Equals(null))
 					hash = (hash * -1521134295) + Item31.GetHashCode();
 			}
 			return hash;
@@ -5042,69 +5042,69 @@ namespace Mutuples {
 				throw new ArgumentNullException(nameof(comparer));
 			var hash = 0x51ed270b;
 			unchecked {
-				if (Item1.Equals(default(T1)))
+				if (TypeCache<T1>.IsValueType || !Item1.Equals(null))
 					hash = (hash * -1521134295) + Item1.GetHashCode();
-				if (Item2.Equals(default(T2)))
+				if (TypeCache<T2>.IsValueType || !Item2.Equals(null))
 					hash = (hash * -1521134295) + Item2.GetHashCode();
-				if (Item3.Equals(default(T3)))
+				if (TypeCache<T3>.IsValueType || !Item3.Equals(null))
 					hash = (hash * -1521134295) + Item3.GetHashCode();
-				if (Item4.Equals(default(T4)))
+				if (TypeCache<T4>.IsValueType || !Item4.Equals(null))
 					hash = (hash * -1521134295) + Item4.GetHashCode();
-				if (Item5.Equals(default(T5)))
+				if (TypeCache<T5>.IsValueType || !Item5.Equals(null))
 					hash = (hash * -1521134295) + Item5.GetHashCode();
-				if (Item6.Equals(default(T6)))
+				if (TypeCache<T6>.IsValueType || !Item6.Equals(null))
 					hash = (hash * -1521134295) + Item6.GetHashCode();
-				if (Item7.Equals(default(T7)))
+				if (TypeCache<T7>.IsValueType || !Item7.Equals(null))
 					hash = (hash * -1521134295) + Item7.GetHashCode();
-				if (Item8.Equals(default(T8)))
+				if (TypeCache<T8>.IsValueType || !Item8.Equals(null))
 					hash = (hash * -1521134295) + Item8.GetHashCode();
-				if (Item9.Equals(default(T9)))
+				if (TypeCache<T9>.IsValueType || !Item9.Equals(null))
 					hash = (hash * -1521134295) + Item9.GetHashCode();
-				if (Item10.Equals(default(T10)))
+				if (TypeCache<T10>.IsValueType || !Item10.Equals(null))
 					hash = (hash * -1521134295) + Item10.GetHashCode();
-				if (Item11.Equals(default(T11)))
+				if (TypeCache<T11>.IsValueType || !Item11.Equals(null))
 					hash = (hash * -1521134295) + Item11.GetHashCode();
-				if (Item12.Equals(default(T12)))
+				if (TypeCache<T12>.IsValueType || !Item12.Equals(null))
 					hash = (hash * -1521134295) + Item12.GetHashCode();
-				if (Item13.Equals(default(T13)))
+				if (TypeCache<T13>.IsValueType || !Item13.Equals(null))
 					hash = (hash * -1521134295) + Item13.GetHashCode();
-				if (Item14.Equals(default(T14)))
+				if (TypeCache<T14>.IsValueType || !Item14.Equals(null))
 					hash = (hash * -1521134295) + Item14.GetHashCode();
-				if (Item15.Equals(default(T15)))
+				if (TypeCache<T15>.IsValueType || !Item15.Equals(null))
 					hash = (hash * -1521134295) + Item15.GetHashCode();
-				if (Item16.Equals(default(T16)))
+				if (TypeCache<T16>.IsValueType || !Item16.Equals(null))
 					hash = (hash * -1521134295) + Item16.GetHashCode();
-				if (Item17.Equals(default(T17)))
+				if (TypeCache<T17>.IsValueType || !Item17.Equals(null))
 					hash = (hash * -1521134295) + Item17.GetHashCode();
-				if (Item18.Equals(default(T18)))
+				if (TypeCache<T18>.IsValueType || !Item18.Equals(null))
 					hash = (hash * -1521134295) + Item18.GetHashCode();
-				if (Item19.Equals(default(T19)))
+				if (TypeCache<T19>.IsValueType || !Item19.Equals(null))
 					hash = (hash * -1521134295) + Item19.GetHashCode();
-				if (Item20.Equals(default(T20)))
+				if (TypeCache<T20>.IsValueType || !Item20.Equals(null))
 					hash = (hash * -1521134295) + Item20.GetHashCode();
-				if (Item21.Equals(default(T21)))
+				if (TypeCache<T21>.IsValueType || !Item21.Equals(null))
 					hash = (hash * -1521134295) + Item21.GetHashCode();
-				if (Item22.Equals(default(T22)))
+				if (TypeCache<T22>.IsValueType || !Item22.Equals(null))
 					hash = (hash * -1521134295) + Item22.GetHashCode();
-				if (Item23.Equals(default(T23)))
+				if (TypeCache<T23>.IsValueType || !Item23.Equals(null))
 					hash = (hash * -1521134295) + Item23.GetHashCode();
-				if (Item24.Equals(default(T24)))
+				if (TypeCache<T24>.IsValueType || !Item24.Equals(null))
 					hash = (hash * -1521134295) + Item24.GetHashCode();
-				if (Item25.Equals(default(T25)))
+				if (TypeCache<T25>.IsValueType || !Item25.Equals(null))
 					hash = (hash * -1521134295) + Item25.GetHashCode();
-				if (Item26.Equals(default(T26)))
+				if (TypeCache<T26>.IsValueType || !Item26.Equals(null))
 					hash = (hash * -1521134295) + Item26.GetHashCode();
-				if (Item27.Equals(default(T27)))
+				if (TypeCache<T27>.IsValueType || !Item27.Equals(null))
 					hash = (hash * -1521134295) + Item27.GetHashCode();
-				if (Item28.Equals(default(T28)))
+				if (TypeCache<T28>.IsValueType || !Item28.Equals(null))
 					hash = (hash * -1521134295) + Item28.GetHashCode();
-				if (Item29.Equals(default(T29)))
+				if (TypeCache<T29>.IsValueType || !Item29.Equals(null))
 					hash = (hash * -1521134295) + Item29.GetHashCode();
-				if (Item30.Equals(default(T30)))
+				if (TypeCache<T30>.IsValueType || !Item30.Equals(null))
 					hash = (hash * -1521134295) + Item30.GetHashCode();
-				if (Item31.Equals(default(T31)))
+				if (TypeCache<T31>.IsValueType || !Item31.Equals(null))
 					hash = (hash * -1521134295) + Item31.GetHashCode();
-				if (Item32.Equals(default(T32)))
+				if (TypeCache<T32>.IsValueType || !Item32.Equals(null))
 					hash = (hash * -1521134295) + Item32.GetHashCode();
 			}
 			return hash;

@@ -49,6 +49,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Mutuple.tt</DependentUpon>
     </Compile>
+    <Compile Include="TypeCache.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
