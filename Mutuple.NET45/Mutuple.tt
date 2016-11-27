@@ -8,14 +8,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-<#/*using System.Collections;
-using System.Collections.Generic;
-*/#>
 namespace Mutuples {
-	public static class Mutuple
-	{
+	public static class Mutuple {
 <#
-	for (var i = 1; i <= 32; ++i) {
+	const Int32 maxTuplicity = 32;
+
+	for (var i = 1; i <= maxTuplicity; ++i) {
 		var suffixes = Enumerable.Range(0, i).Select(x => (x + 1).ToString()).ToArray();
 		var types = suffixes.Select(x => "T" + x);
 		var typeArgs = String.Join(", ", types);
@@ -26,7 +24,7 @@ namespace Mutuples {
 <#	} #>	}
 
 <#
-	for (var i = 1; i <= 32; ++i) {
+	for (var i = 1; i <= maxTuplicity; ++i) {
 		var suffixes = Enumerable.Range(0, i).Select(x => (x + 1).ToString()).ToArray();
 		var types = suffixes.Select(x => "T" + x);
 		var typeArgs = String.Join(", ", types);
@@ -34,8 +32,7 @@ namespace Mutuples {
 		var initializers = String.Join("; ", suffixes.Select(x => $"Item{x} = item{x}"));
 		var toString = "(" + String.Join(", ", suffixes.Select(x => $"{{Item{x}}}")) + ")";
 #>
-	public class Mutuple<<#= typeArgs #>> : IEquatable<Mutuple<<#= typeArgs #>>>, IComparable<Mutuple<<#= typeArgs #>>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<<#= typeArgs #>> : IEquatable<Mutuple<<#= typeArgs #>>>, IComparable<Mutuple<<#= typeArgs #>>>, IStructuralComparable, IStructuralEquatable, IComparable {
 <#	foreach (var suffix in suffixes) { #>
 		public T<#=suffix#> Item<#=suffix#> { get; set; }
 <# } #>

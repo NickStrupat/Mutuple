@@ -3,8 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace Mutuples {
-	public static class Mutuple
-	{
+	public static class Mutuple {
 		public static Mutuple<T1> Create<T1>(T1 item1) => new Mutuple<T1>(item1);
 		public static Mutuple<T1, T2> Create<T1, T2>(T1 item1, T2 item2) => new Mutuple<T1, T2>(item1, item2);
 		public static Mutuple<T1, T2, T3> Create<T1, T2, T3>(T1 item1, T2 item2, T3 item3) => new Mutuple<T1, T2, T3>(item1, item2, item3);
@@ -39,8 +38,7 @@ namespace Mutuples {
 		public static Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32> Create<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19, T20 item20, T21 item21, T22 item22, T23 item23, T24 item24, T25 item25, T26 item26, T27 item27, T28 item28, T29 item29, T30 item30, T31 item31, T32 item32) => new Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32>(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20, item21, item22, item23, item24, item25, item26, item27, item28, item29, item30, item31, item32);
 	}
 
-	public class Mutuple<T1> : IEquatable<Mutuple<T1>>, IComparable<Mutuple<T1>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1> : IEquatable<Mutuple<T1>>, IComparable<Mutuple<T1>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 
 		public Mutuple() {}
@@ -119,8 +117,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2> : IEquatable<Mutuple<T1, T2>>, IComparable<Mutuple<T1, T2>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2> : IEquatable<Mutuple<T1, T2>>, IComparable<Mutuple<T1, T2>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 
@@ -207,8 +204,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3> : IEquatable<Mutuple<T1, T2, T3>>, IComparable<Mutuple<T1, T2, T3>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3> : IEquatable<Mutuple<T1, T2, T3>>, IComparable<Mutuple<T1, T2, T3>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -303,8 +299,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4> : IEquatable<Mutuple<T1, T2, T3, T4>>, IComparable<Mutuple<T1, T2, T3, T4>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4> : IEquatable<Mutuple<T1, T2, T3, T4>>, IComparable<Mutuple<T1, T2, T3, T4>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -407,8 +402,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5> : IEquatable<Mutuple<T1, T2, T3, T4, T5>>, IComparable<Mutuple<T1, T2, T3, T4, T5>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5> : IEquatable<Mutuple<T1, T2, T3, T4, T5>>, IComparable<Mutuple<T1, T2, T3, T4, T5>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -519,8 +513,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5, T6> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5, T6> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -639,8 +632,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5, T6, T7> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -767,8 +759,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -903,8 +894,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -1047,8 +1037,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -1199,8 +1188,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -1359,8 +1347,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -1527,8 +1514,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -1703,8 +1689,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -1887,8 +1872,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -2079,8 +2063,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -2279,8 +2262,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -2487,8 +2469,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -2703,8 +2684,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -2927,8 +2907,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -3159,8 +3138,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -3399,8 +3377,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -3647,8 +3624,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -3903,8 +3879,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -4167,8 +4142,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -4439,8 +4413,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -4719,8 +4692,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -5007,8 +4979,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -5303,8 +5274,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -5607,8 +5577,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -5919,8 +5888,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
@@ -6239,8 +6207,7 @@ namespace Mutuples {
 		#endregion
 	}
 
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32>>, IStructuralComparable, IStructuralEquatable, IComparable
-	{
+	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32> : IEquatable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32>>, IComparable<Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32>>, IStructuralComparable, IStructuralEquatable, IComparable {
 		public T1 Item1 { get; set; }
 		public T2 Item2 { get; set; }
 		public T3 Item3 { get; set; }
