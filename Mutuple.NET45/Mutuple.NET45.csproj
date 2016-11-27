@@ -7,7 +7,7 @@
     <ProjectGuid>{AEF735AD-6A2B-48DD-A0CD-4510859351EC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mutuple</RootNamespace>
+    <RootNamespace>Mutuples</RootNamespace>
     <AssemblyName>Mutuple.net45</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

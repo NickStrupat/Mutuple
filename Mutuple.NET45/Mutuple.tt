@@ -4,11 +4,14 @@
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#@ output extension=".cs" #>
-<#/*using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+
+<#/*using System.Collections;
+using System.Collections.Generic;
 */#>
-namespace Mutuple {
+namespace Mutuples {
 <#/*	public class Mutuple<T> {
 		public T1 Item1 { get; set; }
 	}
@@ -38,21 +41,89 @@ namespace Mutuple {
 		}
 	}
 */#>
+	public static class Mutuple
+	{
 <#
-	for (var i = 1; i <= 128; ++i) {
-		var suffixes = Enumerable.Range(0, i).Select(x => (x + 1).ToString());
+	for (var i = 1; i <= 32; ++i) {
+		var suffixes = Enumerable.Range(0, i).Select(x => (x + 1).ToString()).ToArray();
 		var types = suffixes.Select(x => "T" + x);
 		var typeArgs = String.Join(", ", types);
 		var baseTypeArgs = String.Join(", ", types.Take(i - 1));
-		var invokeParams = String.Join(", ", suffixes.Select(x => "T" + x + " arg" + x));
-		var invokeArgs = String.Join(", ", suffixes.Select(x => "arg" + x));
+		var invokeParams = String.Join(", ", suffixes.Select(x => "T" + x + " item" + x));
+		var invokeArgs = String.Join(", ", suffixes.Select(x => "item" + x));
+#>
+		public static Mutuple<<#= typeArgs #>> Create<<#= typeArgs #>>(<#= invokeParams #>) => new Mutuple<<#= typeArgs #>>(<#= invokeArgs #>);
+<#	} #>	}
+
+<#
+	for (var i = 1; i <= 32; ++i) {
+		var suffixes = Enumerable.Range(0, i).Select(x => (x + 1).ToString()).ToArray();
+		var types = suffixes.Select(x => "T" + x);
+		var typeArgs = String.Join(", ", types);
+		var baseTypeArgs = String.Join(", ", types.Take(i - 1));
+		var invokeParams = String.Join(", ", suffixes.Select(x => "T" + x + " item" + x));
+		var invokeArgs = String.Join(", ", suffixes.Select(x => "item" + x));
+		var initializers = String.Join("; ", suffixes.Select(x => $"Item{x} = item{x}"));
+		var toString = "(" + String.Join(", ", suffixes.Select(x => $"{{Item{x}}}")) + ")";
 #>
 	public class Mutuple<<#= typeArgs #>>
 <# if (baseTypeArgs.Any()) { #>
-	: Mutuple<<#= baseTypeArgs #>>
+	: Mutuple<<#= baseTypeArgs #>>, IStructuralComparable, IStructuralEquatable, IComparable
+<#	} else { #>
+	: IStructuralComparable, IStructuralEquatable, IComparable
 <#	} #>
 	{
 		public T<#=i#> Item<#=i#> { get; set; }
+		protected Mutuple() {}
+		public Mutuple(<#= invokeParams #>) { <#= initializers #>; }
+		public override String ToString() => $"<#= toString #>";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<<#= typeArgs #>>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<<#= typeArgs #>>`", nameof(other));
+			Int32 num;
+<#	foreach (var suffix in suffixes) { #>
+			num = comparer.Compare(Item<#= suffix #>, mutuple.Item<#= suffix #>);
+			if (num != 0)
+				return num;
+<# } #>
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<<#= typeArgs #>>;
+			if (mutuple == null)
+				return false;
+<#	foreach (var suffix in suffixes) { #>
+			if (!comparer.Equals(Item<#= suffix #>, mutuple.Item<#= suffix #>))
+				return false;
+<# } #>
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+<#	foreach (var suffix in suffixes) { #>
+				if (Item<#= suffix #>.Equals(default(T<#= suffix #>)))
+					hash = (hash * -1521134295) + Item<#= suffix #>.GetHashCode();
+<# } #>
+			}
+			return hash;
+		}
 	}
 
 <#	} #>

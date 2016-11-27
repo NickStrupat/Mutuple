@@ -1,769 +1,5114 @@
-﻿namespace Mutuple {
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+
+namespace Mutuples {
+	public static class Mutuple
+	{
+		public static Mutuple<T1> Create<T1>(T1 item1) => new Mutuple<T1>(item1);
+		public static Mutuple<T1, T2> Create<T1, T2>(T1 item1, T2 item2) => new Mutuple<T1, T2>(item1, item2);
+		public static Mutuple<T1, T2, T3> Create<T1, T2, T3>(T1 item1, T2 item2, T3 item3) => new Mutuple<T1, T2, T3>(item1, item2, item3);
+		public static Mutuple<T1, T2, T3, T4> Create<T1, T2, T3, T4>(T1 item1, T2 item2, T3 item3, T4 item4) => new Mutuple<T1, T2, T3, T4>(item1, item2, item3, item4);
+		public static Mutuple<T1, T2, T3, T4, T5> Create<T1, T2, T3, T4, T5>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5) => new Mutuple<T1, T2, T3, T4, T5>(item1, item2, item3, item4, item5);
+		public static Mutuple<T1, T2, T3, T4, T5, T6> Create<T1, T2, T3, T4, T5, T6>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6) => new Mutuple<T1, T2, T3, T4, T5, T6>(item1, item2, item3, item4, item5, item6);
+		public static Mutuple<T1, T2, T3, T4, T5, T6, T7> Create<T1, T2, T3, T4, T5, T6, T7>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7) => new Mutuple<T1, T2, T3, T4, T5, T6, T7>(item1, item2, item3, item4, item5, item6, item7);
+		public static Mutuple<T1, T2, T3, T4, T5, T6, T7, T8> Create<T1, T2, T3, T4, T5, T6, T7, T8>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8) => new Mutuple<T1, T2, T3, T4, T5, T6, T7, T8>(item1, item2, item3, item4, item5, item6, item7, item8);
+		public static Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9> Create<T1, T2, T3, T4, T5, T6, T7, T8, T9>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9) => new Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9>(item1, item2, item3, item4, item5, item6, item7, item8, item9);
+		public static Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> Create<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10) => new Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10);
+		public static Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> Create<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11) => new Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11);
+		public static Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12> Create<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12) => new Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12);
+		public static Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13> Create<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13) => new Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13);
+		public static Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14> Create<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14) => new Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14);
+		public static Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> Create<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15) => new Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15);
+		public static Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16> Create<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16) => new Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16);
+		public static Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17> Create<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17) => new Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17>(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17);
+		public static Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18> Create<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18) => new Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18>(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18);
+		public static Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19> Create<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19) => new Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19);
+		public static Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20> Create<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19, T20 item20) => new Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20>(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20);
+		public static Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21> Create<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19, T20 item20, T21 item21) => new Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21>(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20, item21);
+		public static Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22> Create<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19, T20 item20, T21 item21, T22 item22) => new Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22>(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20, item21, item22);
+		public static Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23> Create<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19, T20 item20, T21 item21, T22 item22, T23 item23) => new Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23>(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20, item21, item22, item23);
+		public static Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24> Create<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19, T20 item20, T21 item21, T22 item22, T23 item23, T24 item24) => new Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24>(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20, item21, item22, item23, item24);
+		public static Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25> Create<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19, T20 item20, T21 item21, T22 item22, T23 item23, T24 item24, T25 item25) => new Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25>(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20, item21, item22, item23, item24, item25);
+		public static Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26> Create<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19, T20 item20, T21 item21, T22 item22, T23 item23, T24 item24, T25 item25, T26 item26) => new Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26>(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20, item21, item22, item23, item24, item25, item26);
+		public static Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27> Create<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19, T20 item20, T21 item21, T22 item22, T23 item23, T24 item24, T25 item25, T26 item26, T27 item27) => new Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27>(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20, item21, item22, item23, item24, item25, item26, item27);
+		public static Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28> Create<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19, T20 item20, T21 item21, T22 item22, T23 item23, T24 item24, T25 item25, T26 item26, T27 item27, T28 item28) => new Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28>(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20, item21, item22, item23, item24, item25, item26, item27, item28);
+		public static Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29> Create<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19, T20 item20, T21 item21, T22 item22, T23 item23, T24 item24, T25 item25, T26 item26, T27 item27, T28 item28, T29 item29) => new Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29>(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20, item21, item22, item23, item24, item25, item26, item27, item28, item29);
+		public static Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30> Create<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19, T20 item20, T21 item21, T22 item22, T23 item23, T24 item24, T25 item25, T26 item26, T27 item27, T28 item28, T29 item29, T30 item30) => new Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30>(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20, item21, item22, item23, item24, item25, item26, item27, item28, item29, item30);
+		public static Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31> Create<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19, T20 item20, T21 item21, T22 item22, T23 item23, T24 item24, T25 item25, T26 item26, T27 item27, T28 item28, T29 item29, T30 item30, T31 item31) => new Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31>(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20, item21, item22, item23, item24, item25, item26, item27, item28, item29, item30, item31);
+		public static Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32> Create<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32>(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19, T20 item20, T21 item21, T22 item22, T23 item23, T24 item24, T25 item25, T26 item26, T27 item27, T28 item28, T29 item29, T30 item30, T31 item31, T32 item32) => new Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32>(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18, item19, item20, item21, item22, item23, item24, item25, item26, item27, item28, item29, item30, item31, item32);
+	}
+
 	public class Mutuple<T1>
+	: IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T1 Item1 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1) { Item1 = item1; }
+		public override String ToString() => $"({Item1})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2>
-	: Mutuple<T1>
+	: Mutuple<T1>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T2 Item2 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2) { Item1 = item1; Item2 = item2; }
+		public override String ToString() => $"({Item1}, {Item2})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3>
-	: Mutuple<T1, T2>
+	: Mutuple<T1, T2>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T3 Item3 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3) { Item1 = item1; Item2 = item2; Item3 = item3; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4>
-	: Mutuple<T1, T2, T3>
+	: Mutuple<T1, T2, T3>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T4 Item4 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5>
-	: Mutuple<T1, T2, T3, T4>
+	: Mutuple<T1, T2, T3, T4>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T5 Item5 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5, T6>
-	: Mutuple<T1, T2, T3, T4, T5>
+	: Mutuple<T1, T2, T3, T4, T5>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T6 Item6 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; Item6 = item6; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5}, {Item6})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5, T6>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item6, mutuple.Item6);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			if (!comparer.Equals(Item6, mutuple.Item6))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+				if (Item6.Equals(default(T6)))
+					hash = (hash * -1521134295) + Item6.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5, T6, T7>
-	: Mutuple<T1, T2, T3, T4, T5, T6>
+	: Mutuple<T1, T2, T3, T4, T5, T6>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T7 Item7 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; Item6 = item6; Item7 = item7; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5}, {Item6}, {Item7})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5, T6, T7>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item6, mutuple.Item6);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item7, mutuple.Item7);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			if (!comparer.Equals(Item6, mutuple.Item6))
+				return false;
+			if (!comparer.Equals(Item7, mutuple.Item7))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+				if (Item6.Equals(default(T6)))
+					hash = (hash * -1521134295) + Item6.GetHashCode();
+				if (Item7.Equals(default(T7)))
+					hash = (hash * -1521134295) + Item7.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7>
+	: Mutuple<T1, T2, T3, T4, T5, T6, T7>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T8 Item8 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; Item6 = item6; Item7 = item7; Item8 = item8; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5}, {Item6}, {Item7}, {Item8})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5, T6, T7, T8>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item6, mutuple.Item6);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item7, mutuple.Item7);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item8, mutuple.Item8);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			if (!comparer.Equals(Item6, mutuple.Item6))
+				return false;
+			if (!comparer.Equals(Item7, mutuple.Item7))
+				return false;
+			if (!comparer.Equals(Item8, mutuple.Item8))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+				if (Item6.Equals(default(T6)))
+					hash = (hash * -1521134295) + Item6.GetHashCode();
+				if (Item7.Equals(default(T7)))
+					hash = (hash * -1521134295) + Item7.GetHashCode();
+				if (Item8.Equals(default(T8)))
+					hash = (hash * -1521134295) + Item8.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8>
+	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T9 Item9 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; Item6 = item6; Item7 = item7; Item8 = item8; Item9 = item9; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5}, {Item6}, {Item7}, {Item8}, {Item9})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item6, mutuple.Item6);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item7, mutuple.Item7);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item8, mutuple.Item8);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item9, mutuple.Item9);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			if (!comparer.Equals(Item6, mutuple.Item6))
+				return false;
+			if (!comparer.Equals(Item7, mutuple.Item7))
+				return false;
+			if (!comparer.Equals(Item8, mutuple.Item8))
+				return false;
+			if (!comparer.Equals(Item9, mutuple.Item9))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+				if (Item6.Equals(default(T6)))
+					hash = (hash * -1521134295) + Item6.GetHashCode();
+				if (Item7.Equals(default(T7)))
+					hash = (hash * -1521134295) + Item7.GetHashCode();
+				if (Item8.Equals(default(T8)))
+					hash = (hash * -1521134295) + Item8.GetHashCode();
+				if (Item9.Equals(default(T9)))
+					hash = (hash * -1521134295) + Item9.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9>
+	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T10 Item10 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; Item6 = item6; Item7 = item7; Item8 = item8; Item9 = item9; Item10 = item10; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5}, {Item6}, {Item7}, {Item8}, {Item9}, {Item10})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item6, mutuple.Item6);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item7, mutuple.Item7);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item8, mutuple.Item8);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item9, mutuple.Item9);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item10, mutuple.Item10);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			if (!comparer.Equals(Item6, mutuple.Item6))
+				return false;
+			if (!comparer.Equals(Item7, mutuple.Item7))
+				return false;
+			if (!comparer.Equals(Item8, mutuple.Item8))
+				return false;
+			if (!comparer.Equals(Item9, mutuple.Item9))
+				return false;
+			if (!comparer.Equals(Item10, mutuple.Item10))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+				if (Item6.Equals(default(T6)))
+					hash = (hash * -1521134295) + Item6.GetHashCode();
+				if (Item7.Equals(default(T7)))
+					hash = (hash * -1521134295) + Item7.GetHashCode();
+				if (Item8.Equals(default(T8)))
+					hash = (hash * -1521134295) + Item8.GetHashCode();
+				if (Item9.Equals(default(T9)))
+					hash = (hash * -1521134295) + Item9.GetHashCode();
+				if (Item10.Equals(default(T10)))
+					hash = (hash * -1521134295) + Item10.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>
+	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T11 Item11 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; Item6 = item6; Item7 = item7; Item8 = item8; Item9 = item9; Item10 = item10; Item11 = item11; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5}, {Item6}, {Item7}, {Item8}, {Item9}, {Item10}, {Item11})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item6, mutuple.Item6);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item7, mutuple.Item7);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item8, mutuple.Item8);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item9, mutuple.Item9);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item10, mutuple.Item10);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item11, mutuple.Item11);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			if (!comparer.Equals(Item6, mutuple.Item6))
+				return false;
+			if (!comparer.Equals(Item7, mutuple.Item7))
+				return false;
+			if (!comparer.Equals(Item8, mutuple.Item8))
+				return false;
+			if (!comparer.Equals(Item9, mutuple.Item9))
+				return false;
+			if (!comparer.Equals(Item10, mutuple.Item10))
+				return false;
+			if (!comparer.Equals(Item11, mutuple.Item11))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+				if (Item6.Equals(default(T6)))
+					hash = (hash * -1521134295) + Item6.GetHashCode();
+				if (Item7.Equals(default(T7)))
+					hash = (hash * -1521134295) + Item7.GetHashCode();
+				if (Item8.Equals(default(T8)))
+					hash = (hash * -1521134295) + Item8.GetHashCode();
+				if (Item9.Equals(default(T9)))
+					hash = (hash * -1521134295) + Item9.GetHashCode();
+				if (Item10.Equals(default(T10)))
+					hash = (hash * -1521134295) + Item10.GetHashCode();
+				if (Item11.Equals(default(T11)))
+					hash = (hash * -1521134295) + Item11.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>
+	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T12 Item12 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; Item6 = item6; Item7 = item7; Item8 = item8; Item9 = item9; Item10 = item10; Item11 = item11; Item12 = item12; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5}, {Item6}, {Item7}, {Item8}, {Item9}, {Item10}, {Item11}, {Item12})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item6, mutuple.Item6);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item7, mutuple.Item7);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item8, mutuple.Item8);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item9, mutuple.Item9);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item10, mutuple.Item10);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item11, mutuple.Item11);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item12, mutuple.Item12);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			if (!comparer.Equals(Item6, mutuple.Item6))
+				return false;
+			if (!comparer.Equals(Item7, mutuple.Item7))
+				return false;
+			if (!comparer.Equals(Item8, mutuple.Item8))
+				return false;
+			if (!comparer.Equals(Item9, mutuple.Item9))
+				return false;
+			if (!comparer.Equals(Item10, mutuple.Item10))
+				return false;
+			if (!comparer.Equals(Item11, mutuple.Item11))
+				return false;
+			if (!comparer.Equals(Item12, mutuple.Item12))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+				if (Item6.Equals(default(T6)))
+					hash = (hash * -1521134295) + Item6.GetHashCode();
+				if (Item7.Equals(default(T7)))
+					hash = (hash * -1521134295) + Item7.GetHashCode();
+				if (Item8.Equals(default(T8)))
+					hash = (hash * -1521134295) + Item8.GetHashCode();
+				if (Item9.Equals(default(T9)))
+					hash = (hash * -1521134295) + Item9.GetHashCode();
+				if (Item10.Equals(default(T10)))
+					hash = (hash * -1521134295) + Item10.GetHashCode();
+				if (Item11.Equals(default(T11)))
+					hash = (hash * -1521134295) + Item11.GetHashCode();
+				if (Item12.Equals(default(T12)))
+					hash = (hash * -1521134295) + Item12.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>
+	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T13 Item13 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; Item6 = item6; Item7 = item7; Item8 = item8; Item9 = item9; Item10 = item10; Item11 = item11; Item12 = item12; Item13 = item13; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5}, {Item6}, {Item7}, {Item8}, {Item9}, {Item10}, {Item11}, {Item12}, {Item13})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item6, mutuple.Item6);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item7, mutuple.Item7);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item8, mutuple.Item8);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item9, mutuple.Item9);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item10, mutuple.Item10);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item11, mutuple.Item11);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item12, mutuple.Item12);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item13, mutuple.Item13);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			if (!comparer.Equals(Item6, mutuple.Item6))
+				return false;
+			if (!comparer.Equals(Item7, mutuple.Item7))
+				return false;
+			if (!comparer.Equals(Item8, mutuple.Item8))
+				return false;
+			if (!comparer.Equals(Item9, mutuple.Item9))
+				return false;
+			if (!comparer.Equals(Item10, mutuple.Item10))
+				return false;
+			if (!comparer.Equals(Item11, mutuple.Item11))
+				return false;
+			if (!comparer.Equals(Item12, mutuple.Item12))
+				return false;
+			if (!comparer.Equals(Item13, mutuple.Item13))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+				if (Item6.Equals(default(T6)))
+					hash = (hash * -1521134295) + Item6.GetHashCode();
+				if (Item7.Equals(default(T7)))
+					hash = (hash * -1521134295) + Item7.GetHashCode();
+				if (Item8.Equals(default(T8)))
+					hash = (hash * -1521134295) + Item8.GetHashCode();
+				if (Item9.Equals(default(T9)))
+					hash = (hash * -1521134295) + Item9.GetHashCode();
+				if (Item10.Equals(default(T10)))
+					hash = (hash * -1521134295) + Item10.GetHashCode();
+				if (Item11.Equals(default(T11)))
+					hash = (hash * -1521134295) + Item11.GetHashCode();
+				if (Item12.Equals(default(T12)))
+					hash = (hash * -1521134295) + Item12.GetHashCode();
+				if (Item13.Equals(default(T13)))
+					hash = (hash * -1521134295) + Item13.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>
+	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T14 Item14 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; Item6 = item6; Item7 = item7; Item8 = item8; Item9 = item9; Item10 = item10; Item11 = item11; Item12 = item12; Item13 = item13; Item14 = item14; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5}, {Item6}, {Item7}, {Item8}, {Item9}, {Item10}, {Item11}, {Item12}, {Item13}, {Item14})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item6, mutuple.Item6);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item7, mutuple.Item7);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item8, mutuple.Item8);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item9, mutuple.Item9);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item10, mutuple.Item10);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item11, mutuple.Item11);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item12, mutuple.Item12);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item13, mutuple.Item13);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item14, mutuple.Item14);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			if (!comparer.Equals(Item6, mutuple.Item6))
+				return false;
+			if (!comparer.Equals(Item7, mutuple.Item7))
+				return false;
+			if (!comparer.Equals(Item8, mutuple.Item8))
+				return false;
+			if (!comparer.Equals(Item9, mutuple.Item9))
+				return false;
+			if (!comparer.Equals(Item10, mutuple.Item10))
+				return false;
+			if (!comparer.Equals(Item11, mutuple.Item11))
+				return false;
+			if (!comparer.Equals(Item12, mutuple.Item12))
+				return false;
+			if (!comparer.Equals(Item13, mutuple.Item13))
+				return false;
+			if (!comparer.Equals(Item14, mutuple.Item14))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+				if (Item6.Equals(default(T6)))
+					hash = (hash * -1521134295) + Item6.GetHashCode();
+				if (Item7.Equals(default(T7)))
+					hash = (hash * -1521134295) + Item7.GetHashCode();
+				if (Item8.Equals(default(T8)))
+					hash = (hash * -1521134295) + Item8.GetHashCode();
+				if (Item9.Equals(default(T9)))
+					hash = (hash * -1521134295) + Item9.GetHashCode();
+				if (Item10.Equals(default(T10)))
+					hash = (hash * -1521134295) + Item10.GetHashCode();
+				if (Item11.Equals(default(T11)))
+					hash = (hash * -1521134295) + Item11.GetHashCode();
+				if (Item12.Equals(default(T12)))
+					hash = (hash * -1521134295) + Item12.GetHashCode();
+				if (Item13.Equals(default(T13)))
+					hash = (hash * -1521134295) + Item13.GetHashCode();
+				if (Item14.Equals(default(T14)))
+					hash = (hash * -1521134295) + Item14.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>
+	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T15 Item15 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; Item6 = item6; Item7 = item7; Item8 = item8; Item9 = item9; Item10 = item10; Item11 = item11; Item12 = item12; Item13 = item13; Item14 = item14; Item15 = item15; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5}, {Item6}, {Item7}, {Item8}, {Item9}, {Item10}, {Item11}, {Item12}, {Item13}, {Item14}, {Item15})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item6, mutuple.Item6);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item7, mutuple.Item7);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item8, mutuple.Item8);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item9, mutuple.Item9);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item10, mutuple.Item10);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item11, mutuple.Item11);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item12, mutuple.Item12);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item13, mutuple.Item13);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item14, mutuple.Item14);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item15, mutuple.Item15);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			if (!comparer.Equals(Item6, mutuple.Item6))
+				return false;
+			if (!comparer.Equals(Item7, mutuple.Item7))
+				return false;
+			if (!comparer.Equals(Item8, mutuple.Item8))
+				return false;
+			if (!comparer.Equals(Item9, mutuple.Item9))
+				return false;
+			if (!comparer.Equals(Item10, mutuple.Item10))
+				return false;
+			if (!comparer.Equals(Item11, mutuple.Item11))
+				return false;
+			if (!comparer.Equals(Item12, mutuple.Item12))
+				return false;
+			if (!comparer.Equals(Item13, mutuple.Item13))
+				return false;
+			if (!comparer.Equals(Item14, mutuple.Item14))
+				return false;
+			if (!comparer.Equals(Item15, mutuple.Item15))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+				if (Item6.Equals(default(T6)))
+					hash = (hash * -1521134295) + Item6.GetHashCode();
+				if (Item7.Equals(default(T7)))
+					hash = (hash * -1521134295) + Item7.GetHashCode();
+				if (Item8.Equals(default(T8)))
+					hash = (hash * -1521134295) + Item8.GetHashCode();
+				if (Item9.Equals(default(T9)))
+					hash = (hash * -1521134295) + Item9.GetHashCode();
+				if (Item10.Equals(default(T10)))
+					hash = (hash * -1521134295) + Item10.GetHashCode();
+				if (Item11.Equals(default(T11)))
+					hash = (hash * -1521134295) + Item11.GetHashCode();
+				if (Item12.Equals(default(T12)))
+					hash = (hash * -1521134295) + Item12.GetHashCode();
+				if (Item13.Equals(default(T13)))
+					hash = (hash * -1521134295) + Item13.GetHashCode();
+				if (Item14.Equals(default(T14)))
+					hash = (hash * -1521134295) + Item14.GetHashCode();
+				if (Item15.Equals(default(T15)))
+					hash = (hash * -1521134295) + Item15.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>
+	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T16 Item16 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; Item6 = item6; Item7 = item7; Item8 = item8; Item9 = item9; Item10 = item10; Item11 = item11; Item12 = item12; Item13 = item13; Item14 = item14; Item15 = item15; Item16 = item16; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5}, {Item6}, {Item7}, {Item8}, {Item9}, {Item10}, {Item11}, {Item12}, {Item13}, {Item14}, {Item15}, {Item16})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item6, mutuple.Item6);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item7, mutuple.Item7);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item8, mutuple.Item8);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item9, mutuple.Item9);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item10, mutuple.Item10);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item11, mutuple.Item11);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item12, mutuple.Item12);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item13, mutuple.Item13);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item14, mutuple.Item14);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item15, mutuple.Item15);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item16, mutuple.Item16);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			if (!comparer.Equals(Item6, mutuple.Item6))
+				return false;
+			if (!comparer.Equals(Item7, mutuple.Item7))
+				return false;
+			if (!comparer.Equals(Item8, mutuple.Item8))
+				return false;
+			if (!comparer.Equals(Item9, mutuple.Item9))
+				return false;
+			if (!comparer.Equals(Item10, mutuple.Item10))
+				return false;
+			if (!comparer.Equals(Item11, mutuple.Item11))
+				return false;
+			if (!comparer.Equals(Item12, mutuple.Item12))
+				return false;
+			if (!comparer.Equals(Item13, mutuple.Item13))
+				return false;
+			if (!comparer.Equals(Item14, mutuple.Item14))
+				return false;
+			if (!comparer.Equals(Item15, mutuple.Item15))
+				return false;
+			if (!comparer.Equals(Item16, mutuple.Item16))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+				if (Item6.Equals(default(T6)))
+					hash = (hash * -1521134295) + Item6.GetHashCode();
+				if (Item7.Equals(default(T7)))
+					hash = (hash * -1521134295) + Item7.GetHashCode();
+				if (Item8.Equals(default(T8)))
+					hash = (hash * -1521134295) + Item8.GetHashCode();
+				if (Item9.Equals(default(T9)))
+					hash = (hash * -1521134295) + Item9.GetHashCode();
+				if (Item10.Equals(default(T10)))
+					hash = (hash * -1521134295) + Item10.GetHashCode();
+				if (Item11.Equals(default(T11)))
+					hash = (hash * -1521134295) + Item11.GetHashCode();
+				if (Item12.Equals(default(T12)))
+					hash = (hash * -1521134295) + Item12.GetHashCode();
+				if (Item13.Equals(default(T13)))
+					hash = (hash * -1521134295) + Item13.GetHashCode();
+				if (Item14.Equals(default(T14)))
+					hash = (hash * -1521134295) + Item14.GetHashCode();
+				if (Item15.Equals(default(T15)))
+					hash = (hash * -1521134295) + Item15.GetHashCode();
+				if (Item16.Equals(default(T16)))
+					hash = (hash * -1521134295) + Item16.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>
+	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T17 Item17 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; Item6 = item6; Item7 = item7; Item8 = item8; Item9 = item9; Item10 = item10; Item11 = item11; Item12 = item12; Item13 = item13; Item14 = item14; Item15 = item15; Item16 = item16; Item17 = item17; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5}, {Item6}, {Item7}, {Item8}, {Item9}, {Item10}, {Item11}, {Item12}, {Item13}, {Item14}, {Item15}, {Item16}, {Item17})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item6, mutuple.Item6);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item7, mutuple.Item7);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item8, mutuple.Item8);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item9, mutuple.Item9);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item10, mutuple.Item10);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item11, mutuple.Item11);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item12, mutuple.Item12);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item13, mutuple.Item13);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item14, mutuple.Item14);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item15, mutuple.Item15);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item16, mutuple.Item16);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item17, mutuple.Item17);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			if (!comparer.Equals(Item6, mutuple.Item6))
+				return false;
+			if (!comparer.Equals(Item7, mutuple.Item7))
+				return false;
+			if (!comparer.Equals(Item8, mutuple.Item8))
+				return false;
+			if (!comparer.Equals(Item9, mutuple.Item9))
+				return false;
+			if (!comparer.Equals(Item10, mutuple.Item10))
+				return false;
+			if (!comparer.Equals(Item11, mutuple.Item11))
+				return false;
+			if (!comparer.Equals(Item12, mutuple.Item12))
+				return false;
+			if (!comparer.Equals(Item13, mutuple.Item13))
+				return false;
+			if (!comparer.Equals(Item14, mutuple.Item14))
+				return false;
+			if (!comparer.Equals(Item15, mutuple.Item15))
+				return false;
+			if (!comparer.Equals(Item16, mutuple.Item16))
+				return false;
+			if (!comparer.Equals(Item17, mutuple.Item17))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+				if (Item6.Equals(default(T6)))
+					hash = (hash * -1521134295) + Item6.GetHashCode();
+				if (Item7.Equals(default(T7)))
+					hash = (hash * -1521134295) + Item7.GetHashCode();
+				if (Item8.Equals(default(T8)))
+					hash = (hash * -1521134295) + Item8.GetHashCode();
+				if (Item9.Equals(default(T9)))
+					hash = (hash * -1521134295) + Item9.GetHashCode();
+				if (Item10.Equals(default(T10)))
+					hash = (hash * -1521134295) + Item10.GetHashCode();
+				if (Item11.Equals(default(T11)))
+					hash = (hash * -1521134295) + Item11.GetHashCode();
+				if (Item12.Equals(default(T12)))
+					hash = (hash * -1521134295) + Item12.GetHashCode();
+				if (Item13.Equals(default(T13)))
+					hash = (hash * -1521134295) + Item13.GetHashCode();
+				if (Item14.Equals(default(T14)))
+					hash = (hash * -1521134295) + Item14.GetHashCode();
+				if (Item15.Equals(default(T15)))
+					hash = (hash * -1521134295) + Item15.GetHashCode();
+				if (Item16.Equals(default(T16)))
+					hash = (hash * -1521134295) + Item16.GetHashCode();
+				if (Item17.Equals(default(T17)))
+					hash = (hash * -1521134295) + Item17.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17>
+	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T18 Item18 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; Item6 = item6; Item7 = item7; Item8 = item8; Item9 = item9; Item10 = item10; Item11 = item11; Item12 = item12; Item13 = item13; Item14 = item14; Item15 = item15; Item16 = item16; Item17 = item17; Item18 = item18; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5}, {Item6}, {Item7}, {Item8}, {Item9}, {Item10}, {Item11}, {Item12}, {Item13}, {Item14}, {Item15}, {Item16}, {Item17}, {Item18})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item6, mutuple.Item6);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item7, mutuple.Item7);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item8, mutuple.Item8);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item9, mutuple.Item9);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item10, mutuple.Item10);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item11, mutuple.Item11);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item12, mutuple.Item12);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item13, mutuple.Item13);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item14, mutuple.Item14);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item15, mutuple.Item15);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item16, mutuple.Item16);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item17, mutuple.Item17);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item18, mutuple.Item18);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			if (!comparer.Equals(Item6, mutuple.Item6))
+				return false;
+			if (!comparer.Equals(Item7, mutuple.Item7))
+				return false;
+			if (!comparer.Equals(Item8, mutuple.Item8))
+				return false;
+			if (!comparer.Equals(Item9, mutuple.Item9))
+				return false;
+			if (!comparer.Equals(Item10, mutuple.Item10))
+				return false;
+			if (!comparer.Equals(Item11, mutuple.Item11))
+				return false;
+			if (!comparer.Equals(Item12, mutuple.Item12))
+				return false;
+			if (!comparer.Equals(Item13, mutuple.Item13))
+				return false;
+			if (!comparer.Equals(Item14, mutuple.Item14))
+				return false;
+			if (!comparer.Equals(Item15, mutuple.Item15))
+				return false;
+			if (!comparer.Equals(Item16, mutuple.Item16))
+				return false;
+			if (!comparer.Equals(Item17, mutuple.Item17))
+				return false;
+			if (!comparer.Equals(Item18, mutuple.Item18))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+				if (Item6.Equals(default(T6)))
+					hash = (hash * -1521134295) + Item6.GetHashCode();
+				if (Item7.Equals(default(T7)))
+					hash = (hash * -1521134295) + Item7.GetHashCode();
+				if (Item8.Equals(default(T8)))
+					hash = (hash * -1521134295) + Item8.GetHashCode();
+				if (Item9.Equals(default(T9)))
+					hash = (hash * -1521134295) + Item9.GetHashCode();
+				if (Item10.Equals(default(T10)))
+					hash = (hash * -1521134295) + Item10.GetHashCode();
+				if (Item11.Equals(default(T11)))
+					hash = (hash * -1521134295) + Item11.GetHashCode();
+				if (Item12.Equals(default(T12)))
+					hash = (hash * -1521134295) + Item12.GetHashCode();
+				if (Item13.Equals(default(T13)))
+					hash = (hash * -1521134295) + Item13.GetHashCode();
+				if (Item14.Equals(default(T14)))
+					hash = (hash * -1521134295) + Item14.GetHashCode();
+				if (Item15.Equals(default(T15)))
+					hash = (hash * -1521134295) + Item15.GetHashCode();
+				if (Item16.Equals(default(T16)))
+					hash = (hash * -1521134295) + Item16.GetHashCode();
+				if (Item17.Equals(default(T17)))
+					hash = (hash * -1521134295) + Item17.GetHashCode();
+				if (Item18.Equals(default(T18)))
+					hash = (hash * -1521134295) + Item18.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18>
+	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T19 Item19 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; Item6 = item6; Item7 = item7; Item8 = item8; Item9 = item9; Item10 = item10; Item11 = item11; Item12 = item12; Item13 = item13; Item14 = item14; Item15 = item15; Item16 = item16; Item17 = item17; Item18 = item18; Item19 = item19; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5}, {Item6}, {Item7}, {Item8}, {Item9}, {Item10}, {Item11}, {Item12}, {Item13}, {Item14}, {Item15}, {Item16}, {Item17}, {Item18}, {Item19})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item6, mutuple.Item6);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item7, mutuple.Item7);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item8, mutuple.Item8);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item9, mutuple.Item9);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item10, mutuple.Item10);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item11, mutuple.Item11);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item12, mutuple.Item12);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item13, mutuple.Item13);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item14, mutuple.Item14);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item15, mutuple.Item15);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item16, mutuple.Item16);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item17, mutuple.Item17);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item18, mutuple.Item18);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item19, mutuple.Item19);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			if (!comparer.Equals(Item6, mutuple.Item6))
+				return false;
+			if (!comparer.Equals(Item7, mutuple.Item7))
+				return false;
+			if (!comparer.Equals(Item8, mutuple.Item8))
+				return false;
+			if (!comparer.Equals(Item9, mutuple.Item9))
+				return false;
+			if (!comparer.Equals(Item10, mutuple.Item10))
+				return false;
+			if (!comparer.Equals(Item11, mutuple.Item11))
+				return false;
+			if (!comparer.Equals(Item12, mutuple.Item12))
+				return false;
+			if (!comparer.Equals(Item13, mutuple.Item13))
+				return false;
+			if (!comparer.Equals(Item14, mutuple.Item14))
+				return false;
+			if (!comparer.Equals(Item15, mutuple.Item15))
+				return false;
+			if (!comparer.Equals(Item16, mutuple.Item16))
+				return false;
+			if (!comparer.Equals(Item17, mutuple.Item17))
+				return false;
+			if (!comparer.Equals(Item18, mutuple.Item18))
+				return false;
+			if (!comparer.Equals(Item19, mutuple.Item19))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+				if (Item6.Equals(default(T6)))
+					hash = (hash * -1521134295) + Item6.GetHashCode();
+				if (Item7.Equals(default(T7)))
+					hash = (hash * -1521134295) + Item7.GetHashCode();
+				if (Item8.Equals(default(T8)))
+					hash = (hash * -1521134295) + Item8.GetHashCode();
+				if (Item9.Equals(default(T9)))
+					hash = (hash * -1521134295) + Item9.GetHashCode();
+				if (Item10.Equals(default(T10)))
+					hash = (hash * -1521134295) + Item10.GetHashCode();
+				if (Item11.Equals(default(T11)))
+					hash = (hash * -1521134295) + Item11.GetHashCode();
+				if (Item12.Equals(default(T12)))
+					hash = (hash * -1521134295) + Item12.GetHashCode();
+				if (Item13.Equals(default(T13)))
+					hash = (hash * -1521134295) + Item13.GetHashCode();
+				if (Item14.Equals(default(T14)))
+					hash = (hash * -1521134295) + Item14.GetHashCode();
+				if (Item15.Equals(default(T15)))
+					hash = (hash * -1521134295) + Item15.GetHashCode();
+				if (Item16.Equals(default(T16)))
+					hash = (hash * -1521134295) + Item16.GetHashCode();
+				if (Item17.Equals(default(T17)))
+					hash = (hash * -1521134295) + Item17.GetHashCode();
+				if (Item18.Equals(default(T18)))
+					hash = (hash * -1521134295) + Item18.GetHashCode();
+				if (Item19.Equals(default(T19)))
+					hash = (hash * -1521134295) + Item19.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>
+	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T20 Item20 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19, T20 item20) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; Item6 = item6; Item7 = item7; Item8 = item8; Item9 = item9; Item10 = item10; Item11 = item11; Item12 = item12; Item13 = item13; Item14 = item14; Item15 = item15; Item16 = item16; Item17 = item17; Item18 = item18; Item19 = item19; Item20 = item20; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5}, {Item6}, {Item7}, {Item8}, {Item9}, {Item10}, {Item11}, {Item12}, {Item13}, {Item14}, {Item15}, {Item16}, {Item17}, {Item18}, {Item19}, {Item20})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item6, mutuple.Item6);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item7, mutuple.Item7);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item8, mutuple.Item8);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item9, mutuple.Item9);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item10, mutuple.Item10);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item11, mutuple.Item11);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item12, mutuple.Item12);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item13, mutuple.Item13);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item14, mutuple.Item14);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item15, mutuple.Item15);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item16, mutuple.Item16);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item17, mutuple.Item17);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item18, mutuple.Item18);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item19, mutuple.Item19);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item20, mutuple.Item20);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			if (!comparer.Equals(Item6, mutuple.Item6))
+				return false;
+			if (!comparer.Equals(Item7, mutuple.Item7))
+				return false;
+			if (!comparer.Equals(Item8, mutuple.Item8))
+				return false;
+			if (!comparer.Equals(Item9, mutuple.Item9))
+				return false;
+			if (!comparer.Equals(Item10, mutuple.Item10))
+				return false;
+			if (!comparer.Equals(Item11, mutuple.Item11))
+				return false;
+			if (!comparer.Equals(Item12, mutuple.Item12))
+				return false;
+			if (!comparer.Equals(Item13, mutuple.Item13))
+				return false;
+			if (!comparer.Equals(Item14, mutuple.Item14))
+				return false;
+			if (!comparer.Equals(Item15, mutuple.Item15))
+				return false;
+			if (!comparer.Equals(Item16, mutuple.Item16))
+				return false;
+			if (!comparer.Equals(Item17, mutuple.Item17))
+				return false;
+			if (!comparer.Equals(Item18, mutuple.Item18))
+				return false;
+			if (!comparer.Equals(Item19, mutuple.Item19))
+				return false;
+			if (!comparer.Equals(Item20, mutuple.Item20))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+				if (Item6.Equals(default(T6)))
+					hash = (hash * -1521134295) + Item6.GetHashCode();
+				if (Item7.Equals(default(T7)))
+					hash = (hash * -1521134295) + Item7.GetHashCode();
+				if (Item8.Equals(default(T8)))
+					hash = (hash * -1521134295) + Item8.GetHashCode();
+				if (Item9.Equals(default(T9)))
+					hash = (hash * -1521134295) + Item9.GetHashCode();
+				if (Item10.Equals(default(T10)))
+					hash = (hash * -1521134295) + Item10.GetHashCode();
+				if (Item11.Equals(default(T11)))
+					hash = (hash * -1521134295) + Item11.GetHashCode();
+				if (Item12.Equals(default(T12)))
+					hash = (hash * -1521134295) + Item12.GetHashCode();
+				if (Item13.Equals(default(T13)))
+					hash = (hash * -1521134295) + Item13.GetHashCode();
+				if (Item14.Equals(default(T14)))
+					hash = (hash * -1521134295) + Item14.GetHashCode();
+				if (Item15.Equals(default(T15)))
+					hash = (hash * -1521134295) + Item15.GetHashCode();
+				if (Item16.Equals(default(T16)))
+					hash = (hash * -1521134295) + Item16.GetHashCode();
+				if (Item17.Equals(default(T17)))
+					hash = (hash * -1521134295) + Item17.GetHashCode();
+				if (Item18.Equals(default(T18)))
+					hash = (hash * -1521134295) + Item18.GetHashCode();
+				if (Item19.Equals(default(T19)))
+					hash = (hash * -1521134295) + Item19.GetHashCode();
+				if (Item20.Equals(default(T20)))
+					hash = (hash * -1521134295) + Item20.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20>
+	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T21 Item21 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19, T20 item20, T21 item21) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; Item6 = item6; Item7 = item7; Item8 = item8; Item9 = item9; Item10 = item10; Item11 = item11; Item12 = item12; Item13 = item13; Item14 = item14; Item15 = item15; Item16 = item16; Item17 = item17; Item18 = item18; Item19 = item19; Item20 = item20; Item21 = item21; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5}, {Item6}, {Item7}, {Item8}, {Item9}, {Item10}, {Item11}, {Item12}, {Item13}, {Item14}, {Item15}, {Item16}, {Item17}, {Item18}, {Item19}, {Item20}, {Item21})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item6, mutuple.Item6);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item7, mutuple.Item7);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item8, mutuple.Item8);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item9, mutuple.Item9);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item10, mutuple.Item10);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item11, mutuple.Item11);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item12, mutuple.Item12);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item13, mutuple.Item13);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item14, mutuple.Item14);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item15, mutuple.Item15);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item16, mutuple.Item16);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item17, mutuple.Item17);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item18, mutuple.Item18);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item19, mutuple.Item19);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item20, mutuple.Item20);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item21, mutuple.Item21);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			if (!comparer.Equals(Item6, mutuple.Item6))
+				return false;
+			if (!comparer.Equals(Item7, mutuple.Item7))
+				return false;
+			if (!comparer.Equals(Item8, mutuple.Item8))
+				return false;
+			if (!comparer.Equals(Item9, mutuple.Item9))
+				return false;
+			if (!comparer.Equals(Item10, mutuple.Item10))
+				return false;
+			if (!comparer.Equals(Item11, mutuple.Item11))
+				return false;
+			if (!comparer.Equals(Item12, mutuple.Item12))
+				return false;
+			if (!comparer.Equals(Item13, mutuple.Item13))
+				return false;
+			if (!comparer.Equals(Item14, mutuple.Item14))
+				return false;
+			if (!comparer.Equals(Item15, mutuple.Item15))
+				return false;
+			if (!comparer.Equals(Item16, mutuple.Item16))
+				return false;
+			if (!comparer.Equals(Item17, mutuple.Item17))
+				return false;
+			if (!comparer.Equals(Item18, mutuple.Item18))
+				return false;
+			if (!comparer.Equals(Item19, mutuple.Item19))
+				return false;
+			if (!comparer.Equals(Item20, mutuple.Item20))
+				return false;
+			if (!comparer.Equals(Item21, mutuple.Item21))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+				if (Item6.Equals(default(T6)))
+					hash = (hash * -1521134295) + Item6.GetHashCode();
+				if (Item7.Equals(default(T7)))
+					hash = (hash * -1521134295) + Item7.GetHashCode();
+				if (Item8.Equals(default(T8)))
+					hash = (hash * -1521134295) + Item8.GetHashCode();
+				if (Item9.Equals(default(T9)))
+					hash = (hash * -1521134295) + Item9.GetHashCode();
+				if (Item10.Equals(default(T10)))
+					hash = (hash * -1521134295) + Item10.GetHashCode();
+				if (Item11.Equals(default(T11)))
+					hash = (hash * -1521134295) + Item11.GetHashCode();
+				if (Item12.Equals(default(T12)))
+					hash = (hash * -1521134295) + Item12.GetHashCode();
+				if (Item13.Equals(default(T13)))
+					hash = (hash * -1521134295) + Item13.GetHashCode();
+				if (Item14.Equals(default(T14)))
+					hash = (hash * -1521134295) + Item14.GetHashCode();
+				if (Item15.Equals(default(T15)))
+					hash = (hash * -1521134295) + Item15.GetHashCode();
+				if (Item16.Equals(default(T16)))
+					hash = (hash * -1521134295) + Item16.GetHashCode();
+				if (Item17.Equals(default(T17)))
+					hash = (hash * -1521134295) + Item17.GetHashCode();
+				if (Item18.Equals(default(T18)))
+					hash = (hash * -1521134295) + Item18.GetHashCode();
+				if (Item19.Equals(default(T19)))
+					hash = (hash * -1521134295) + Item19.GetHashCode();
+				if (Item20.Equals(default(T20)))
+					hash = (hash * -1521134295) + Item20.GetHashCode();
+				if (Item21.Equals(default(T21)))
+					hash = (hash * -1521134295) + Item21.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21>
+	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T22 Item22 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19, T20 item20, T21 item21, T22 item22) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; Item6 = item6; Item7 = item7; Item8 = item8; Item9 = item9; Item10 = item10; Item11 = item11; Item12 = item12; Item13 = item13; Item14 = item14; Item15 = item15; Item16 = item16; Item17 = item17; Item18 = item18; Item19 = item19; Item20 = item20; Item21 = item21; Item22 = item22; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5}, {Item6}, {Item7}, {Item8}, {Item9}, {Item10}, {Item11}, {Item12}, {Item13}, {Item14}, {Item15}, {Item16}, {Item17}, {Item18}, {Item19}, {Item20}, {Item21}, {Item22})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item6, mutuple.Item6);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item7, mutuple.Item7);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item8, mutuple.Item8);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item9, mutuple.Item9);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item10, mutuple.Item10);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item11, mutuple.Item11);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item12, mutuple.Item12);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item13, mutuple.Item13);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item14, mutuple.Item14);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item15, mutuple.Item15);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item16, mutuple.Item16);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item17, mutuple.Item17);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item18, mutuple.Item18);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item19, mutuple.Item19);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item20, mutuple.Item20);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item21, mutuple.Item21);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item22, mutuple.Item22);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			if (!comparer.Equals(Item6, mutuple.Item6))
+				return false;
+			if (!comparer.Equals(Item7, mutuple.Item7))
+				return false;
+			if (!comparer.Equals(Item8, mutuple.Item8))
+				return false;
+			if (!comparer.Equals(Item9, mutuple.Item9))
+				return false;
+			if (!comparer.Equals(Item10, mutuple.Item10))
+				return false;
+			if (!comparer.Equals(Item11, mutuple.Item11))
+				return false;
+			if (!comparer.Equals(Item12, mutuple.Item12))
+				return false;
+			if (!comparer.Equals(Item13, mutuple.Item13))
+				return false;
+			if (!comparer.Equals(Item14, mutuple.Item14))
+				return false;
+			if (!comparer.Equals(Item15, mutuple.Item15))
+				return false;
+			if (!comparer.Equals(Item16, mutuple.Item16))
+				return false;
+			if (!comparer.Equals(Item17, mutuple.Item17))
+				return false;
+			if (!comparer.Equals(Item18, mutuple.Item18))
+				return false;
+			if (!comparer.Equals(Item19, mutuple.Item19))
+				return false;
+			if (!comparer.Equals(Item20, mutuple.Item20))
+				return false;
+			if (!comparer.Equals(Item21, mutuple.Item21))
+				return false;
+			if (!comparer.Equals(Item22, mutuple.Item22))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+				if (Item6.Equals(default(T6)))
+					hash = (hash * -1521134295) + Item6.GetHashCode();
+				if (Item7.Equals(default(T7)))
+					hash = (hash * -1521134295) + Item7.GetHashCode();
+				if (Item8.Equals(default(T8)))
+					hash = (hash * -1521134295) + Item8.GetHashCode();
+				if (Item9.Equals(default(T9)))
+					hash = (hash * -1521134295) + Item9.GetHashCode();
+				if (Item10.Equals(default(T10)))
+					hash = (hash * -1521134295) + Item10.GetHashCode();
+				if (Item11.Equals(default(T11)))
+					hash = (hash * -1521134295) + Item11.GetHashCode();
+				if (Item12.Equals(default(T12)))
+					hash = (hash * -1521134295) + Item12.GetHashCode();
+				if (Item13.Equals(default(T13)))
+					hash = (hash * -1521134295) + Item13.GetHashCode();
+				if (Item14.Equals(default(T14)))
+					hash = (hash * -1521134295) + Item14.GetHashCode();
+				if (Item15.Equals(default(T15)))
+					hash = (hash * -1521134295) + Item15.GetHashCode();
+				if (Item16.Equals(default(T16)))
+					hash = (hash * -1521134295) + Item16.GetHashCode();
+				if (Item17.Equals(default(T17)))
+					hash = (hash * -1521134295) + Item17.GetHashCode();
+				if (Item18.Equals(default(T18)))
+					hash = (hash * -1521134295) + Item18.GetHashCode();
+				if (Item19.Equals(default(T19)))
+					hash = (hash * -1521134295) + Item19.GetHashCode();
+				if (Item20.Equals(default(T20)))
+					hash = (hash * -1521134295) + Item20.GetHashCode();
+				if (Item21.Equals(default(T21)))
+					hash = (hash * -1521134295) + Item21.GetHashCode();
+				if (Item22.Equals(default(T22)))
+					hash = (hash * -1521134295) + Item22.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22>
+	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T23 Item23 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19, T20 item20, T21 item21, T22 item22, T23 item23) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; Item6 = item6; Item7 = item7; Item8 = item8; Item9 = item9; Item10 = item10; Item11 = item11; Item12 = item12; Item13 = item13; Item14 = item14; Item15 = item15; Item16 = item16; Item17 = item17; Item18 = item18; Item19 = item19; Item20 = item20; Item21 = item21; Item22 = item22; Item23 = item23; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5}, {Item6}, {Item7}, {Item8}, {Item9}, {Item10}, {Item11}, {Item12}, {Item13}, {Item14}, {Item15}, {Item16}, {Item17}, {Item18}, {Item19}, {Item20}, {Item21}, {Item22}, {Item23})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item6, mutuple.Item6);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item7, mutuple.Item7);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item8, mutuple.Item8);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item9, mutuple.Item9);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item10, mutuple.Item10);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item11, mutuple.Item11);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item12, mutuple.Item12);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item13, mutuple.Item13);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item14, mutuple.Item14);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item15, mutuple.Item15);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item16, mutuple.Item16);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item17, mutuple.Item17);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item18, mutuple.Item18);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item19, mutuple.Item19);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item20, mutuple.Item20);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item21, mutuple.Item21);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item22, mutuple.Item22);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item23, mutuple.Item23);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			if (!comparer.Equals(Item6, mutuple.Item6))
+				return false;
+			if (!comparer.Equals(Item7, mutuple.Item7))
+				return false;
+			if (!comparer.Equals(Item8, mutuple.Item8))
+				return false;
+			if (!comparer.Equals(Item9, mutuple.Item9))
+				return false;
+			if (!comparer.Equals(Item10, mutuple.Item10))
+				return false;
+			if (!comparer.Equals(Item11, mutuple.Item11))
+				return false;
+			if (!comparer.Equals(Item12, mutuple.Item12))
+				return false;
+			if (!comparer.Equals(Item13, mutuple.Item13))
+				return false;
+			if (!comparer.Equals(Item14, mutuple.Item14))
+				return false;
+			if (!comparer.Equals(Item15, mutuple.Item15))
+				return false;
+			if (!comparer.Equals(Item16, mutuple.Item16))
+				return false;
+			if (!comparer.Equals(Item17, mutuple.Item17))
+				return false;
+			if (!comparer.Equals(Item18, mutuple.Item18))
+				return false;
+			if (!comparer.Equals(Item19, mutuple.Item19))
+				return false;
+			if (!comparer.Equals(Item20, mutuple.Item20))
+				return false;
+			if (!comparer.Equals(Item21, mutuple.Item21))
+				return false;
+			if (!comparer.Equals(Item22, mutuple.Item22))
+				return false;
+			if (!comparer.Equals(Item23, mutuple.Item23))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+				if (Item6.Equals(default(T6)))
+					hash = (hash * -1521134295) + Item6.GetHashCode();
+				if (Item7.Equals(default(T7)))
+					hash = (hash * -1521134295) + Item7.GetHashCode();
+				if (Item8.Equals(default(T8)))
+					hash = (hash * -1521134295) + Item8.GetHashCode();
+				if (Item9.Equals(default(T9)))
+					hash = (hash * -1521134295) + Item9.GetHashCode();
+				if (Item10.Equals(default(T10)))
+					hash = (hash * -1521134295) + Item10.GetHashCode();
+				if (Item11.Equals(default(T11)))
+					hash = (hash * -1521134295) + Item11.GetHashCode();
+				if (Item12.Equals(default(T12)))
+					hash = (hash * -1521134295) + Item12.GetHashCode();
+				if (Item13.Equals(default(T13)))
+					hash = (hash * -1521134295) + Item13.GetHashCode();
+				if (Item14.Equals(default(T14)))
+					hash = (hash * -1521134295) + Item14.GetHashCode();
+				if (Item15.Equals(default(T15)))
+					hash = (hash * -1521134295) + Item15.GetHashCode();
+				if (Item16.Equals(default(T16)))
+					hash = (hash * -1521134295) + Item16.GetHashCode();
+				if (Item17.Equals(default(T17)))
+					hash = (hash * -1521134295) + Item17.GetHashCode();
+				if (Item18.Equals(default(T18)))
+					hash = (hash * -1521134295) + Item18.GetHashCode();
+				if (Item19.Equals(default(T19)))
+					hash = (hash * -1521134295) + Item19.GetHashCode();
+				if (Item20.Equals(default(T20)))
+					hash = (hash * -1521134295) + Item20.GetHashCode();
+				if (Item21.Equals(default(T21)))
+					hash = (hash * -1521134295) + Item21.GetHashCode();
+				if (Item22.Equals(default(T22)))
+					hash = (hash * -1521134295) + Item22.GetHashCode();
+				if (Item23.Equals(default(T23)))
+					hash = (hash * -1521134295) + Item23.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23>
+	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T24 Item24 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19, T20 item20, T21 item21, T22 item22, T23 item23, T24 item24) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; Item6 = item6; Item7 = item7; Item8 = item8; Item9 = item9; Item10 = item10; Item11 = item11; Item12 = item12; Item13 = item13; Item14 = item14; Item15 = item15; Item16 = item16; Item17 = item17; Item18 = item18; Item19 = item19; Item20 = item20; Item21 = item21; Item22 = item22; Item23 = item23; Item24 = item24; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5}, {Item6}, {Item7}, {Item8}, {Item9}, {Item10}, {Item11}, {Item12}, {Item13}, {Item14}, {Item15}, {Item16}, {Item17}, {Item18}, {Item19}, {Item20}, {Item21}, {Item22}, {Item23}, {Item24})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item6, mutuple.Item6);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item7, mutuple.Item7);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item8, mutuple.Item8);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item9, mutuple.Item9);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item10, mutuple.Item10);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item11, mutuple.Item11);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item12, mutuple.Item12);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item13, mutuple.Item13);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item14, mutuple.Item14);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item15, mutuple.Item15);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item16, mutuple.Item16);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item17, mutuple.Item17);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item18, mutuple.Item18);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item19, mutuple.Item19);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item20, mutuple.Item20);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item21, mutuple.Item21);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item22, mutuple.Item22);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item23, mutuple.Item23);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item24, mutuple.Item24);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			if (!comparer.Equals(Item6, mutuple.Item6))
+				return false;
+			if (!comparer.Equals(Item7, mutuple.Item7))
+				return false;
+			if (!comparer.Equals(Item8, mutuple.Item8))
+				return false;
+			if (!comparer.Equals(Item9, mutuple.Item9))
+				return false;
+			if (!comparer.Equals(Item10, mutuple.Item10))
+				return false;
+			if (!comparer.Equals(Item11, mutuple.Item11))
+				return false;
+			if (!comparer.Equals(Item12, mutuple.Item12))
+				return false;
+			if (!comparer.Equals(Item13, mutuple.Item13))
+				return false;
+			if (!comparer.Equals(Item14, mutuple.Item14))
+				return false;
+			if (!comparer.Equals(Item15, mutuple.Item15))
+				return false;
+			if (!comparer.Equals(Item16, mutuple.Item16))
+				return false;
+			if (!comparer.Equals(Item17, mutuple.Item17))
+				return false;
+			if (!comparer.Equals(Item18, mutuple.Item18))
+				return false;
+			if (!comparer.Equals(Item19, mutuple.Item19))
+				return false;
+			if (!comparer.Equals(Item20, mutuple.Item20))
+				return false;
+			if (!comparer.Equals(Item21, mutuple.Item21))
+				return false;
+			if (!comparer.Equals(Item22, mutuple.Item22))
+				return false;
+			if (!comparer.Equals(Item23, mutuple.Item23))
+				return false;
+			if (!comparer.Equals(Item24, mutuple.Item24))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+				if (Item6.Equals(default(T6)))
+					hash = (hash * -1521134295) + Item6.GetHashCode();
+				if (Item7.Equals(default(T7)))
+					hash = (hash * -1521134295) + Item7.GetHashCode();
+				if (Item8.Equals(default(T8)))
+					hash = (hash * -1521134295) + Item8.GetHashCode();
+				if (Item9.Equals(default(T9)))
+					hash = (hash * -1521134295) + Item9.GetHashCode();
+				if (Item10.Equals(default(T10)))
+					hash = (hash * -1521134295) + Item10.GetHashCode();
+				if (Item11.Equals(default(T11)))
+					hash = (hash * -1521134295) + Item11.GetHashCode();
+				if (Item12.Equals(default(T12)))
+					hash = (hash * -1521134295) + Item12.GetHashCode();
+				if (Item13.Equals(default(T13)))
+					hash = (hash * -1521134295) + Item13.GetHashCode();
+				if (Item14.Equals(default(T14)))
+					hash = (hash * -1521134295) + Item14.GetHashCode();
+				if (Item15.Equals(default(T15)))
+					hash = (hash * -1521134295) + Item15.GetHashCode();
+				if (Item16.Equals(default(T16)))
+					hash = (hash * -1521134295) + Item16.GetHashCode();
+				if (Item17.Equals(default(T17)))
+					hash = (hash * -1521134295) + Item17.GetHashCode();
+				if (Item18.Equals(default(T18)))
+					hash = (hash * -1521134295) + Item18.GetHashCode();
+				if (Item19.Equals(default(T19)))
+					hash = (hash * -1521134295) + Item19.GetHashCode();
+				if (Item20.Equals(default(T20)))
+					hash = (hash * -1521134295) + Item20.GetHashCode();
+				if (Item21.Equals(default(T21)))
+					hash = (hash * -1521134295) + Item21.GetHashCode();
+				if (Item22.Equals(default(T22)))
+					hash = (hash * -1521134295) + Item22.GetHashCode();
+				if (Item23.Equals(default(T23)))
+					hash = (hash * -1521134295) + Item23.GetHashCode();
+				if (Item24.Equals(default(T24)))
+					hash = (hash * -1521134295) + Item24.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24>
+	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T25 Item25 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19, T20 item20, T21 item21, T22 item22, T23 item23, T24 item24, T25 item25) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; Item6 = item6; Item7 = item7; Item8 = item8; Item9 = item9; Item10 = item10; Item11 = item11; Item12 = item12; Item13 = item13; Item14 = item14; Item15 = item15; Item16 = item16; Item17 = item17; Item18 = item18; Item19 = item19; Item20 = item20; Item21 = item21; Item22 = item22; Item23 = item23; Item24 = item24; Item25 = item25; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5}, {Item6}, {Item7}, {Item8}, {Item9}, {Item10}, {Item11}, {Item12}, {Item13}, {Item14}, {Item15}, {Item16}, {Item17}, {Item18}, {Item19}, {Item20}, {Item21}, {Item22}, {Item23}, {Item24}, {Item25})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item6, mutuple.Item6);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item7, mutuple.Item7);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item8, mutuple.Item8);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item9, mutuple.Item9);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item10, mutuple.Item10);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item11, mutuple.Item11);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item12, mutuple.Item12);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item13, mutuple.Item13);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item14, mutuple.Item14);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item15, mutuple.Item15);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item16, mutuple.Item16);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item17, mutuple.Item17);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item18, mutuple.Item18);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item19, mutuple.Item19);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item20, mutuple.Item20);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item21, mutuple.Item21);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item22, mutuple.Item22);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item23, mutuple.Item23);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item24, mutuple.Item24);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item25, mutuple.Item25);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			if (!comparer.Equals(Item6, mutuple.Item6))
+				return false;
+			if (!comparer.Equals(Item7, mutuple.Item7))
+				return false;
+			if (!comparer.Equals(Item8, mutuple.Item8))
+				return false;
+			if (!comparer.Equals(Item9, mutuple.Item9))
+				return false;
+			if (!comparer.Equals(Item10, mutuple.Item10))
+				return false;
+			if (!comparer.Equals(Item11, mutuple.Item11))
+				return false;
+			if (!comparer.Equals(Item12, mutuple.Item12))
+				return false;
+			if (!comparer.Equals(Item13, mutuple.Item13))
+				return false;
+			if (!comparer.Equals(Item14, mutuple.Item14))
+				return false;
+			if (!comparer.Equals(Item15, mutuple.Item15))
+				return false;
+			if (!comparer.Equals(Item16, mutuple.Item16))
+				return false;
+			if (!comparer.Equals(Item17, mutuple.Item17))
+				return false;
+			if (!comparer.Equals(Item18, mutuple.Item18))
+				return false;
+			if (!comparer.Equals(Item19, mutuple.Item19))
+				return false;
+			if (!comparer.Equals(Item20, mutuple.Item20))
+				return false;
+			if (!comparer.Equals(Item21, mutuple.Item21))
+				return false;
+			if (!comparer.Equals(Item22, mutuple.Item22))
+				return false;
+			if (!comparer.Equals(Item23, mutuple.Item23))
+				return false;
+			if (!comparer.Equals(Item24, mutuple.Item24))
+				return false;
+			if (!comparer.Equals(Item25, mutuple.Item25))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+				if (Item6.Equals(default(T6)))
+					hash = (hash * -1521134295) + Item6.GetHashCode();
+				if (Item7.Equals(default(T7)))
+					hash = (hash * -1521134295) + Item7.GetHashCode();
+				if (Item8.Equals(default(T8)))
+					hash = (hash * -1521134295) + Item8.GetHashCode();
+				if (Item9.Equals(default(T9)))
+					hash = (hash * -1521134295) + Item9.GetHashCode();
+				if (Item10.Equals(default(T10)))
+					hash = (hash * -1521134295) + Item10.GetHashCode();
+				if (Item11.Equals(default(T11)))
+					hash = (hash * -1521134295) + Item11.GetHashCode();
+				if (Item12.Equals(default(T12)))
+					hash = (hash * -1521134295) + Item12.GetHashCode();
+				if (Item13.Equals(default(T13)))
+					hash = (hash * -1521134295) + Item13.GetHashCode();
+				if (Item14.Equals(default(T14)))
+					hash = (hash * -1521134295) + Item14.GetHashCode();
+				if (Item15.Equals(default(T15)))
+					hash = (hash * -1521134295) + Item15.GetHashCode();
+				if (Item16.Equals(default(T16)))
+					hash = (hash * -1521134295) + Item16.GetHashCode();
+				if (Item17.Equals(default(T17)))
+					hash = (hash * -1521134295) + Item17.GetHashCode();
+				if (Item18.Equals(default(T18)))
+					hash = (hash * -1521134295) + Item18.GetHashCode();
+				if (Item19.Equals(default(T19)))
+					hash = (hash * -1521134295) + Item19.GetHashCode();
+				if (Item20.Equals(default(T20)))
+					hash = (hash * -1521134295) + Item20.GetHashCode();
+				if (Item21.Equals(default(T21)))
+					hash = (hash * -1521134295) + Item21.GetHashCode();
+				if (Item22.Equals(default(T22)))
+					hash = (hash * -1521134295) + Item22.GetHashCode();
+				if (Item23.Equals(default(T23)))
+					hash = (hash * -1521134295) + Item23.GetHashCode();
+				if (Item24.Equals(default(T24)))
+					hash = (hash * -1521134295) + Item24.GetHashCode();
+				if (Item25.Equals(default(T25)))
+					hash = (hash * -1521134295) + Item25.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25>
+	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T26 Item26 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19, T20 item20, T21 item21, T22 item22, T23 item23, T24 item24, T25 item25, T26 item26) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; Item6 = item6; Item7 = item7; Item8 = item8; Item9 = item9; Item10 = item10; Item11 = item11; Item12 = item12; Item13 = item13; Item14 = item14; Item15 = item15; Item16 = item16; Item17 = item17; Item18 = item18; Item19 = item19; Item20 = item20; Item21 = item21; Item22 = item22; Item23 = item23; Item24 = item24; Item25 = item25; Item26 = item26; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5}, {Item6}, {Item7}, {Item8}, {Item9}, {Item10}, {Item11}, {Item12}, {Item13}, {Item14}, {Item15}, {Item16}, {Item17}, {Item18}, {Item19}, {Item20}, {Item21}, {Item22}, {Item23}, {Item24}, {Item25}, {Item26})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item6, mutuple.Item6);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item7, mutuple.Item7);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item8, mutuple.Item8);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item9, mutuple.Item9);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item10, mutuple.Item10);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item11, mutuple.Item11);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item12, mutuple.Item12);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item13, mutuple.Item13);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item14, mutuple.Item14);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item15, mutuple.Item15);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item16, mutuple.Item16);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item17, mutuple.Item17);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item18, mutuple.Item18);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item19, mutuple.Item19);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item20, mutuple.Item20);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item21, mutuple.Item21);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item22, mutuple.Item22);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item23, mutuple.Item23);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item24, mutuple.Item24);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item25, mutuple.Item25);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item26, mutuple.Item26);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			if (!comparer.Equals(Item6, mutuple.Item6))
+				return false;
+			if (!comparer.Equals(Item7, mutuple.Item7))
+				return false;
+			if (!comparer.Equals(Item8, mutuple.Item8))
+				return false;
+			if (!comparer.Equals(Item9, mutuple.Item9))
+				return false;
+			if (!comparer.Equals(Item10, mutuple.Item10))
+				return false;
+			if (!comparer.Equals(Item11, mutuple.Item11))
+				return false;
+			if (!comparer.Equals(Item12, mutuple.Item12))
+				return false;
+			if (!comparer.Equals(Item13, mutuple.Item13))
+				return false;
+			if (!comparer.Equals(Item14, mutuple.Item14))
+				return false;
+			if (!comparer.Equals(Item15, mutuple.Item15))
+				return false;
+			if (!comparer.Equals(Item16, mutuple.Item16))
+				return false;
+			if (!comparer.Equals(Item17, mutuple.Item17))
+				return false;
+			if (!comparer.Equals(Item18, mutuple.Item18))
+				return false;
+			if (!comparer.Equals(Item19, mutuple.Item19))
+				return false;
+			if (!comparer.Equals(Item20, mutuple.Item20))
+				return false;
+			if (!comparer.Equals(Item21, mutuple.Item21))
+				return false;
+			if (!comparer.Equals(Item22, mutuple.Item22))
+				return false;
+			if (!comparer.Equals(Item23, mutuple.Item23))
+				return false;
+			if (!comparer.Equals(Item24, mutuple.Item24))
+				return false;
+			if (!comparer.Equals(Item25, mutuple.Item25))
+				return false;
+			if (!comparer.Equals(Item26, mutuple.Item26))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+				if (Item6.Equals(default(T6)))
+					hash = (hash * -1521134295) + Item6.GetHashCode();
+				if (Item7.Equals(default(T7)))
+					hash = (hash * -1521134295) + Item7.GetHashCode();
+				if (Item8.Equals(default(T8)))
+					hash = (hash * -1521134295) + Item8.GetHashCode();
+				if (Item9.Equals(default(T9)))
+					hash = (hash * -1521134295) + Item9.GetHashCode();
+				if (Item10.Equals(default(T10)))
+					hash = (hash * -1521134295) + Item10.GetHashCode();
+				if (Item11.Equals(default(T11)))
+					hash = (hash * -1521134295) + Item11.GetHashCode();
+				if (Item12.Equals(default(T12)))
+					hash = (hash * -1521134295) + Item12.GetHashCode();
+				if (Item13.Equals(default(T13)))
+					hash = (hash * -1521134295) + Item13.GetHashCode();
+				if (Item14.Equals(default(T14)))
+					hash = (hash * -1521134295) + Item14.GetHashCode();
+				if (Item15.Equals(default(T15)))
+					hash = (hash * -1521134295) + Item15.GetHashCode();
+				if (Item16.Equals(default(T16)))
+					hash = (hash * -1521134295) + Item16.GetHashCode();
+				if (Item17.Equals(default(T17)))
+					hash = (hash * -1521134295) + Item17.GetHashCode();
+				if (Item18.Equals(default(T18)))
+					hash = (hash * -1521134295) + Item18.GetHashCode();
+				if (Item19.Equals(default(T19)))
+					hash = (hash * -1521134295) + Item19.GetHashCode();
+				if (Item20.Equals(default(T20)))
+					hash = (hash * -1521134295) + Item20.GetHashCode();
+				if (Item21.Equals(default(T21)))
+					hash = (hash * -1521134295) + Item21.GetHashCode();
+				if (Item22.Equals(default(T22)))
+					hash = (hash * -1521134295) + Item22.GetHashCode();
+				if (Item23.Equals(default(T23)))
+					hash = (hash * -1521134295) + Item23.GetHashCode();
+				if (Item24.Equals(default(T24)))
+					hash = (hash * -1521134295) + Item24.GetHashCode();
+				if (Item25.Equals(default(T25)))
+					hash = (hash * -1521134295) + Item25.GetHashCode();
+				if (Item26.Equals(default(T26)))
+					hash = (hash * -1521134295) + Item26.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26>
+	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T27 Item27 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19, T20 item20, T21 item21, T22 item22, T23 item23, T24 item24, T25 item25, T26 item26, T27 item27) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; Item6 = item6; Item7 = item7; Item8 = item8; Item9 = item9; Item10 = item10; Item11 = item11; Item12 = item12; Item13 = item13; Item14 = item14; Item15 = item15; Item16 = item16; Item17 = item17; Item18 = item18; Item19 = item19; Item20 = item20; Item21 = item21; Item22 = item22; Item23 = item23; Item24 = item24; Item25 = item25; Item26 = item26; Item27 = item27; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5}, {Item6}, {Item7}, {Item8}, {Item9}, {Item10}, {Item11}, {Item12}, {Item13}, {Item14}, {Item15}, {Item16}, {Item17}, {Item18}, {Item19}, {Item20}, {Item21}, {Item22}, {Item23}, {Item24}, {Item25}, {Item26}, {Item27})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item6, mutuple.Item6);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item7, mutuple.Item7);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item8, mutuple.Item8);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item9, mutuple.Item9);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item10, mutuple.Item10);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item11, mutuple.Item11);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item12, mutuple.Item12);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item13, mutuple.Item13);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item14, mutuple.Item14);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item15, mutuple.Item15);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item16, mutuple.Item16);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item17, mutuple.Item17);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item18, mutuple.Item18);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item19, mutuple.Item19);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item20, mutuple.Item20);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item21, mutuple.Item21);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item22, mutuple.Item22);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item23, mutuple.Item23);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item24, mutuple.Item24);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item25, mutuple.Item25);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item26, mutuple.Item26);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item27, mutuple.Item27);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			if (!comparer.Equals(Item6, mutuple.Item6))
+				return false;
+			if (!comparer.Equals(Item7, mutuple.Item7))
+				return false;
+			if (!comparer.Equals(Item8, mutuple.Item8))
+				return false;
+			if (!comparer.Equals(Item9, mutuple.Item9))
+				return false;
+			if (!comparer.Equals(Item10, mutuple.Item10))
+				return false;
+			if (!comparer.Equals(Item11, mutuple.Item11))
+				return false;
+			if (!comparer.Equals(Item12, mutuple.Item12))
+				return false;
+			if (!comparer.Equals(Item13, mutuple.Item13))
+				return false;
+			if (!comparer.Equals(Item14, mutuple.Item14))
+				return false;
+			if (!comparer.Equals(Item15, mutuple.Item15))
+				return false;
+			if (!comparer.Equals(Item16, mutuple.Item16))
+				return false;
+			if (!comparer.Equals(Item17, mutuple.Item17))
+				return false;
+			if (!comparer.Equals(Item18, mutuple.Item18))
+				return false;
+			if (!comparer.Equals(Item19, mutuple.Item19))
+				return false;
+			if (!comparer.Equals(Item20, mutuple.Item20))
+				return false;
+			if (!comparer.Equals(Item21, mutuple.Item21))
+				return false;
+			if (!comparer.Equals(Item22, mutuple.Item22))
+				return false;
+			if (!comparer.Equals(Item23, mutuple.Item23))
+				return false;
+			if (!comparer.Equals(Item24, mutuple.Item24))
+				return false;
+			if (!comparer.Equals(Item25, mutuple.Item25))
+				return false;
+			if (!comparer.Equals(Item26, mutuple.Item26))
+				return false;
+			if (!comparer.Equals(Item27, mutuple.Item27))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+				if (Item6.Equals(default(T6)))
+					hash = (hash * -1521134295) + Item6.GetHashCode();
+				if (Item7.Equals(default(T7)))
+					hash = (hash * -1521134295) + Item7.GetHashCode();
+				if (Item8.Equals(default(T8)))
+					hash = (hash * -1521134295) + Item8.GetHashCode();
+				if (Item9.Equals(default(T9)))
+					hash = (hash * -1521134295) + Item9.GetHashCode();
+				if (Item10.Equals(default(T10)))
+					hash = (hash * -1521134295) + Item10.GetHashCode();
+				if (Item11.Equals(default(T11)))
+					hash = (hash * -1521134295) + Item11.GetHashCode();
+				if (Item12.Equals(default(T12)))
+					hash = (hash * -1521134295) + Item12.GetHashCode();
+				if (Item13.Equals(default(T13)))
+					hash = (hash * -1521134295) + Item13.GetHashCode();
+				if (Item14.Equals(default(T14)))
+					hash = (hash * -1521134295) + Item14.GetHashCode();
+				if (Item15.Equals(default(T15)))
+					hash = (hash * -1521134295) + Item15.GetHashCode();
+				if (Item16.Equals(default(T16)))
+					hash = (hash * -1521134295) + Item16.GetHashCode();
+				if (Item17.Equals(default(T17)))
+					hash = (hash * -1521134295) + Item17.GetHashCode();
+				if (Item18.Equals(default(T18)))
+					hash = (hash * -1521134295) + Item18.GetHashCode();
+				if (Item19.Equals(default(T19)))
+					hash = (hash * -1521134295) + Item19.GetHashCode();
+				if (Item20.Equals(default(T20)))
+					hash = (hash * -1521134295) + Item20.GetHashCode();
+				if (Item21.Equals(default(T21)))
+					hash = (hash * -1521134295) + Item21.GetHashCode();
+				if (Item22.Equals(default(T22)))
+					hash = (hash * -1521134295) + Item22.GetHashCode();
+				if (Item23.Equals(default(T23)))
+					hash = (hash * -1521134295) + Item23.GetHashCode();
+				if (Item24.Equals(default(T24)))
+					hash = (hash * -1521134295) + Item24.GetHashCode();
+				if (Item25.Equals(default(T25)))
+					hash = (hash * -1521134295) + Item25.GetHashCode();
+				if (Item26.Equals(default(T26)))
+					hash = (hash * -1521134295) + Item26.GetHashCode();
+				if (Item27.Equals(default(T27)))
+					hash = (hash * -1521134295) + Item27.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27>
+	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T28 Item28 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19, T20 item20, T21 item21, T22 item22, T23 item23, T24 item24, T25 item25, T26 item26, T27 item27, T28 item28) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; Item6 = item6; Item7 = item7; Item8 = item8; Item9 = item9; Item10 = item10; Item11 = item11; Item12 = item12; Item13 = item13; Item14 = item14; Item15 = item15; Item16 = item16; Item17 = item17; Item18 = item18; Item19 = item19; Item20 = item20; Item21 = item21; Item22 = item22; Item23 = item23; Item24 = item24; Item25 = item25; Item26 = item26; Item27 = item27; Item28 = item28; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5}, {Item6}, {Item7}, {Item8}, {Item9}, {Item10}, {Item11}, {Item12}, {Item13}, {Item14}, {Item15}, {Item16}, {Item17}, {Item18}, {Item19}, {Item20}, {Item21}, {Item22}, {Item23}, {Item24}, {Item25}, {Item26}, {Item27}, {Item28})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item6, mutuple.Item6);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item7, mutuple.Item7);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item8, mutuple.Item8);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item9, mutuple.Item9);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item10, mutuple.Item10);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item11, mutuple.Item11);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item12, mutuple.Item12);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item13, mutuple.Item13);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item14, mutuple.Item14);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item15, mutuple.Item15);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item16, mutuple.Item16);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item17, mutuple.Item17);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item18, mutuple.Item18);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item19, mutuple.Item19);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item20, mutuple.Item20);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item21, mutuple.Item21);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item22, mutuple.Item22);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item23, mutuple.Item23);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item24, mutuple.Item24);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item25, mutuple.Item25);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item26, mutuple.Item26);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item27, mutuple.Item27);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item28, mutuple.Item28);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			if (!comparer.Equals(Item6, mutuple.Item6))
+				return false;
+			if (!comparer.Equals(Item7, mutuple.Item7))
+				return false;
+			if (!comparer.Equals(Item8, mutuple.Item8))
+				return false;
+			if (!comparer.Equals(Item9, mutuple.Item9))
+				return false;
+			if (!comparer.Equals(Item10, mutuple.Item10))
+				return false;
+			if (!comparer.Equals(Item11, mutuple.Item11))
+				return false;
+			if (!comparer.Equals(Item12, mutuple.Item12))
+				return false;
+			if (!comparer.Equals(Item13, mutuple.Item13))
+				return false;
+			if (!comparer.Equals(Item14, mutuple.Item14))
+				return false;
+			if (!comparer.Equals(Item15, mutuple.Item15))
+				return false;
+			if (!comparer.Equals(Item16, mutuple.Item16))
+				return false;
+			if (!comparer.Equals(Item17, mutuple.Item17))
+				return false;
+			if (!comparer.Equals(Item18, mutuple.Item18))
+				return false;
+			if (!comparer.Equals(Item19, mutuple.Item19))
+				return false;
+			if (!comparer.Equals(Item20, mutuple.Item20))
+				return false;
+			if (!comparer.Equals(Item21, mutuple.Item21))
+				return false;
+			if (!comparer.Equals(Item22, mutuple.Item22))
+				return false;
+			if (!comparer.Equals(Item23, mutuple.Item23))
+				return false;
+			if (!comparer.Equals(Item24, mutuple.Item24))
+				return false;
+			if (!comparer.Equals(Item25, mutuple.Item25))
+				return false;
+			if (!comparer.Equals(Item26, mutuple.Item26))
+				return false;
+			if (!comparer.Equals(Item27, mutuple.Item27))
+				return false;
+			if (!comparer.Equals(Item28, mutuple.Item28))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+				if (Item6.Equals(default(T6)))
+					hash = (hash * -1521134295) + Item6.GetHashCode();
+				if (Item7.Equals(default(T7)))
+					hash = (hash * -1521134295) + Item7.GetHashCode();
+				if (Item8.Equals(default(T8)))
+					hash = (hash * -1521134295) + Item8.GetHashCode();
+				if (Item9.Equals(default(T9)))
+					hash = (hash * -1521134295) + Item9.GetHashCode();
+				if (Item10.Equals(default(T10)))
+					hash = (hash * -1521134295) + Item10.GetHashCode();
+				if (Item11.Equals(default(T11)))
+					hash = (hash * -1521134295) + Item11.GetHashCode();
+				if (Item12.Equals(default(T12)))
+					hash = (hash * -1521134295) + Item12.GetHashCode();
+				if (Item13.Equals(default(T13)))
+					hash = (hash * -1521134295) + Item13.GetHashCode();
+				if (Item14.Equals(default(T14)))
+					hash = (hash * -1521134295) + Item14.GetHashCode();
+				if (Item15.Equals(default(T15)))
+					hash = (hash * -1521134295) + Item15.GetHashCode();
+				if (Item16.Equals(default(T16)))
+					hash = (hash * -1521134295) + Item16.GetHashCode();
+				if (Item17.Equals(default(T17)))
+					hash = (hash * -1521134295) + Item17.GetHashCode();
+				if (Item18.Equals(default(T18)))
+					hash = (hash * -1521134295) + Item18.GetHashCode();
+				if (Item19.Equals(default(T19)))
+					hash = (hash * -1521134295) + Item19.GetHashCode();
+				if (Item20.Equals(default(T20)))
+					hash = (hash * -1521134295) + Item20.GetHashCode();
+				if (Item21.Equals(default(T21)))
+					hash = (hash * -1521134295) + Item21.GetHashCode();
+				if (Item22.Equals(default(T22)))
+					hash = (hash * -1521134295) + Item22.GetHashCode();
+				if (Item23.Equals(default(T23)))
+					hash = (hash * -1521134295) + Item23.GetHashCode();
+				if (Item24.Equals(default(T24)))
+					hash = (hash * -1521134295) + Item24.GetHashCode();
+				if (Item25.Equals(default(T25)))
+					hash = (hash * -1521134295) + Item25.GetHashCode();
+				if (Item26.Equals(default(T26)))
+					hash = (hash * -1521134295) + Item26.GetHashCode();
+				if (Item27.Equals(default(T27)))
+					hash = (hash * -1521134295) + Item27.GetHashCode();
+				if (Item28.Equals(default(T28)))
+					hash = (hash * -1521134295) + Item28.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28>
+	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T29 Item29 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19, T20 item20, T21 item21, T22 item22, T23 item23, T24 item24, T25 item25, T26 item26, T27 item27, T28 item28, T29 item29) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; Item6 = item6; Item7 = item7; Item8 = item8; Item9 = item9; Item10 = item10; Item11 = item11; Item12 = item12; Item13 = item13; Item14 = item14; Item15 = item15; Item16 = item16; Item17 = item17; Item18 = item18; Item19 = item19; Item20 = item20; Item21 = item21; Item22 = item22; Item23 = item23; Item24 = item24; Item25 = item25; Item26 = item26; Item27 = item27; Item28 = item28; Item29 = item29; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5}, {Item6}, {Item7}, {Item8}, {Item9}, {Item10}, {Item11}, {Item12}, {Item13}, {Item14}, {Item15}, {Item16}, {Item17}, {Item18}, {Item19}, {Item20}, {Item21}, {Item22}, {Item23}, {Item24}, {Item25}, {Item26}, {Item27}, {Item28}, {Item29})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item6, mutuple.Item6);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item7, mutuple.Item7);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item8, mutuple.Item8);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item9, mutuple.Item9);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item10, mutuple.Item10);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item11, mutuple.Item11);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item12, mutuple.Item12);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item13, mutuple.Item13);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item14, mutuple.Item14);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item15, mutuple.Item15);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item16, mutuple.Item16);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item17, mutuple.Item17);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item18, mutuple.Item18);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item19, mutuple.Item19);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item20, mutuple.Item20);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item21, mutuple.Item21);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item22, mutuple.Item22);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item23, mutuple.Item23);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item24, mutuple.Item24);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item25, mutuple.Item25);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item26, mutuple.Item26);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item27, mutuple.Item27);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item28, mutuple.Item28);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item29, mutuple.Item29);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			if (!comparer.Equals(Item6, mutuple.Item6))
+				return false;
+			if (!comparer.Equals(Item7, mutuple.Item7))
+				return false;
+			if (!comparer.Equals(Item8, mutuple.Item8))
+				return false;
+			if (!comparer.Equals(Item9, mutuple.Item9))
+				return false;
+			if (!comparer.Equals(Item10, mutuple.Item10))
+				return false;
+			if (!comparer.Equals(Item11, mutuple.Item11))
+				return false;
+			if (!comparer.Equals(Item12, mutuple.Item12))
+				return false;
+			if (!comparer.Equals(Item13, mutuple.Item13))
+				return false;
+			if (!comparer.Equals(Item14, mutuple.Item14))
+				return false;
+			if (!comparer.Equals(Item15, mutuple.Item15))
+				return false;
+			if (!comparer.Equals(Item16, mutuple.Item16))
+				return false;
+			if (!comparer.Equals(Item17, mutuple.Item17))
+				return false;
+			if (!comparer.Equals(Item18, mutuple.Item18))
+				return false;
+			if (!comparer.Equals(Item19, mutuple.Item19))
+				return false;
+			if (!comparer.Equals(Item20, mutuple.Item20))
+				return false;
+			if (!comparer.Equals(Item21, mutuple.Item21))
+				return false;
+			if (!comparer.Equals(Item22, mutuple.Item22))
+				return false;
+			if (!comparer.Equals(Item23, mutuple.Item23))
+				return false;
+			if (!comparer.Equals(Item24, mutuple.Item24))
+				return false;
+			if (!comparer.Equals(Item25, mutuple.Item25))
+				return false;
+			if (!comparer.Equals(Item26, mutuple.Item26))
+				return false;
+			if (!comparer.Equals(Item27, mutuple.Item27))
+				return false;
+			if (!comparer.Equals(Item28, mutuple.Item28))
+				return false;
+			if (!comparer.Equals(Item29, mutuple.Item29))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+				if (Item6.Equals(default(T6)))
+					hash = (hash * -1521134295) + Item6.GetHashCode();
+				if (Item7.Equals(default(T7)))
+					hash = (hash * -1521134295) + Item7.GetHashCode();
+				if (Item8.Equals(default(T8)))
+					hash = (hash * -1521134295) + Item8.GetHashCode();
+				if (Item9.Equals(default(T9)))
+					hash = (hash * -1521134295) + Item9.GetHashCode();
+				if (Item10.Equals(default(T10)))
+					hash = (hash * -1521134295) + Item10.GetHashCode();
+				if (Item11.Equals(default(T11)))
+					hash = (hash * -1521134295) + Item11.GetHashCode();
+				if (Item12.Equals(default(T12)))
+					hash = (hash * -1521134295) + Item12.GetHashCode();
+				if (Item13.Equals(default(T13)))
+					hash = (hash * -1521134295) + Item13.GetHashCode();
+				if (Item14.Equals(default(T14)))
+					hash = (hash * -1521134295) + Item14.GetHashCode();
+				if (Item15.Equals(default(T15)))
+					hash = (hash * -1521134295) + Item15.GetHashCode();
+				if (Item16.Equals(default(T16)))
+					hash = (hash * -1521134295) + Item16.GetHashCode();
+				if (Item17.Equals(default(T17)))
+					hash = (hash * -1521134295) + Item17.GetHashCode();
+				if (Item18.Equals(default(T18)))
+					hash = (hash * -1521134295) + Item18.GetHashCode();
+				if (Item19.Equals(default(T19)))
+					hash = (hash * -1521134295) + Item19.GetHashCode();
+				if (Item20.Equals(default(T20)))
+					hash = (hash * -1521134295) + Item20.GetHashCode();
+				if (Item21.Equals(default(T21)))
+					hash = (hash * -1521134295) + Item21.GetHashCode();
+				if (Item22.Equals(default(T22)))
+					hash = (hash * -1521134295) + Item22.GetHashCode();
+				if (Item23.Equals(default(T23)))
+					hash = (hash * -1521134295) + Item23.GetHashCode();
+				if (Item24.Equals(default(T24)))
+					hash = (hash * -1521134295) + Item24.GetHashCode();
+				if (Item25.Equals(default(T25)))
+					hash = (hash * -1521134295) + Item25.GetHashCode();
+				if (Item26.Equals(default(T26)))
+					hash = (hash * -1521134295) + Item26.GetHashCode();
+				if (Item27.Equals(default(T27)))
+					hash = (hash * -1521134295) + Item27.GetHashCode();
+				if (Item28.Equals(default(T28)))
+					hash = (hash * -1521134295) + Item28.GetHashCode();
+				if (Item29.Equals(default(T29)))
+					hash = (hash * -1521134295) + Item29.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29>
+	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T30 Item30 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19, T20 item20, T21 item21, T22 item22, T23 item23, T24 item24, T25 item25, T26 item26, T27 item27, T28 item28, T29 item29, T30 item30) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; Item6 = item6; Item7 = item7; Item8 = item8; Item9 = item9; Item10 = item10; Item11 = item11; Item12 = item12; Item13 = item13; Item14 = item14; Item15 = item15; Item16 = item16; Item17 = item17; Item18 = item18; Item19 = item19; Item20 = item20; Item21 = item21; Item22 = item22; Item23 = item23; Item24 = item24; Item25 = item25; Item26 = item26; Item27 = item27; Item28 = item28; Item29 = item29; Item30 = item30; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5}, {Item6}, {Item7}, {Item8}, {Item9}, {Item10}, {Item11}, {Item12}, {Item13}, {Item14}, {Item15}, {Item16}, {Item17}, {Item18}, {Item19}, {Item20}, {Item21}, {Item22}, {Item23}, {Item24}, {Item25}, {Item26}, {Item27}, {Item28}, {Item29}, {Item30})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item6, mutuple.Item6);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item7, mutuple.Item7);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item8, mutuple.Item8);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item9, mutuple.Item9);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item10, mutuple.Item10);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item11, mutuple.Item11);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item12, mutuple.Item12);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item13, mutuple.Item13);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item14, mutuple.Item14);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item15, mutuple.Item15);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item16, mutuple.Item16);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item17, mutuple.Item17);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item18, mutuple.Item18);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item19, mutuple.Item19);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item20, mutuple.Item20);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item21, mutuple.Item21);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item22, mutuple.Item22);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item23, mutuple.Item23);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item24, mutuple.Item24);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item25, mutuple.Item25);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item26, mutuple.Item26);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item27, mutuple.Item27);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item28, mutuple.Item28);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item29, mutuple.Item29);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item30, mutuple.Item30);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			if (!comparer.Equals(Item6, mutuple.Item6))
+				return false;
+			if (!comparer.Equals(Item7, mutuple.Item7))
+				return false;
+			if (!comparer.Equals(Item8, mutuple.Item8))
+				return false;
+			if (!comparer.Equals(Item9, mutuple.Item9))
+				return false;
+			if (!comparer.Equals(Item10, mutuple.Item10))
+				return false;
+			if (!comparer.Equals(Item11, mutuple.Item11))
+				return false;
+			if (!comparer.Equals(Item12, mutuple.Item12))
+				return false;
+			if (!comparer.Equals(Item13, mutuple.Item13))
+				return false;
+			if (!comparer.Equals(Item14, mutuple.Item14))
+				return false;
+			if (!comparer.Equals(Item15, mutuple.Item15))
+				return false;
+			if (!comparer.Equals(Item16, mutuple.Item16))
+				return false;
+			if (!comparer.Equals(Item17, mutuple.Item17))
+				return false;
+			if (!comparer.Equals(Item18, mutuple.Item18))
+				return false;
+			if (!comparer.Equals(Item19, mutuple.Item19))
+				return false;
+			if (!comparer.Equals(Item20, mutuple.Item20))
+				return false;
+			if (!comparer.Equals(Item21, mutuple.Item21))
+				return false;
+			if (!comparer.Equals(Item22, mutuple.Item22))
+				return false;
+			if (!comparer.Equals(Item23, mutuple.Item23))
+				return false;
+			if (!comparer.Equals(Item24, mutuple.Item24))
+				return false;
+			if (!comparer.Equals(Item25, mutuple.Item25))
+				return false;
+			if (!comparer.Equals(Item26, mutuple.Item26))
+				return false;
+			if (!comparer.Equals(Item27, mutuple.Item27))
+				return false;
+			if (!comparer.Equals(Item28, mutuple.Item28))
+				return false;
+			if (!comparer.Equals(Item29, mutuple.Item29))
+				return false;
+			if (!comparer.Equals(Item30, mutuple.Item30))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+				if (Item6.Equals(default(T6)))
+					hash = (hash * -1521134295) + Item6.GetHashCode();
+				if (Item7.Equals(default(T7)))
+					hash = (hash * -1521134295) + Item7.GetHashCode();
+				if (Item8.Equals(default(T8)))
+					hash = (hash * -1521134295) + Item8.GetHashCode();
+				if (Item9.Equals(default(T9)))
+					hash = (hash * -1521134295) + Item9.GetHashCode();
+				if (Item10.Equals(default(T10)))
+					hash = (hash * -1521134295) + Item10.GetHashCode();
+				if (Item11.Equals(default(T11)))
+					hash = (hash * -1521134295) + Item11.GetHashCode();
+				if (Item12.Equals(default(T12)))
+					hash = (hash * -1521134295) + Item12.GetHashCode();
+				if (Item13.Equals(default(T13)))
+					hash = (hash * -1521134295) + Item13.GetHashCode();
+				if (Item14.Equals(default(T14)))
+					hash = (hash * -1521134295) + Item14.GetHashCode();
+				if (Item15.Equals(default(T15)))
+					hash = (hash * -1521134295) + Item15.GetHashCode();
+				if (Item16.Equals(default(T16)))
+					hash = (hash * -1521134295) + Item16.GetHashCode();
+				if (Item17.Equals(default(T17)))
+					hash = (hash * -1521134295) + Item17.GetHashCode();
+				if (Item18.Equals(default(T18)))
+					hash = (hash * -1521134295) + Item18.GetHashCode();
+				if (Item19.Equals(default(T19)))
+					hash = (hash * -1521134295) + Item19.GetHashCode();
+				if (Item20.Equals(default(T20)))
+					hash = (hash * -1521134295) + Item20.GetHashCode();
+				if (Item21.Equals(default(T21)))
+					hash = (hash * -1521134295) + Item21.GetHashCode();
+				if (Item22.Equals(default(T22)))
+					hash = (hash * -1521134295) + Item22.GetHashCode();
+				if (Item23.Equals(default(T23)))
+					hash = (hash * -1521134295) + Item23.GetHashCode();
+				if (Item24.Equals(default(T24)))
+					hash = (hash * -1521134295) + Item24.GetHashCode();
+				if (Item25.Equals(default(T25)))
+					hash = (hash * -1521134295) + Item25.GetHashCode();
+				if (Item26.Equals(default(T26)))
+					hash = (hash * -1521134295) + Item26.GetHashCode();
+				if (Item27.Equals(default(T27)))
+					hash = (hash * -1521134295) + Item27.GetHashCode();
+				if (Item28.Equals(default(T28)))
+					hash = (hash * -1521134295) + Item28.GetHashCode();
+				if (Item29.Equals(default(T29)))
+					hash = (hash * -1521134295) + Item29.GetHashCode();
+				if (Item30.Equals(default(T30)))
+					hash = (hash * -1521134295) + Item30.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30>
+	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T31 Item31 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19, T20 item20, T21 item21, T22 item22, T23 item23, T24 item24, T25 item25, T26 item26, T27 item27, T28 item28, T29 item29, T30 item30, T31 item31) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; Item6 = item6; Item7 = item7; Item8 = item8; Item9 = item9; Item10 = item10; Item11 = item11; Item12 = item12; Item13 = item13; Item14 = item14; Item15 = item15; Item16 = item16; Item17 = item17; Item18 = item18; Item19 = item19; Item20 = item20; Item21 = item21; Item22 = item22; Item23 = item23; Item24 = item24; Item25 = item25; Item26 = item26; Item27 = item27; Item28 = item28; Item29 = item29; Item30 = item30; Item31 = item31; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5}, {Item6}, {Item7}, {Item8}, {Item9}, {Item10}, {Item11}, {Item12}, {Item13}, {Item14}, {Item15}, {Item16}, {Item17}, {Item18}, {Item19}, {Item20}, {Item21}, {Item22}, {Item23}, {Item24}, {Item25}, {Item26}, {Item27}, {Item28}, {Item29}, {Item30}, {Item31})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item6, mutuple.Item6);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item7, mutuple.Item7);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item8, mutuple.Item8);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item9, mutuple.Item9);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item10, mutuple.Item10);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item11, mutuple.Item11);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item12, mutuple.Item12);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item13, mutuple.Item13);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item14, mutuple.Item14);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item15, mutuple.Item15);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item16, mutuple.Item16);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item17, mutuple.Item17);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item18, mutuple.Item18);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item19, mutuple.Item19);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item20, mutuple.Item20);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item21, mutuple.Item21);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item22, mutuple.Item22);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item23, mutuple.Item23);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item24, mutuple.Item24);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item25, mutuple.Item25);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item26, mutuple.Item26);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item27, mutuple.Item27);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item28, mutuple.Item28);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item29, mutuple.Item29);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item30, mutuple.Item30);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item31, mutuple.Item31);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			if (!comparer.Equals(Item6, mutuple.Item6))
+				return false;
+			if (!comparer.Equals(Item7, mutuple.Item7))
+				return false;
+			if (!comparer.Equals(Item8, mutuple.Item8))
+				return false;
+			if (!comparer.Equals(Item9, mutuple.Item9))
+				return false;
+			if (!comparer.Equals(Item10, mutuple.Item10))
+				return false;
+			if (!comparer.Equals(Item11, mutuple.Item11))
+				return false;
+			if (!comparer.Equals(Item12, mutuple.Item12))
+				return false;
+			if (!comparer.Equals(Item13, mutuple.Item13))
+				return false;
+			if (!comparer.Equals(Item14, mutuple.Item14))
+				return false;
+			if (!comparer.Equals(Item15, mutuple.Item15))
+				return false;
+			if (!comparer.Equals(Item16, mutuple.Item16))
+				return false;
+			if (!comparer.Equals(Item17, mutuple.Item17))
+				return false;
+			if (!comparer.Equals(Item18, mutuple.Item18))
+				return false;
+			if (!comparer.Equals(Item19, mutuple.Item19))
+				return false;
+			if (!comparer.Equals(Item20, mutuple.Item20))
+				return false;
+			if (!comparer.Equals(Item21, mutuple.Item21))
+				return false;
+			if (!comparer.Equals(Item22, mutuple.Item22))
+				return false;
+			if (!comparer.Equals(Item23, mutuple.Item23))
+				return false;
+			if (!comparer.Equals(Item24, mutuple.Item24))
+				return false;
+			if (!comparer.Equals(Item25, mutuple.Item25))
+				return false;
+			if (!comparer.Equals(Item26, mutuple.Item26))
+				return false;
+			if (!comparer.Equals(Item27, mutuple.Item27))
+				return false;
+			if (!comparer.Equals(Item28, mutuple.Item28))
+				return false;
+			if (!comparer.Equals(Item29, mutuple.Item29))
+				return false;
+			if (!comparer.Equals(Item30, mutuple.Item30))
+				return false;
+			if (!comparer.Equals(Item31, mutuple.Item31))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+				if (Item6.Equals(default(T6)))
+					hash = (hash * -1521134295) + Item6.GetHashCode();
+				if (Item7.Equals(default(T7)))
+					hash = (hash * -1521134295) + Item7.GetHashCode();
+				if (Item8.Equals(default(T8)))
+					hash = (hash * -1521134295) + Item8.GetHashCode();
+				if (Item9.Equals(default(T9)))
+					hash = (hash * -1521134295) + Item9.GetHashCode();
+				if (Item10.Equals(default(T10)))
+					hash = (hash * -1521134295) + Item10.GetHashCode();
+				if (Item11.Equals(default(T11)))
+					hash = (hash * -1521134295) + Item11.GetHashCode();
+				if (Item12.Equals(default(T12)))
+					hash = (hash * -1521134295) + Item12.GetHashCode();
+				if (Item13.Equals(default(T13)))
+					hash = (hash * -1521134295) + Item13.GetHashCode();
+				if (Item14.Equals(default(T14)))
+					hash = (hash * -1521134295) + Item14.GetHashCode();
+				if (Item15.Equals(default(T15)))
+					hash = (hash * -1521134295) + Item15.GetHashCode();
+				if (Item16.Equals(default(T16)))
+					hash = (hash * -1521134295) + Item16.GetHashCode();
+				if (Item17.Equals(default(T17)))
+					hash = (hash * -1521134295) + Item17.GetHashCode();
+				if (Item18.Equals(default(T18)))
+					hash = (hash * -1521134295) + Item18.GetHashCode();
+				if (Item19.Equals(default(T19)))
+					hash = (hash * -1521134295) + Item19.GetHashCode();
+				if (Item20.Equals(default(T20)))
+					hash = (hash * -1521134295) + Item20.GetHashCode();
+				if (Item21.Equals(default(T21)))
+					hash = (hash * -1521134295) + Item21.GetHashCode();
+				if (Item22.Equals(default(T22)))
+					hash = (hash * -1521134295) + Item22.GetHashCode();
+				if (Item23.Equals(default(T23)))
+					hash = (hash * -1521134295) + Item23.GetHashCode();
+				if (Item24.Equals(default(T24)))
+					hash = (hash * -1521134295) + Item24.GetHashCode();
+				if (Item25.Equals(default(T25)))
+					hash = (hash * -1521134295) + Item25.GetHashCode();
+				if (Item26.Equals(default(T26)))
+					hash = (hash * -1521134295) + Item26.GetHashCode();
+				if (Item27.Equals(default(T27)))
+					hash = (hash * -1521134295) + Item27.GetHashCode();
+				if (Item28.Equals(default(T28)))
+					hash = (hash * -1521134295) + Item28.GetHashCode();
+				if (Item29.Equals(default(T29)))
+					hash = (hash * -1521134295) + Item29.GetHashCode();
+				if (Item30.Equals(default(T30)))
+					hash = (hash * -1521134295) + Item30.GetHashCode();
+				if (Item31.Equals(default(T31)))
+					hash = (hash * -1521134295) + Item31.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31>
+	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31>, IStructuralComparable, IStructuralEquatable, IComparable
 	{
 		public T32 Item32 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32>
-	{
-		public T33 Item33 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33>
-	{
-		public T34 Item34 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34>
-	{
-		public T35 Item35 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35>
-	{
-		public T36 Item36 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36>
-	{
-		public T37 Item37 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37>
-	{
-		public T38 Item38 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38>
-	{
-		public T39 Item39 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39>
-	{
-		public T40 Item40 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40>
-	{
-		public T41 Item41 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41>
-	{
-		public T42 Item42 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42>
-	{
-		public T43 Item43 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43>
-	{
-		public T44 Item44 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44>
-	{
-		public T45 Item45 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45>
-	{
-		public T46 Item46 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46>
-	{
-		public T47 Item47 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47>
-	{
-		public T48 Item48 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48>
-	{
-		public T49 Item49 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49>
-	{
-		public T50 Item50 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50>
-	{
-		public T51 Item51 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51>
-	{
-		public T52 Item52 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52>
-	{
-		public T53 Item53 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53>
-	{
-		public T54 Item54 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54>
-	{
-		public T55 Item55 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55>
-	{
-		public T56 Item56 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56>
-	{
-		public T57 Item57 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57>
-	{
-		public T58 Item58 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58>
-	{
-		public T59 Item59 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59>
-	{
-		public T60 Item60 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60>
-	{
-		public T61 Item61 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61>
-	{
-		public T62 Item62 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62>
-	{
-		public T63 Item63 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63>
-	{
-		public T64 Item64 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64>
-	{
-		public T65 Item65 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65>
-	{
-		public T66 Item66 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66>
-	{
-		public T67 Item67 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67>
-	{
-		public T68 Item68 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68>
-	{
-		public T69 Item69 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69>
-	{
-		public T70 Item70 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70>
-	{
-		public T71 Item71 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71>
-	{
-		public T72 Item72 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72>
-	{
-		public T73 Item73 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73>
-	{
-		public T74 Item74 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74>
-	{
-		public T75 Item75 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75>
-	{
-		public T76 Item76 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76>
-	{
-		public T77 Item77 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77>
-	{
-		public T78 Item78 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78>
-	{
-		public T79 Item79 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79>
-	{
-		public T80 Item80 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80>
-	{
-		public T81 Item81 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81>
-	{
-		public T82 Item82 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82>
-	{
-		public T83 Item83 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83>
-	{
-		public T84 Item84 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84>
-	{
-		public T85 Item85 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85>
-	{
-		public T86 Item86 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86>
-	{
-		public T87 Item87 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87>
-	{
-		public T88 Item88 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88>
-	{
-		public T89 Item89 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89>
-	{
-		public T90 Item90 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90>
-	{
-		public T91 Item91 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91>
-	{
-		public T92 Item92 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92>
-	{
-		public T93 Item93 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93>
-	{
-		public T94 Item94 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94>
-	{
-		public T95 Item95 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95>
-	{
-		public T96 Item96 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96>
-	{
-		public T97 Item97 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97>
-	{
-		public T98 Item98 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98>
-	{
-		public T99 Item99 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99>
-	{
-		public T100 Item100 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100>
-	{
-		public T101 Item101 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101>
-	{
-		public T102 Item102 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102>
-	{
-		public T103 Item103 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103>
-	{
-		public T104 Item104 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104>
-	{
-		public T105 Item105 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105>
-	{
-		public T106 Item106 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106>
-	{
-		public T107 Item107 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107>
-	{
-		public T108 Item108 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108>
-	{
-		public T109 Item109 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109>
-	{
-		public T110 Item110 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110>
-	{
-		public T111 Item111 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111>
-	{
-		public T112 Item112 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112>
-	{
-		public T113 Item113 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113>
-	{
-		public T114 Item114 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114, T115>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114>
-	{
-		public T115 Item115 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114, T115, T116>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114, T115>
-	{
-		public T116 Item116 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114, T115, T116, T117>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114, T115, T116>
-	{
-		public T117 Item117 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114, T115, T116, T117, T118>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114, T115, T116, T117>
-	{
-		public T118 Item118 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114, T115, T116, T117, T118, T119>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114, T115, T116, T117, T118>
-	{
-		public T119 Item119 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114, T115, T116, T117, T118, T119, T120>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114, T115, T116, T117, T118, T119>
-	{
-		public T120 Item120 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114, T115, T116, T117, T118, T119, T120, T121>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114, T115, T116, T117, T118, T119, T120>
-	{
-		public T121 Item121 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114, T115, T116, T117, T118, T119, T120, T121, T122>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114, T115, T116, T117, T118, T119, T120, T121>
-	{
-		public T122 Item122 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114, T115, T116, T117, T118, T119, T120, T121, T122, T123>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114, T115, T116, T117, T118, T119, T120, T121, T122>
-	{
-		public T123 Item123 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114, T115, T116, T117, T118, T119, T120, T121, T122, T123, T124>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114, T115, T116, T117, T118, T119, T120, T121, T122, T123>
-	{
-		public T124 Item124 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114, T115, T116, T117, T118, T119, T120, T121, T122, T123, T124, T125>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114, T115, T116, T117, T118, T119, T120, T121, T122, T123, T124>
-	{
-		public T125 Item125 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114, T115, T116, T117, T118, T119, T120, T121, T122, T123, T124, T125, T126>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114, T115, T116, T117, T118, T119, T120, T121, T122, T123, T124, T125>
-	{
-		public T126 Item126 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114, T115, T116, T117, T118, T119, T120, T121, T122, T123, T124, T125, T126, T127>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114, T115, T116, T117, T118, T119, T120, T121, T122, T123, T124, T125, T126>
-	{
-		public T127 Item127 { get; set; }
-	}
-
-	public class Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114, T115, T116, T117, T118, T119, T120, T121, T122, T123, T124, T125, T126, T127, T128>
-	: Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T50, T51, T52, T53, T54, T55, T56, T57, T58, T59, T60, T61, T62, T63, T64, T65, T66, T67, T68, T69, T70, T71, T72, T73, T74, T75, T76, T77, T78, T79, T80, T81, T82, T83, T84, T85, T86, T87, T88, T89, T90, T91, T92, T93, T94, T95, T96, T97, T98, T99, T100, T101, T102, T103, T104, T105, T106, T107, T108, T109, T110, T111, T112, T113, T114, T115, T116, T117, T118, T119, T120, T121, T122, T123, T124, T125, T126, T127>
-	{
-		public T128 Item128 { get; set; }
+		protected Mutuple() {}
+		public Mutuple(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8, T9 item9, T10 item10, T11 item11, T12 item12, T13 item13, T14 item14, T15 item15, T16 item16, T17 item17, T18 item18, T19 item19, T20 item20, T21 item21, T22 item22, T23 item23, T24 item24, T25 item25, T26 item26, T27 item27, T28 item28, T29 item29, T30 item30, T31 item31, T32 item32) { Item1 = item1; Item2 = item2; Item3 = item3; Item4 = item4; Item5 = item5; Item6 = item6; Item7 = item7; Item8 = item8; Item9 = item9; Item10 = item10; Item11 = item11; Item12 = item12; Item13 = item13; Item14 = item14; Item15 = item15; Item16 = item16; Item17 = item17; Item18 = item18; Item19 = item19; Item20 = item20; Item21 = item21; Item22 = item22; Item23 = item23; Item24 = item24; Item25 = item25; Item26 = item26; Item27 = item27; Item28 = item28; Item29 = item29; Item30 = item30; Item31 = item31; Item32 = item32; }
+		public override String ToString() => $"({Item1}, {Item2}, {Item3}, {Item4}, {Item5}, {Item6}, {Item7}, {Item8}, {Item9}, {Item10}, {Item11}, {Item12}, {Item13}, {Item14}, {Item15}, {Item16}, {Item17}, {Item18}, {Item19}, {Item20}, {Item21}, {Item22}, {Item23}, {Item24}, {Item25}, {Item26}, {Item27}, {Item28}, {Item29}, {Item30}, {Item31}, {Item32})";
+
+		public override Boolean Equals(Object obj) => ((IStructuralEquatable) this).Equals(obj, EqualityComparer<Object>.Default);
+		public override Int32 GetHashCode() => ((IStructuralEquatable) this).GetHashCode(EqualityComparer<Object>.Default);
+		
+		Int32 IComparable.CompareTo(Object obj) => ((IStructuralComparable) this).CompareTo(obj, Comparer<Object>.Default);
+		Int32 IStructuralComparable.CompareTo(Object other, IComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return 1;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32>;
+			if (mutuple == null)
+				throw new ArgumentException("Incorrect type, must be `Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32>`", nameof(other));
+			Int32 num;
+			num = comparer.Compare(Item1, mutuple.Item1);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item2, mutuple.Item2);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item3, mutuple.Item3);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item4, mutuple.Item4);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item5, mutuple.Item5);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item6, mutuple.Item6);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item7, mutuple.Item7);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item8, mutuple.Item8);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item9, mutuple.Item9);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item10, mutuple.Item10);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item11, mutuple.Item11);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item12, mutuple.Item12);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item13, mutuple.Item13);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item14, mutuple.Item14);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item15, mutuple.Item15);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item16, mutuple.Item16);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item17, mutuple.Item17);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item18, mutuple.Item18);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item19, mutuple.Item19);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item20, mutuple.Item20);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item21, mutuple.Item21);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item22, mutuple.Item22);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item23, mutuple.Item23);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item24, mutuple.Item24);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item25, mutuple.Item25);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item26, mutuple.Item26);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item27, mutuple.Item27);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item28, mutuple.Item28);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item29, mutuple.Item29);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item30, mutuple.Item30);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item31, mutuple.Item31);
+			if (num != 0)
+				return num;
+			num = comparer.Compare(Item32, mutuple.Item32);
+			if (num != 0)
+				return num;
+			return num;
+		}
+		Boolean IStructuralEquatable.Equals(Object other, IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			if (other == null)
+				return false;
+			var mutuple = other as Mutuple<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32>;
+			if (mutuple == null)
+				return false;
+			if (!comparer.Equals(Item1, mutuple.Item1))
+				return false;
+			if (!comparer.Equals(Item2, mutuple.Item2))
+				return false;
+			if (!comparer.Equals(Item3, mutuple.Item3))
+				return false;
+			if (!comparer.Equals(Item4, mutuple.Item4))
+				return false;
+			if (!comparer.Equals(Item5, mutuple.Item5))
+				return false;
+			if (!comparer.Equals(Item6, mutuple.Item6))
+				return false;
+			if (!comparer.Equals(Item7, mutuple.Item7))
+				return false;
+			if (!comparer.Equals(Item8, mutuple.Item8))
+				return false;
+			if (!comparer.Equals(Item9, mutuple.Item9))
+				return false;
+			if (!comparer.Equals(Item10, mutuple.Item10))
+				return false;
+			if (!comparer.Equals(Item11, mutuple.Item11))
+				return false;
+			if (!comparer.Equals(Item12, mutuple.Item12))
+				return false;
+			if (!comparer.Equals(Item13, mutuple.Item13))
+				return false;
+			if (!comparer.Equals(Item14, mutuple.Item14))
+				return false;
+			if (!comparer.Equals(Item15, mutuple.Item15))
+				return false;
+			if (!comparer.Equals(Item16, mutuple.Item16))
+				return false;
+			if (!comparer.Equals(Item17, mutuple.Item17))
+				return false;
+			if (!comparer.Equals(Item18, mutuple.Item18))
+				return false;
+			if (!comparer.Equals(Item19, mutuple.Item19))
+				return false;
+			if (!comparer.Equals(Item20, mutuple.Item20))
+				return false;
+			if (!comparer.Equals(Item21, mutuple.Item21))
+				return false;
+			if (!comparer.Equals(Item22, mutuple.Item22))
+				return false;
+			if (!comparer.Equals(Item23, mutuple.Item23))
+				return false;
+			if (!comparer.Equals(Item24, mutuple.Item24))
+				return false;
+			if (!comparer.Equals(Item25, mutuple.Item25))
+				return false;
+			if (!comparer.Equals(Item26, mutuple.Item26))
+				return false;
+			if (!comparer.Equals(Item27, mutuple.Item27))
+				return false;
+			if (!comparer.Equals(Item28, mutuple.Item28))
+				return false;
+			if (!comparer.Equals(Item29, mutuple.Item29))
+				return false;
+			if (!comparer.Equals(Item30, mutuple.Item30))
+				return false;
+			if (!comparer.Equals(Item31, mutuple.Item31))
+				return false;
+			if (!comparer.Equals(Item32, mutuple.Item32))
+				return false;
+			return true;
+		}
+		Int32 IStructuralEquatable.GetHashCode(IEqualityComparer comparer) {
+			if (comparer == null)
+				throw new ArgumentNullException(nameof(comparer));
+			var hash = 0x51ed270b;
+			unchecked {
+				if (Item1.Equals(default(T1)))
+					hash = (hash * -1521134295) + Item1.GetHashCode();
+				if (Item2.Equals(default(T2)))
+					hash = (hash * -1521134295) + Item2.GetHashCode();
+				if (Item3.Equals(default(T3)))
+					hash = (hash * -1521134295) + Item3.GetHashCode();
+				if (Item4.Equals(default(T4)))
+					hash = (hash * -1521134295) + Item4.GetHashCode();
+				if (Item5.Equals(default(T5)))
+					hash = (hash * -1521134295) + Item5.GetHashCode();
+				if (Item6.Equals(default(T6)))
+					hash = (hash * -1521134295) + Item6.GetHashCode();
+				if (Item7.Equals(default(T7)))
+					hash = (hash * -1521134295) + Item7.GetHashCode();
+				if (Item8.Equals(default(T8)))
+					hash = (hash * -1521134295) + Item8.GetHashCode();
+				if (Item9.Equals(default(T9)))
+					hash = (hash * -1521134295) + Item9.GetHashCode();
+				if (Item10.Equals(default(T10)))
+					hash = (hash * -1521134295) + Item10.GetHashCode();
+				if (Item11.Equals(default(T11)))
+					hash = (hash * -1521134295) + Item11.GetHashCode();
+				if (Item12.Equals(default(T12)))
+					hash = (hash * -1521134295) + Item12.GetHashCode();
+				if (Item13.Equals(default(T13)))
+					hash = (hash * -1521134295) + Item13.GetHashCode();
+				if (Item14.Equals(default(T14)))
+					hash = (hash * -1521134295) + Item14.GetHashCode();
+				if (Item15.Equals(default(T15)))
+					hash = (hash * -1521134295) + Item15.GetHashCode();
+				if (Item16.Equals(default(T16)))
+					hash = (hash * -1521134295) + Item16.GetHashCode();
+				if (Item17.Equals(default(T17)))
+					hash = (hash * -1521134295) + Item17.GetHashCode();
+				if (Item18.Equals(default(T18)))
+					hash = (hash * -1521134295) + Item18.GetHashCode();
+				if (Item19.Equals(default(T19)))
+					hash = (hash * -1521134295) + Item19.GetHashCode();
+				if (Item20.Equals(default(T20)))
+					hash = (hash * -1521134295) + Item20.GetHashCode();
+				if (Item21.Equals(default(T21)))
+					hash = (hash * -1521134295) + Item21.GetHashCode();
+				if (Item22.Equals(default(T22)))
+					hash = (hash * -1521134295) + Item22.GetHashCode();
+				if (Item23.Equals(default(T23)))
+					hash = (hash * -1521134295) + Item23.GetHashCode();
+				if (Item24.Equals(default(T24)))
+					hash = (hash * -1521134295) + Item24.GetHashCode();
+				if (Item25.Equals(default(T25)))
+					hash = (hash * -1521134295) + Item25.GetHashCode();
+				if (Item26.Equals(default(T26)))
+					hash = (hash * -1521134295) + Item26.GetHashCode();
+				if (Item27.Equals(default(T27)))
+					hash = (hash * -1521134295) + Item27.GetHashCode();
+				if (Item28.Equals(default(T28)))
+					hash = (hash * -1521134295) + Item28.GetHashCode();
+				if (Item29.Equals(default(T29)))
+					hash = (hash * -1521134295) + Item29.GetHashCode();
+				if (Item30.Equals(default(T30)))
+					hash = (hash * -1521134295) + Item30.GetHashCode();
+				if (Item31.Equals(default(T31)))
+					hash = (hash * -1521134295) + Item31.GetHashCode();
+				if (Item32.Equals(default(T32)))
+					hash = (hash * -1521134295) + Item32.GetHashCode();
+			}
+			return hash;
+		}
 	}
 
 }
