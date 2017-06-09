@@ -29,7 +29,7 @@ TLDR; Sometimes things are needed.
 
 I have a rule for myself: any code I write which lends itself to a general purpose must be put in a public GitHub repo and NuGet package.
 
-Mutable reference-type tuples seem like a terrible idea to anyone who espouses functional-style programming. After all, tuples are supposed to facilitate the quick passage of small and simple data structures; especially those with no obvious name. The possibily of changing that data while its being passed around increases the complexity of your system.
+Mutable reference-type tuples seem like a terrible idea to anyone who espouses functional-style programming. After all, tuples are supposed to facilitate the quick passage of small and simple data structures; especially those with no obvious name. The possibily of that data changing while its being passed around needlessly increases the complexity of your system.
 
 The reason I created mutuples was to solve a very specific puzzle in one of my projects. I needed to build a LINQ expression at run-time for Entity Framework. EF is very particular about what counts as an acceptable result selector in a group join.
 
