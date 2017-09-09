@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Mutable tuple class library for those times when you need mutable, reference-type tuples</Description>
+    <AssemblyTitle>Mutuple</AssemblyTitle>
+    <VersionPrefix>0.1.0</VersionPrefix>
+    <Authors>Nick Strupat</Authors>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <AssemblyName>Mutuple.netstandard1.3</AssemblyName>
+    <PackageId>Mutuple</PackageId>
+    <PackageTags>mutable;tuple;tuples;mutuple;mutuples</PackageTags>
+    <PackageProjectUrl>https://github.com/NickStrupat/Mutuple</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/NickStrupat/Mutuple/master/LICENSE</PackageLicenseUrl>
+    <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
+    <RootNamespace>Mutuples</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Mutuple.NET45\*.cs" Exclude="bin\**;obj\**;**\*.xproj;packages\**" />
+  </ItemGroup>
+
+</Project>

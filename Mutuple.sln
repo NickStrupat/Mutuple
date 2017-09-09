@@ -1,19 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mutuple.NET45", "Mutuple.NET45\Mutuple.NET45.csproj", "{AEF735AD-6A2B-48DD-A0CD-4510859351EC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mutuple.NET40", "Mutuple.NET40\Mutuple.NET40.csproj", "{99CFBD6C-7E4C-4A84-8E08-7509BB6D4FEC}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Mutuple.NETCore", "Mutuple.NETCore\Mutuple.NETCore.xproj", "{288A0B40-48DF-4AEE-9E9A-BC92B7294230}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F2E0D827-4092-4F28-8050-C7386655DF2E}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mutuple.NET45", "Mutuple.NET45\Mutuple.NET45.csproj", "{AEF735AD-6A2B-48DD-A0CD-4510859351EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mutuple.NET40", "Mutuple.NET40\Mutuple.NET40.csproj", "{99CFBD6C-7E4C-4A84-8E08-7509BB6D4FEC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mutuple.NETCore", "Mutuple.NETCore\Mutuple.NETCore.csproj", "{288A0B40-48DF-4AEE-9E9A-BC92B7294230}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,5 +36,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {460E6036-EFF7-49A7-A298-4C2CB411CEE9}
 	EndGlobalSection
 EndGlobal
